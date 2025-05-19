@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+ 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+    <style>
+        .testimonials .swiper {
+            width: 100%;
+            /* height: 100%; */
+        }
+ 
+        .testimonials .testimonials-grid {
+            width: 1360px;
+        }
+ 
+        .testimonials .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 40px;
+            max-width: 565px;
+            border: 1px solid #E7E7E7;
+            height: 433px;
+            box-sizing: border-box;
+            justify-content: space-between;
+ 
+        }
+ 
+        .testimonials .swiper-slide ul {
+            text-align: left;
+            padding: 0 0 0 20px;
+        }
+ 
+        .testimonials .swiper-pagination {
+            position: unset;
+            height: 10px !important;
+            margin-top: 50px;
+        }
+ 
+        .testimonials_footer {
+            display: flex;
+        }
+    </style>
+</head>
+ 
+<body>
+    <!-- Testimonials section -->
+    <section class="testimonials">
+        <div class="testimonials-wrapper ">
+            <div class="head-wrapper">
+                <h2>What our great customers say</h2>
+            </div>
+            <div class="head-secondary ">
+                <h3>What our great customers say</h3>
+            </div>
+ 
+            <div class="testimonials-grid">
+                <div class="swiper myslider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span><img src="./assets/images/Layer_1.svg" alt=""></span>
+                            <p>Our business switched to Techdot’s renewable energy solutions last year, and it’s been
+                                incredible. The energy savings have exceeded our expectations, and clients love our
+                                commitment to sustainability.</p>
+                            <div class="testimonials_footer">
+                                <figure><img src="./assets/images/Frame 79.svg" alt="testimonials profile image">
+                                </figure>
+ 
+                                <div>
+                                    <p>Albert Flores</p><span>CEO of ACD Solution</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="./assets/images/Layer_1.svg" alt=""></span>
+                            <p>Our business switched to Techdot’s renewable energy solutions last year, and it’s been
+                                incredible. The energy savings have exceeded our expectations, and clients love our
+                                commitment to sustainability.</p>
+                            <div class="testimonials_footer">
+                                <figure><img src="./assets/images/Frame 79.svg" alt="testimonials profile image">
+                                </figure>
+ 
+                                <div>
+                                    <p>Albert Flores</p><span>CEO of ACD Solution</span>
+                                </div>
+                            </div>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="./assets/images/Layer_1.svg" alt=""></span>
+                            <p>Our business switched to Techdot’s renewable energy solutions last year, and it’s been
+                                incredible. The energy savings have exceeded our expectations, and clients love our
+                                commitment to sustainability.</p>
+                            <div class="testimonials_footer">
+                                <figure><img src="./assets/images/Frame 79.svg" alt="testimonials profile image">
+                                </figure>
+                                <div>
+                                    <p>Albert Flores</p><span>CEO of ACD Solution</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <span><img src="./assets/images/Layer_1.svg" alt=""></span>
+                            <p>Our business switched to Techdot’s renewable energy solutions last year, and it’s been
+                                incredible. The energy savings have exceeded our expectations, and clients love our
+                                commitment to sustainability.</p>
+                            <div class="testimonials_footer">
+                                <figure><img src="./assets/images/Frame 79.svg" alt="testimonials profile image">
+                                </figure>
+                                <div>
+                                    <p>Albert Flores</p><span>CEO of ACD Solution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+ 
+    </section>
+ 
+ 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".myslider", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            loop: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                type: "progressbar",
+            },
+        });
+    </script>
+ 
+</body>
+ 
+</html>
