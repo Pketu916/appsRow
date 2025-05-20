@@ -130,6 +130,9 @@ button.global-button:hover {
 .hamburger-button i:hover {
     color: orangered;
 } */
+footer a:hover {
+    color: orangered;
+}
 
 .flex_row_reverse {
     display: flex;
@@ -399,6 +402,7 @@ body {
     display: flex;
     animation: scroll 20s linear infinite;
     width: fit-content;
+    gap: 20px;
 }
 
 .logo-track {
@@ -513,6 +517,7 @@ body {
     left: 36.2%;
     bottom: 11%;
     background: transparent;
+    z-index: 10;
 }
 
 .article-content {
@@ -843,7 +848,6 @@ footer div {
     }
 
     .circle-image {
-        /* left: 85%; */
         top: 120px;
     }
 
@@ -922,7 +926,7 @@ footer div {
     }
 
     .next-step .article-container figcaption {
-        left: 40.2%;
+        left: 28%;
     }
 
     .reviews-container article {
@@ -980,7 +984,7 @@ footer div {
 
     footer .social {
         justify-content: flex-start;
-        margin-top: 24px;
+        margin-top: 14px;
     }
 
     .footer-line {
@@ -1002,6 +1006,9 @@ footer div {
         gap: 14px;
     }
 
+    .circle-image {
+        left: 85%;
+    }
 
     .logo {
         height: 39.5px;
@@ -1144,6 +1151,9 @@ footer div {
         max-width: 100%;
         object-fit: cover;
     }
+      .next-step .article-container figcaption {
+        left: 40%;
+    }
 }
 
 @media (max-width:425px) {
@@ -1159,8 +1169,8 @@ footer div {
         letter-spacing: -1.28px;
         line-height: 32px;
     }
-    
-    .brand-section h2.heading2{
+
+    .brand-section h2.heading2 {
         max-width: 225px;
     }
 }
