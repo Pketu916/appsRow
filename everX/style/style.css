@@ -110,8 +110,16 @@ h1 {
 }
 
 button:hover {
-    background-color: orangered !important;
+    background-color: orangered;
     box-shadow: 0 22px 32px #5F5C5747;
+}
+
+.hamburger-button:hover {
+    background-color: transparent;
+}
+
+.hamburger-button i:hover {
+    color: orangered;
 }
 
 .flex_row_reverse {
@@ -124,7 +132,7 @@ button:hover {
     flex-direction: column-reverse;
 }
 
-a:active {
+a:hover {
     color: orangered;
 }
 
@@ -243,6 +251,14 @@ nav {
     text-transform: uppercase;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 979.5px;
+}
+
 .nav-link-icon {
     display: flex;
     align-items: center;
@@ -253,8 +269,21 @@ nav {
     display: none;
 }
 
-.nav a {
-    letter-spacing: 2.52px;
+.nav-list li a {
+    position: relative;
+}
+
+.nav-list a:hover::before {
+    content: "";
+    border-bottom: 1px dashed orangered;
+    position: absolute;
+    bottom: -10px;
+    /* left: 0; */
+    width: 100%;
+    /* width: 2px; */
+    height: 2px;
+    transition: transform 0.5s ease;
+    color: white;
 }
 
 body {
@@ -441,6 +470,7 @@ body {
     display: none;
 }
 
+
 .article-container figure img {
     border-radius: 20px;
     overflow: hidden;
@@ -450,7 +480,7 @@ body {
 
 .article-container article {
     position: relative;
-    max-width: 433px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -775,12 +805,15 @@ footer div {
 
 
 @media (max-width:1024px) {
+
     body {
         background-position: top;
+        background-size: 143% 8%;
     }
 
     a,
-    .rights_reserved {
+    .rights_reserved,
+    .footer-line p.flex-beetwen {
         font-size: 11.2px;
         line-height: 11.2px;
         letter-spacing: 1.12px;
@@ -790,16 +823,9 @@ footer div {
         padding: 0px 24px;
     }
 
-    .nav-list {
-        display: none;
-    }
-
-    .nav-button-container {
-        display: none;
-    }
-
     .circle-image {
         left: 85%;
+        top: 125px;
     }
 
     .circle-image-1 {
@@ -810,10 +836,6 @@ footer div {
     .circle-image-2 {
         width: 58.32px;
         height: auto;
-    }
-
-    .nav-list-mobile {
-        display: block;
     }
 
     h1 {
@@ -852,9 +874,19 @@ footer div {
         flex-wrap: wrap;
     }
 
+    p.flex-wrap {
+        justify-content: flex-start !important;
+
+    }
+
     .features .figure,
-    .features .gap-60 {
+    .features .gap-60,
+    .next-step.gap-60 {
         gap: 25px;
+    }
+
+    .article-container {
+        gap: 8px;
     }
 
     .blog-section .article-container {
@@ -883,12 +915,12 @@ footer div {
 
     .reviews-container article {
         gap: 67px;
-        padding: 24px;
+        padding: 34px 50px 24px 24px;
     }
 
     .get-started>:first-child {
         flex-direction: column;
-        padding: 32px 24px;
+        padding: 32px 50px 32px 24px;
     }
 
     .footer-content {
@@ -937,12 +969,61 @@ footer div {
 }
 
 @media (max-width:768px) {
+
+    .nav-list-mobile {
+        display: block;
+    }
+
+    .nav-container {
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--jat-gray);
+        padding: 1rem;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        gap: 30px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition:
+            max-height 0.4s ease-in-out,
+            opacity 0.4s ease,
+            transform 0.4s ease;
+    }
+
+    .nav-container .nav-list {
+        flex-direction: column;
+        gap: 30px;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-container.show {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .hamburger-button {
+        display: block;
+        z-index: 20;
+    }
+
+
     #hero {
-        margin-bottom: 200px;
+        margin-bottom: 258px;
+        margin-top: 46px;
     }
 
     .brand-section {
         margin-bottom: 64px;
+        margin-top: 78px;
     }
 
     .circle-blog-image {
@@ -971,7 +1052,7 @@ footer div {
     .global-button {
         font-size: 11.2px;
         letter-spacing: 1.12px;
-        padding: 15px 20px;
+        padding: 11.5px 15px;
     }
 
 
@@ -998,18 +1079,24 @@ footer div {
     }
 
     .next-step .article-container figure img {
-        height: 380px;
+        max-height: 380px;
     }
 
     .get-started {
         margin: 64px 0;
     }
+
+    .blog-content figure img {
+        max-height: 380px;
+        max-width: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width:425px) {
     .brand-section video {
-        height: 380px;
-        width: 342px;
+        max-height: 380px;
+        width: 100%;
         object-fit: cover;
         margin: 0 auto;
     }
