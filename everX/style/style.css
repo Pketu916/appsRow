@@ -156,7 +156,7 @@ footer a:hover {
     stroke: white;
 }
 
-.nav-link-icon:hover {
+.nav-link-icon:hover,nav li a:hover {
     color: orangered;
 }
 
