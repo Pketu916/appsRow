@@ -156,12 +156,7 @@ footer a:hover {
     stroke: white;
 }
 
-<<<<<<< HEAD
-.nav-link-icon:hover,
-nav li a:hover {
-=======
 .nav-link-icon:hover,nav li a:hover {
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     color: orangered;
 }
 
@@ -419,12 +414,7 @@ body {
     display: flex;
     animation: scroll 30s linear infinite;
     width: fit-content;
-<<<<<<< HEAD
     gap: 64px;
-
-=======
-    gap: 20px;
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
 }
 
 .logo-track {
@@ -435,10 +425,6 @@ body {
 .logo-track img {
     height: 29px;
     flex-shrink: 0;
-<<<<<<< HEAD
-=======
-    margin: 0 25px;
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
 }
 
 /* Optional fade edges */
@@ -597,10 +583,7 @@ span {
     display: flex;
     width: max-content;
     animation: move-lines 30s linear infinite;
-<<<<<<< HEAD
     gap: 30px;
-=======
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
 }
 
 .line-track {
@@ -609,17 +592,10 @@ span {
     color: #EAEBDD;
     font-size: var(--size-lg);
     font-weight: 900;
-<<<<<<< HEAD
     gap: 30px;
 }
 
 .line-track i {
-=======
-}
-
-.line-track i {
-    margin: 0 20px;
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     rotate: 90deg;
     white-space: nowrap;
 }
@@ -901,7 +877,6 @@ footer div {
         height: auto;
     }
 
-<<<<<<< HEAD
     #hero p {
         font-size: 24px;
         line-height: 33.6px;
@@ -910,11 +885,6 @@ footer div {
     .text-big {
         font-size: 14.4px;
         line-height: 18.72px;
-=======
-    .text-big {
-        font-size: var(--size-lg);
-        line-height: 26px;
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     }
 
     .features>:first-child {
@@ -964,14 +934,6 @@ footer div {
         margin-bottom: 24px;
     }
 
-<<<<<<< HEAD
-=======
-    .line-track i {
-        margin: 0 17px;
-        font-size: 10px;
-    }
-
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     .line-container {
         top: 0;
     }
@@ -1011,14 +973,6 @@ footer div {
         padding: 0 24px 24px 24px;
     }
 
-<<<<<<< HEAD
-=======
-    .text-big {
-        font-size: 14.4px;
-        line-height: 18.72px;
-    }
-
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     footer h2.heading2 {
         font-size: var(--size-xl);
         line-height: 28.8px;
@@ -1038,14 +992,11 @@ footer div {
     .features-content .global-button {
         margin-top: 0;
     }
-<<<<<<< HEAD
 
     .nav-list {
         max-width: 470px;
         margin: 0 auto;
     }
-=======
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
 }
 
 @media (max-width:768px) {
@@ -1055,15 +1006,12 @@ footer div {
         line-height: 46px;
     }
 
-<<<<<<< HEAD
     #hero p {
         font-size: 14.4px;
         line-height: 18.72px;
         max-width: 400px;
     }
 
-=======
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     .footer-content {
         flex-direction: column;
     }
@@ -1115,14 +1063,11 @@ footer div {
         left: -4%;
     }
 
-<<<<<<< HEAD
     .logo-slider,
     .logo-track {
         gap: 34px;
     }
 
-=======
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     .nav-list-mobile {
         display: block;
     }
@@ -1219,7 +1164,6 @@ footer div {
         line-height: 20.16px;
     }
 
-<<<<<<< HEAD
     .line-track i {
         font-size: 10px;
     }
@@ -1227,11 +1171,6 @@ footer div {
     .line-slider,
     .line-track {
         gap: 30px;
-=======
-    .logo-track,
-    .line-track {
-        gap: 0;
->>>>>>> b4f2e6406bf92c641e5741c89d401c64847f658b
     }
 
     .logo-track img {
