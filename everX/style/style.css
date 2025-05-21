@@ -156,7 +156,8 @@ footer a:hover {
     stroke: white;
 }
 
-.nav-link-icon:hover,nav li a:hover {
+.nav-link-icon:hover,
+nav li a:hover {
     color: orangered;
 }
 
@@ -322,17 +323,19 @@ body {
 /* hero */
 
 #hero {
-    margin-top: 112px;
+    /* margin-top: 112px; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 32px;
-    margin-bottom: 389px;
+    /* margin-bottom: 389px; */
     position: relative;
+    min-height: calc(100vh - 84px);
 }
 
-#hero h1 {
+h1 {
     max-width: 935px;
+    padding-top: 111px;
 }
 
 #hero p {
@@ -378,7 +381,7 @@ body {
     color: var(--white);
     border: none;
     position: absolute;
-    top: 150%;
+    bottom: 15%;
     left: 1%;
     padding: 5px;
     transition: all 0.5s ease;
@@ -399,7 +402,7 @@ body {
 .brand-section {
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 48px;
     margin-bottom: 119px;
 }
 
@@ -555,13 +558,18 @@ span {
     padding-top: 71.5px;
     padding-bottom: 50px;
     position: relative;
-    max-width: 1440px;
+    /* max-width: 1440px; */
+    width: 100%;
+    /* for overflow */
     margin: 0 auto;
     overflow: hidden;
 }
 
 .blog-line> :first-child {
     max-width: 100%;
+    width: 100%;
+    /* for overflow */
+
 }
 
 .circle-blog-image {
@@ -865,6 +873,7 @@ footer div {
 
     .circle-image {
         top: 120px;
+        left: 94%;
     }
 
     .circle-image-1 {
@@ -1003,6 +1012,7 @@ footer div {
     h1 {
         font-size: 46px;
         letter-spacing: -1.84px;
+        padding-top: 0px;
         line-height: 46px;
     }
 
@@ -1010,6 +1020,12 @@ footer div {
         font-size: 14.4px;
         line-height: 18.72px;
         max-width: 400px;
+    }
+
+    #hero {
+        margin-bottom: 246px;
+        margin-top: 46px;
+        min-height: auto;
     }
 
     .footer-content {
@@ -1051,7 +1067,7 @@ footer div {
     }
 
     .circle-image {
-        left: 85%;
+        left: 92%;
     }
 
     .logo {
@@ -1061,6 +1077,7 @@ footer div {
 
     .hero-btn {
         left: -4%;
+        bottom: -70%;
     }
 
     .logo-slider,
@@ -1128,12 +1145,6 @@ footer div {
     .hamburger-button {
         display: block;
         z-index: 20;
-    }
-
-
-    #hero {
-        margin-bottom: 246px;
-        margin-top: 46px;
     }
 
     .brand-section {
@@ -1230,5 +1241,9 @@ footer div {
 
     .brand-section h2.heading2 {
         max-width: 225px;
+    }
+
+    .circle-image {
+        left: 85%;
     }
 }
