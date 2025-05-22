@@ -8,6 +8,11 @@
     scroll-behavior: smooth;
 }
 
+::selection {
+    background: var(--orange);
+    color: var(--jat-gray);
+}
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -115,21 +120,15 @@ h1 {
 }
 
 button.global-button:hover {
-    background-color: orangered;
+    /* background-color: orangered; */
+    color: white;
+    box-shadow: inset 250px 10px 0 0 orangered;
 }
 
-/* button:hover {
-    background-color: orangered;
-    box-shadow: 0 22px 32px #5F5C5747;
+button.global-button:active {
+    transform: scale(0.95);
 }
 
-.hamburger-button:hover {
-    background-color: transparent;
-}
-
-.hamburger-button i:hover {
-    color: orangered;
-} */
 footer a:hover {
     color: orangered;
 }
@@ -199,7 +198,7 @@ a {
     gap: 8px;
 }
 
-.flex-beetwen {
+.flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -290,8 +289,12 @@ nav {
     gap: 24px;
 }
 
+.nav-list li a {
+    display: inline;
+}
+
 .nav-link-icon {
-    display: flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 8px;
 }
@@ -308,11 +311,6 @@ nav {
     display: none;
 }
 
-.nav-list li a {
-    position: relative;
-}
-
-
 body {
     background-image: url('hero-bg.svg');
     background-repeat: no-repeat;
@@ -323,22 +321,22 @@ body {
 /* hero */
 
 #hero {
-    /* margin-top: 112px; */
+    margin-top: 112px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     gap: 32px;
-    /* margin-bottom: 389px; */
+    margin-bottom: 389px;
     position: relative;
-    min-height: calc(100vh - 84px);
+    /* min-height: calc(100vh - 84px); */
 }
 
 h1 {
     max-width: 935px;
-    padding-top: 111px;
+    /* padding-top: 111px; */
 }
 
-#hero p {
+#hero .hero-text {
     max-width: 593px;
     padding-bottom: 16px;
 }
@@ -351,7 +349,7 @@ h1 {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 91%;
-    top: 186px;
+    top: 190px;
     background: transparent;
 }
 
@@ -381,7 +379,7 @@ h1 {
     color: var(--white);
     border: none;
     position: absolute;
-    bottom: 15%;
+    top: 150%;
     left: 1%;
     padding: 5px;
     transition: all 0.5s ease;
@@ -855,7 +853,7 @@ footer div {
 
     a,
     .rights_reserved,
-    .footer-line p.flex-beetwen {
+    .footer-line p.flex-between {
         font-size: 11.2px;
         line-height: 11.2px;
         letter-spacing: 1.12px;
@@ -886,7 +884,7 @@ footer div {
         height: auto;
     }
 
-    #hero p {
+    #hero .hero-text {
         font-size: 24px;
         line-height: 33.6px;
     }
@@ -902,7 +900,7 @@ footer div {
         flex-wrap: wrap;
     }
 
-    .features .flex-beetwen {
+    .features .flex-between {
         justify-content: center;
     }
 
@@ -1012,11 +1010,10 @@ footer div {
     h1 {
         font-size: 46px;
         letter-spacing: -1.84px;
-        padding-top: 0px;
         line-height: 46px;
     }
 
-    #hero p {
+    #hero .hero-text {
         font-size: 14.4px;
         line-height: 18.72px;
         max-width: 400px;
@@ -1038,7 +1035,7 @@ footer div {
         align-items: flex-start;
     }
 
-    .footer-list.flex-beetwen li a {
+    .footer-list.flex-between li a {
         letter-spacing: 1.99px !important;
     }
 
@@ -1114,7 +1111,7 @@ footer div {
         background-image: url("./menu_bg.svg");
         background-position: right bottom;
         background-repeat: no-repeat;
-        background-size: 100% 57%;
+        background-size: 100% 53%;
     }
 
     .nav-container.show {
@@ -1123,9 +1120,14 @@ footer div {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+        z-index: 2;
     }
 
-    .nav-list a::before {
+    .nav-list li {
+        position: relative;
+    }
+
+    .nav-list li::before {
         content: "";
         position: absolute;
         bottom: -14px;
@@ -1134,6 +1136,7 @@ footer div {
         border-bottom: 1px solid #fff;
         opacity: 0.07;
         transition: transform 0.5s ease;
+        pointer-events: none;
     }
 
     .nav-container .nav-list {
