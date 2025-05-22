@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: black; */
-    /* color: white; */
     font-family: "Schibsted Grotesk", sans-serif;
     scroll-behavior: smooth;
 }
@@ -969,7 +969,7 @@ footer div {
     .get-started>:first-child {
         flex-direction: column;
         padding: 32px 50px 32px 24px;
-        gap: 24pxpx;
+        gap: 24px;
     }
 
     .get-started .get-started-content {
