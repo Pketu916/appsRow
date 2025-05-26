@@ -127,57 +127,29 @@ window.addEventListener("resize", () => {
   window.swiperResizeTimeout = setTimeout(initSwiper, 200); // debounce
 });
 
-// let swiper;
 
-// function initSwiper() {
-//   const isMobile = window.innerWidth <= 1024;
-
-//   if (isMobile && !swiper) {
-//     swiper = new Swiper(".mySwiper", {
-//       slidesPerView: "auto",
-//       spaceBetween: 20,
-//       centeredSlides: false,
-//       loop: true,
-//       navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//       },
-//     });
-//   } else if (!isMobile && swiper) {
-//     swiper.destroy(true, true);
-//     swiper = null;
-//   }
-// }
-
-// window.addEventListener("load", initSwiper);
-// window.addEventListener("resize", initSwiper);
 const faqCards = document.querySelectorAll(".faq-card");
 
 faqCards.forEach((card) => {
   const questionArea = card.querySelector(".faq-question");
-  const icon = card.querySelector("i");
+  const answer = card.querySelector(".faq-answer");
 
   questionArea.addEventListener("click", () => {
-    // Close all others
     faqCards.forEach((other) => {
       if (other !== card) {
         other.classList.remove("active");
-        const otherIcon = other.querySelector("i");
-        if (otherIcon) {
-          otherIcon.classList.remove("fa-minus");
-          otherIcon.classList.add("fa-plus");
-        }
+        other.querySelector(".faq-answer").style.maxHeight = null;
       }
     });
 
-    // Toggle current
     const isActive = card.classList.contains("active");
+
     card.classList.toggle("active");
 
-    // Toggle icon
-    if (icon) {
-      icon.classList.toggle("fa-plus", isActive);
-      icon.classList.toggle("fa-minus", !isActive);
+    if (!isActive) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = null;
     }
   });
 });

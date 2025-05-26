@@ -7,14 +7,34 @@
     max-width: 1340px;
     overflow: hidden;
     width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    min-height: 380px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.about-hero-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0D0D0D66, #0D0D0D1A);
+    border-radius: 20px;
 }
 
 .about-hero-text {
     position: absolute;
     max-width: 802px;
-    bottom: 48px;
-    left: 48px;
-    /* padding: 0 0 48px 48px; */
+    bottom: 0;
+    padding: 0 0 48px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+    z-index: 1;
 }
 
 .about-hero {
@@ -28,10 +48,6 @@
     margin-bottom: 48px;
     gap: 8px;
     align-items: flex-start;
-}
-
-.approach-section .section-header p {
-    max-width: 742px;
 }
 
 .approach-section .section-header h2 {
@@ -81,7 +97,6 @@
     max-width: 774px;
     width: 774px;
     filter: brightness(1.4);
-
 }
 
 .approach-section .approach-card {
@@ -92,7 +107,7 @@
     position: absolute;
     rotate: -90deg;
     bottom: 20.4%;
-    left: -28px;
+    left: -15%;
     text-align: left;
     width: 200px;
     transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -100,7 +115,6 @@
 }
 
 .approach-section .approach-card:hover h3 {
-    position: absolute;
     rotate: 0deg;
     bottom: 27.3%;
     left: 6.2%;
@@ -128,7 +142,7 @@
     margin: 120px 0;
 }
 
-.partners-section .section-header p {
+.header-p {
     max-width: 799px;
 }
 
@@ -138,7 +152,7 @@
 
 .partners-swiper {
     position: relative;
-    padding: 40px 0;
+    margin: 40px 0;
 }
 
 .partners-content {
@@ -170,7 +184,7 @@
     gap: 8px;
     font-size: 24px;
     line-height: 120%;
-    letter-spacing: -0.48;
+    letter-spacing: -0.48px;
 }
 
 .partners-swiper .swiper-slide p span {
@@ -181,7 +195,7 @@
 
 .custom-nav {
     position: absolute;
-    /* top: 50%; */
+    top: 43% !important;
     width: 44px !important;
     background: white;
     transform: translateY(-50%);
@@ -227,7 +241,7 @@
     color: #302D27;
 }
 
-.advisory-section .section-header p {
+.header-p {
     max-width: 799px;
 }
 
@@ -258,27 +272,21 @@
     color: #302D27;
 }
 
-@media (max-width: 1024px) {
-    .custom-nav {
-        opacity: 1;
-    }
+/* faq */
 
-    .advisory-section article {
-        padding: 24px 28px 24px 24px;
-        gap: 92px;
-        height: auto
-    }
+.faq-section {
+    margin: 120px auto;
 }
 
 .faq-section .faq-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .faq-section .faq-card {
     border-radius: 20px;
-    padding: 20px;
+    padding: 16px;
     transition: all 0.3s ease;
     position: relative;
     background-color: #5F5C5715;
@@ -300,11 +308,139 @@
 }
 
 .faq-section .faq-answer {
-    margin-top: 15px;
-    display: none;
-    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
 .faq-section .faq-card.active .faq-answer {
-    display: block;
+    margin-top: 15px;
+    max-height: 500px;
+}
+
+.faq-card button i {
+    transition: transform 0.4s ease;
+
+}
+
+.faq-card.active button i {
+    transform: rotate(135deg);
+}
+
+@media (max-width: 1024px) {
+    .custom-nav {
+        opacity: 1;
+    }
+
+    .advisory-section article {
+        padding: 24px 28px 24px 24px;
+        gap: 92px;
+        height: auto
+    }
+
+    .header-p {
+        max-width: 500px;
+    }
+
+    .advisory-section {
+        padding: 64px 0;
+    }
+
+    .about-hero {
+        margin-bottom: 64px !important;
+    }
+
+    .about-hero-content {
+        margin-top: 16px;
+    }
+
+    .partners-section,
+    .faq-section {
+        margin: 64px auto;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+    }
+
+    .approach-section .approach-card figure:hover {
+        width: 600px;
+        max-width: 600px;
+    }
+
+    .approach-section .approach-card:hover h3 {
+        bottom: 16%;
+    }
+
+    .approach-section .approach-card h3 {
+        left: -20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-text {
+        padding: 0 24px 34px 24px;
+    }
+
+    .about-hero-text h2.heading2 {
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: -0.72px;
+    }
+
+    .approach-section .approach-card figure:hover,
+    .approach-section .approach-card figure {
+        width: 100%;
+        max-width: 100%;
+        height: 341px;
+    }
+
+    .approach-section .approach-card {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .approach-section .approach-content {
+        flex-wrap: wrap;
+
+    }
+
+    /* .approach-section .approach-card h3 {
+        position: absolute;
+        rotate: 0deg;
+        bottom: 20%;
+        left: 6.2%;
+        pointer-events: none;
+    }
+
+    .approach-section .approach-card p {
+        display: inline;
+        max-width: 500px;        
+    } */
+    .approach-section .approach-card h3,
+    .approach-section .approach-card p {
+        position: unset;
+        rotate: unset;
+        display: inline-block;
+    }
+
+    .approach-content .approach-card-text {
+        position: absolute;
+        bottom: 0;
+        padding: 0 33px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .partners-swiper .swiper-slide p {
+        margin-top: 16px;
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+
+    .partners-swiper .swiper-slide p span {
+        font-size: 14px;
+    }
 }
