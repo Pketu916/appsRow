@@ -1,9 +1,35 @@
-.about-hero-content {
-    position: relative;
-    margin-top: 88px;
+.breadcrumb {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.about-hero-content img {
+.breadcrumb a,
+.breadcrumb span {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 2.52px;
+    font-weight: 500;
+}
+
+#hero.about-hero {
+    gap: 16px;
+    margin-top: 79px;
+}
+
+#hero.about-hero p {
+    padding: 16px 0 0 0;
+    max-width: 759px;
+}
+
+.hero-content {
+    position: relative;
+    margin-top: 104px;
+}
+
+.hero-content img {
     max-width: 1340px;
     overflow: hidden;
     width: 100%;
@@ -14,7 +40,7 @@
     position: relative;
 }
 
-.about-hero-content::after {
+.hero-content::after {
     content: "";
     position: absolute;
     top: 0;
@@ -62,7 +88,7 @@
     width: 370px !important;
     height: 370px !important;
     top: -20%;
-    left: 7%;
+    left: 60px;
     overflow: hidden;
 }
 
@@ -181,9 +207,23 @@
     max-width: 394px;
 }
 
-.partners-swiper {
+.outer-wrapper {
     position: relative;
-    margin-top: 77px;
+    max-width: 1440px;
+    margin: 98px auto 0;
+}
+
+.partners-swiper {
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.swiper {
+    overflow: visible !important;
+    width: 100%;
+    margin: 0 !important;
 }
 
 .partners-content {
@@ -232,7 +272,7 @@
     transform: translateY(-50%);
     border-radius: 50%;
     margin: 0 !important;
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .custom-nav svg {
@@ -240,11 +280,11 @@
 }
 
 .swiper-button-prev.custom-nav {
-    left: 10px;
+    left: 40px;
 }
 
 .swiper-button-next.custom-nav {
-    right: 10px;
+    right: 13px;
 }
 
 .swiper-button-prev::after,
@@ -253,23 +293,30 @@
 }
 
 @media (min-width: 1025px) {
-    .swiper-wrapper {
-        display: flex;
-        transform: none;
-    }
+    /* .swiper-wrapper { */
+    /* display: flex; */
+    /* } */
 
     .swiper-slide {
-        width: 100%;
         flex: 1;
     }
 }
 
 /* advisory-section,success_stories_section */
 
+.advisory-section {
+    border-radius: 20px 20px 0 0;
+}
+
+.success_stories_section {
+    border-radius: 0 0 20px 20px;
+}
+
 .advisory-section,
 .success_stories_section {
     background-color: white;
     color: #302D27;
+    /* border-radius: 20px; */
 }
 
 .advisory-section {
@@ -285,9 +332,7 @@
 }
 
 .success_stories_section article {
-    /* background-image: linear-gradient(#DFDEDD), url('customer-stories.svg'); */
     background-image: url('customer-stories.svg');
-    background-size: auto 100%;
     background-color: #5f5c5741;
     background-repeat: no-repeat;
     border: 2px solid #DFDEDD;
@@ -295,6 +340,7 @@
     padding: 48px 44px 44px 48px;
     gap: 0px;
     justify-content: space-between;
+    background-size: cover;
 }
 
 .success_stories_section article h3 {
@@ -343,7 +389,7 @@
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    color: #333;
+    color: var(--orange);
 }
 
 .faq-section .faq-answer {
@@ -368,7 +414,7 @@
 
 @media (max-width: 1024px) {
     .custom-nav {
-        opacity: 1;
+        opacity: 1 !important;
     }
 
     .success_stories_section article {
@@ -393,8 +439,8 @@
         margin-bottom: 64px !important;
     }
 
-    .about-hero-content {
-        margin-top: 16px;
+    .hero-content {
+        margin-top: 48px;
     }
 
     .partners-section,
@@ -421,13 +467,39 @@
     }
 
     .circle_dash {
-        top: -14%;
-        left: 5%;
+        max-height: 242px !important;
+        max-width: 242px !important;
+        top: -10%;
+        right: calc(57% + 60px);
+        /* left: 0%; */
+    }
 
+    .outer-wrapper {
+        padding-left: 60px;
+        margin-top: 77px;
+    }
+
+    .partners-swiper {
+        padding: 0;
+    }
+
+    .swiper {
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
+
+    .breadcrumb a,
+    .breadcrumb span {
+        font-size: 11.1px;
+        letter-spacing: 1.99px;
+    }
+
+    #hero.about-hero {
+        margin-top: 41.5px;
+    }
+
     .about-hero-text {
         padding: 0 24px 34px 24px;
     }
@@ -495,19 +567,5 @@
 
     .partners-swiper .swiper-slide p span {
         font-size: 14px;
-    }
-
-    .circle_dash {
-        max-height: 242px !important;
-        max-width: 242px !important;
-        top: -10%;
-        /* left: 0%; */
-    }
-}
-
-@media (max-width: 480px) {
-    .circle_dash {
-        top: -13%;
-        left: 12%;
     }
 }
