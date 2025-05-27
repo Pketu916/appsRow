@@ -59,38 +59,62 @@ function changeHeroText() {
 }
 // changeHeroText();
 
-let swiperInstance;
+let swiperInstances = [];
 
-function initSwiper() {
+function initSwipers() {
   const isMobile = window.innerWidth <= 1024;
+  const isFade = window.innerWidth <= 530;
+  const newEffect = isFade ? "fade" : "slide";
 
-  if (isMobile && !swiperInstance) {
-    swiperInstance = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      loop: true,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
+  // Destroy old instances
+  swiperInstances.forEach((instance) => instance.destroy(true, true));
+  swiperInstances = [];
+
+  const swiperContainers = document.querySelectorAll(".mySwiper");
+
+  swiperContainers.forEach((swiperContainer, index) => {
+    if (isMobile) {
+      const swiper = new Swiper(swiperContainer, {
+        // loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        effect: "slide",
+        fadeEffect: isFade ? { crossFade: true } : undefined,
+        navigation: {
+          nextEl: swiperContainer.querySelector(".swiper-button-next"),
+          prevEl: swiperContainer.querySelector(".swiper-button-prev"),
         },
-      },
-    });
-  } else if (!isMobile && !swiperInstance) {
-    swiperInstance.destroy(true, true);
-    swiperInstance = undefined;
-  }
+        breakpoints: !isFade
+          ? {
+              530: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+            }
+          : {},
+      });
+
+      swiperInstances.push(swiper);
+    } else {
+      // Optional: clean styles if not mobile
+      const wrapper = swiperContainer.querySelector(".swiper-wrapper");
+      if (wrapper) wrapper.removeAttribute("style");
+    }
+  });
 }
 
-window.addEventListener("load", initSwiper);
+// Debounced resize
+let resizeTimeout;
 window.addEventListener("resize", () => {
-  clearTimeout(window.swiperResizeTimeout);
-  window.swiperResizeTimeout = setTimeout(initSwiper, 200); // debounce
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initSwipers, 150);
 });
 
+window.addEventListener("load", initSwipers);
+
+// FAQ accordion functionality
 
 const faqCards = document.querySelectorAll(".faq-card");
 

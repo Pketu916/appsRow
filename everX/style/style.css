@@ -648,17 +648,17 @@ span {
 
 /*  */
 
-.features>:first-child {
+.features .container>:first-child {
     display: flex;
     gap: 176px;
     padding-bottom: 0px;
 }
 
-.features>:first-child p {
+.features .container>:first-child p {
     padding-bottom: 16px;
 }
 
-.features>:first-child h2 {
+.features .container>:first-child h2 {
     white-space: nowrap;
 }
 
