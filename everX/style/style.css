@@ -68,6 +68,13 @@ h1 {
 
 }
 
+.heading-md {
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: -1.28px;
+    font-weight: 400;
+}
+
 .opacity-80 {
     opacity: 0.8;
 }
@@ -185,6 +192,7 @@ nav li a:hover {
     font-size: 19px;
     background: transparent;
     color: white;
+    cursor: pointer;
 }
 
 .relative {
@@ -951,6 +959,12 @@ footer div {
 
     .heading4 {
         font-size: 16px;
+    }
+
+    .heading-md {
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: -0.72px;
     }
 
     .flex-wrap {
