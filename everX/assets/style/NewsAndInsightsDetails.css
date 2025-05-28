@@ -1,0 +1,24 @@
+#hero.details-hero-section {
+    margin: 120px auto;
+    gap: 48px;
+}
+
+.details-hero-section figure {
+    overflow: hidden;
+}
+
+.details-hero-section figure img {
+    width: 100%;
+    height: auto
+}
+
+.search-input {
+    max-width: 660px;
+}
+
+@media (max-width:768px) {
+    #hero.details-hero-section {
+        margin: 41.5px 0 64px 0;
+        gap: 24px;
+    }
+}

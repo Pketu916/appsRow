@@ -332,7 +332,7 @@
 }
 
 .success_stories_section article {
-    background-image: url('customer-stories.svg');
+    background-image: url('../image/customer-stories.svg');
     background-color: #5f5c5741;
     background-repeat: no-repeat;
     border: 2px solid #DFDEDD;
