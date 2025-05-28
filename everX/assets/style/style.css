@@ -654,7 +654,7 @@ span {
     }
 }
 
-/*  */
+/* features section */
 
 .features .container>:first-child {
     display: flex;
@@ -765,7 +765,7 @@ span {
 }
 
 
-/*  */
+/* next step section  */
 
 .next-step {
     padding: 120px 50px;
@@ -786,7 +786,7 @@ span {
     margin: 0 auto;
 }
 
-/*  */
+/* get started section */
 
 .get-started {
     margin: 120px auto;
@@ -1057,6 +1057,11 @@ footer div {
         max-width: 470px;
         margin: 0 auto;
     }
+
+    .features .container>:first-child {
+        /* gap: 50px; */
+        gap: 8px;
+    }
 }
 
 @media (max-width:768px) {
@@ -1298,5 +1303,9 @@ footer div {
 
     .circle-image {
         left: 85%;
+    }
+
+    .features .container>:first-child {
+        flex-wrap: wrap;
     }
 }
