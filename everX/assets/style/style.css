@@ -40,6 +40,7 @@ body.no-scroll {
     background-color: var(--jat-gray);
     color: var(--white);
 }
+
 .jat_gray {
     color: var(--jat-gray);
 }
@@ -1177,7 +1178,7 @@ footer div {
             max-height 0.4s ease-in-out,
             opacity 0.4s ease,
             transform 0.4s ease;
-        background-image: url("./image/menu_bg.svg");
+        background-image: url("../image/menu_bg.svg");
         background-position: right bottom;
         background-repeat: no-repeat;
         background-size: 100% 53%;
