@@ -148,6 +148,7 @@
     bottom: 18px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .category-links {
