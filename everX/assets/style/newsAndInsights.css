@@ -27,7 +27,8 @@
 .hero-grid-2 figure,
 .hero-grid-2 figure {
     max-height: 774px;
-    max-width: 606px;
+    /* max-width: 606px; */
+    width: 100%;
 }
 
 .hero-grid-1 {
