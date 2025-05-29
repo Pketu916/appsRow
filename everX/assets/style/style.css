@@ -245,6 +245,10 @@ a {
     gap: 10px;
 }
 
+.gap-32 {
+    gap: 32px;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -833,7 +837,7 @@ footer h2 {
 footer .footer-list {
     display: flex;
     gap: 48px;
-    padding-top: 25px;
+    /* padding-top: 25px; */
     white-space: nowrap;
 }
 
@@ -844,8 +848,7 @@ footer .footer-list {
 
 .footer-content {
     padding-top: var(--size-md);
-    align-items: flex-start;
-
+    align-items: baseline;
 }
 
 footer .social {
@@ -1065,6 +1068,10 @@ footer div {
 }
 
 @media (max-width:768px) {
+    .gap-32 {
+        gap: 16px;
+    }
+
     h1 {
         font-size: 46px;
         letter-spacing: -1.84px;
@@ -1103,7 +1110,8 @@ footer div {
     }
 
     .footer-line {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
         align-items: flex-start;
     }
 

@@ -141,3 +141,16 @@ faqCards.forEach((card) => {
     }
   });
 });
+
+
+
+// header footer
+    async function includeHTML() {
+      const header = await fetch("header.html").then(res => res.text());
+      const footer = await fetch("footer.html").then(res => res.text());
+
+      document.getElementById("header").innerHTML = header;
+      document.getElementById("footer").innerHTML = footer;
+    }
+
+    includeHTML();
