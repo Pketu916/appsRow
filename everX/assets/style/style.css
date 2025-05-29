@@ -40,6 +40,9 @@ body.no-scroll {
     background-color: var(--jat-gray);
     color: var(--white);
 }
+.jat_gray {
+    color: var(--jat-gray);
+}
 
 .dark-gray {
     color: var(--dark-gray);
