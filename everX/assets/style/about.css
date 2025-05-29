@@ -416,6 +416,9 @@
     .custom-nav {
         opacity: 1 !important;
     }
+    .partners-content {
+        gap: 21px;
+    }
 
     .success_stories_section article {
         padding: 24px 28px 24px 24px;
