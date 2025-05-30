@@ -364,7 +364,6 @@ h1 {
 /* End of Typography */
 
 /* Header */
-/* header */
 
 nav {
     display: flex;
@@ -441,7 +440,6 @@ body {
 
 
 /* Hero Section */
-/* hero */
 
 #hero {
     margin-top: 112px;
@@ -520,7 +518,6 @@ h1 {
 
 
 /* Brand Section */
-/* brand-section */
 
 .brand-section {
     display: flex;
@@ -596,7 +593,6 @@ h1 {
 
 
 /* Blog Section */
-/* blog-section */
 
 .blog-section h2 {
     max-width: 765px;
@@ -744,7 +740,6 @@ span {
 /* End of Blog Section */
 
 /* Features Section */
-/* features section */
 
 .features .container>:first-child {
     display: flex;
@@ -859,7 +854,6 @@ span {
 
 
 /* Next Step Section */
-/* next step section  */
 
 .next-step {
     padding: 120px 50px;
@@ -882,7 +876,6 @@ span {
 /* End of Next Step Section */
 
 /* Get Started Section */
-/* get started section */
 
 .get-started {
     margin: 120px auto;
@@ -922,7 +915,6 @@ span {
 /* End of Get Started Section */
 
 /* Footer */
-/* footer */
 
 footer h2 {
     max-width: 674px;
