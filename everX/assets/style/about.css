@@ -73,7 +73,6 @@
 /* End of Hero Section */
 
 /* Section Header */
-/* section header */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -114,7 +113,6 @@
 /* End of Section Header */
 
 /* Approach Section */
-/* approach section */
 .approach-section .flex-between p {
     max-width: 742px;
     padding-right: 57px;
@@ -197,7 +195,6 @@
 /* End of Approach Section */
 
 /* Partners Section */
-/* partners section */
 
 .partners-section {
     margin: 120px 0;
@@ -313,7 +310,6 @@
 /* End of Partners Section */
 
 /* Advisory Board and Success Stories Section */
-/* advisory-section,success_stories_section */
 
 .advisory-section {
     border-radius: 20px 20px 0 0;
@@ -370,7 +366,6 @@
 /* End of Advisory Board and Success Stories Section */
 
 /* FAQ Section */
-/* faq */
 
 .faq-section {
     margin: 120px auto;
