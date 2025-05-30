@@ -1,3 +1,4 @@
+/* Hero Section */
 #hero {
     margin: 64px auto 120px auto;
 }
@@ -71,7 +72,9 @@
 .contactUs-form *:focus {
     outline-style: solid;
 }
+/* End of Hero Section */
 
+/* Trusted Brands Section */
 /* trusted-section */
 .trusted-section figure {
     overflow: hidden;
@@ -88,13 +91,17 @@
     height: 100%;
     border-radius: 20px;
 }
+/* End of Trusted Brands Section */
 
+/* Inventory Section */
 /* inventory-section */
 
 .inventory-section article {
     padding: 120px 0 !important;
 }
+/* End of Inventory Section */
 
+/* Media Queries */
 @media (max-width:768px) {
     #hero {
         margin: 41.5px auto 64px auto;
@@ -123,3 +130,4 @@
     padding: 64px 0 !important;
 }
 }
+/* End of Media Queries */
