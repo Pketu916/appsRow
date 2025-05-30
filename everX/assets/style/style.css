@@ -85,6 +85,9 @@ h1 {
 .opacity-80 {
     opacity: 0.8;
 }
+.underline{
+    text-decoration: underline;
+}
 
 .heading3 {
     font-size: var(--size-heading3);
@@ -911,6 +914,9 @@ span {
     letter-spacing: -2.9296px;
     font-weight: 400;
     line-height: 65.916px;
+    max-width: 490px;
+    min-width: 170px;
+    width: 100%;
 }
 /* End of Get Started Section */
 
@@ -1332,7 +1338,7 @@ footer div {
     }
 
     .line-track i {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .line-slider,
@@ -1342,7 +1348,6 @@ footer div {
 
     .logo-track img {
         height: 15px;
-        margin: 0 17px;
     }
 
     .blog-line {

@@ -63,15 +63,15 @@ function initSwipers() {
           onlyInViewport: true,
         },
 
-        slidesPerView: 1,
+        slidesPerView: "auto",
         effect: "coverflow",
         coverflowEffect: {
           rotate: 0,
           stretch: isMobile ? -20 : -30,
-          depth: isMobile ? 150 : 100,
+          depth: isMobile ? 200 : 100,
           modifier: 1,
           scale: 1,
-          slideShadows: false,
+          slideShadows: true,
         },
         // fadeEffect: isMobile ? { crossFade: true } : undefined,
         fadeEffect: true,

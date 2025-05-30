@@ -5,6 +5,7 @@
     gap: 8px;
     margin: 0;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .breadcrumb a,
@@ -13,6 +14,13 @@
     line-height: 120%;
     letter-spacing: 2.52px;
     font-weight: 500;
+    white-space: nowrap;
+}
+
+.breadcrumb span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+
 }
 
 /* End of Breadcrumb */
@@ -91,7 +99,7 @@
     position: absolute;
     animation: spin_circle 30s linear infinite;
     height: 370px !important;
-    width: 370px !important ;
+    width: 370px !important;
     top: -20%;
     left: 60px;
     overflow: hidden;
@@ -272,16 +280,15 @@
 }
 
 .outer-wrapper {
+    overflow: hidden;
     position: relative;
-    max-width: 1440px;
-    margin: 98px auto 0;
 }
 
 .partners-swiper {
+    position: relative;
     max-width: 1440px;
     padding: 0 50px;
-    margin: 0 auto;
-    overflow: hidden;
+    margin: 98px auto 0;
 }
 
 .swiper {
@@ -330,7 +337,6 @@
 
 .custom-nav {
     position: absolute;
-    top: 43% !important;
     width: 44px !important;
     background: white;
     transform: translateY(-50%);
@@ -357,9 +363,6 @@
 }
 
 @media (min-width: 1025px) {
-    /* .swiper-wrapper { */
-    /* display: flex; */
-    /* } */
 
     .swiper-slide {
         flex: 1;
@@ -439,7 +442,7 @@
 
 .faq-section .faq-card {
     border-radius: 20px;
-    padding: 16px;
+    padding: 32px 40px 32px 40px;
     transition: all 0.3s ease;
     position: relative;
     background-color: #5F5C5715;
@@ -542,24 +545,17 @@
     }
 
     .circle_dash {
-        max-height: 242px ;
-        max-width: 242px ;
+        max-height: 242px;
+        max-width: 242px;
         top: -10%;
-        left: 15%;
-    }
-
-    .outer-wrapper {
-        padding-left: 60px;
-        margin-top: 77px;
+        left: 12%;
     }
 
     .partners-swiper {
-        padding: 0;
+        padding: 0 60px 0 60px;
+        margin-top: 77px;
     }
 
-    .swiper {
-        width: 90%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -605,6 +601,13 @@
 
     }
 
+    .approach-card .card-index {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        right: auto;
+    }
+
     /* .approach-section .approach-card h3 {
         position: absolute;
         rotate: 0deg;
@@ -641,6 +644,27 @@
 
     .partners-swiper .swiper-slide p span {
         font-size: 14px;
+    }
+
+    .partners-swiper figure {
+        height: 320px;
+    }
+}
+
+@media (max-width:425px) {
+
+    .circle_dash {
+        max-height: 200px;
+        max-width: 200px;
+        top: -10%;
+        left: 20%;
+    }
+
+}
+
+@media (max-width:375px) {
+    .partners-swiper {
+        padding: 0 30px 0 30px;
     }
 }
 
