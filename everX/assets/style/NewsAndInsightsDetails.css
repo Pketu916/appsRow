@@ -1,5 +1,8 @@
+/* Import */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+/* End of Import */
 
+/* Hero Section */
 #hero.details-hero-section {
     margin: 120px auto;
     gap: 48px;
@@ -13,6 +16,7 @@
     width: 100%;
     height: auto
 }
+/* End of Hero Section */
 
 /* news details section */
 
@@ -70,6 +74,7 @@
 .px-16 {
     padding: 16px 0;
 }
+/* End of News Details Section */
 
 /* otherNewsAndInsights-section */
 
@@ -119,7 +124,9 @@
     flex-direction: column;
     gap: 16px;
 }
+/* End of Other News and Insights Section */
 
+/* Media Queries */
 @media (max-width:1024px) {
     .other-card-content {
         gap: 24px;
@@ -185,3 +192,4 @@
     }
 
 }
+/* End of Media Queries */
