@@ -14,6 +14,7 @@
     letter-spacing: 2.52px;
     font-weight: 500;
 }
+
 /* End of Breadcrumb */
 
 /* Hero Section */
@@ -70,6 +71,7 @@
 .about-hero {
     margin-bottom: 120px !important;
 }
+
 /* End of Hero Section */
 
 /* Section Header */
@@ -87,10 +89,9 @@
 
 .circle_dash {
     position: absolute;
-    top: 0%;
     animation: spin_circle 30s linear infinite;
-    width: 370px !important;
     height: 370px !important;
+    width: 370px !important ;
     top: -20%;
     left: 60px;
     overflow: hidden;
@@ -110,6 +111,7 @@
     stroke: #0D0D0D;
 
 }
+
 /* End of Section Header */
 
 /* Approach Section */
@@ -156,6 +158,23 @@
     filter: brightness(1.4);
 }
 
+/*.approach-section .approach-card figure.default {
+    max-width: 774px;
+    filter: brightness(1.4);
+    width: 774px;
+}
+
+.approach-section:hover .default {
+    max-width: 440px ;
+    width: auto !important;
+}
+
+.approach-section .approach-card figure.default:hover {
+    max-width: 774px ;
+    filter: brightness(1.4);
+    width: 774px !important;
+} */
+
 .approach-section .approach-card {
     position: relative;
 }
@@ -171,12 +190,38 @@
     z-index: 2;
 }
 
+.approach-card .card-index {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
 .approach-section .approach-card:hover h3 {
     rotate: 0deg;
     bottom: 27.3%;
     left: 6.2%;
     pointer-events: none;
 }
+
+/* .approach-section .default-text h3 {
+    rotate: 0deg;
+    bottom: 27.3%;
+    left: 6.2%;
+    pointer-events: none;
+}
+
+.approach-section .default-card:hover .default-text h3 {
+    rotate: 0deg;
+    bottom: 27.3%;
+    left: 6.2%;
+    pointer-events: none;
+}
+
+.approach-section:hover .default-text h3 {
+    rotate: -90deg;
+    bottom: 20.4%;
+    left: -15%;
+} */
 
 .approach-section .approach-card p {
     display: none;
@@ -192,6 +237,19 @@
 .approach-section .approach-card:hover p {
     display: inline;
 }
+
+/* .approach-section .approach-card:hover p {
+    display: inline !important;
+}
+
+.approach-section .default-card p {
+    display: inline ;
+}
+
+.approach-section:hover .default-card p {
+    display: none;
+} */
+
 /* End of Approach Section */
 
 /* Partners Section */
@@ -307,6 +365,7 @@
         flex: 1;
     }
 }
+
 /* End of Partners Section */
 
 /* Advisory Board and Success Stories Section */
@@ -363,6 +422,7 @@
 .success_stories_section article a {
     color: #302D27;
 }
+
 /* End of Advisory Board and Success Stories Section */
 
 /* FAQ Section */
@@ -419,6 +479,7 @@
 .faq-card.active button i {
     transform: rotate(135deg);
 }
+
 /* End of FAQ Section */
 
 /* Media Queries */
@@ -426,6 +487,7 @@
     .custom-nav {
         opacity: 1 !important;
     }
+
     .partners-content {
         gap: 21px;
     }
@@ -480,11 +542,10 @@
     }
 
     .circle_dash {
-        max-height: 242px !important;
-        max-width: 242px !important;
+        max-height: 242px ;
+        max-width: 242px ;
         top: -10%;
-        right: calc(57% + 60px);
-        /* left: 0%; */
+        left: 15%;
     }
 
     .outer-wrapper {
@@ -582,4 +643,5 @@
         font-size: 14px;
     }
 }
+
 /* End of Media Queries */
