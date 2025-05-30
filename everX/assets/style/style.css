@@ -263,6 +263,13 @@ hr {
     margin: 0 auto;
     /* color: var(--dark-gray); */
     opacity: 15%;
+    width: 100%;
+    color: white;
+    height: 1px;
+}
+
+footer hr {
+    display: none;
 }
 
 .font-size-48 {
@@ -425,7 +432,7 @@ h1 {
     color: var(--white);
     border: none;
     position: absolute;
-    top: 150%;
+    top: 170%;
     left: 1%;
     padding: 5px;
     transition: all 0.5s ease;
@@ -441,7 +448,7 @@ h1 {
 }
 
 
-/*  */
+/* brand-section */
 
 .brand-section {
     display: flex;
@@ -454,7 +461,7 @@ h1 {
     overflow: hidden;
     position: relative;
     width: 100%;
-    padding-top: 6px;
+    /* padding-top: 6px; */
 }
 
 .logo-slider {
@@ -488,7 +495,6 @@ h1 {
 
 .logo-container::before {
     left: 0;
-    /* background: linear-gradient(to left, transparent, #0D0D0D); */
     background: linear-gradient(to left, #0d0d0d00, #0D0D0D);
 }
 
@@ -881,8 +887,6 @@ footer div {
     gap: 16px;
 }
 
-
-
 @media (max-width:1024px) {
 
     body {
@@ -1099,9 +1103,11 @@ footer div {
     }
 
     footer .footer-list {
-        flex-direction: column;
-        gap: 8px;
+        /* flex-direction: column; */
+        gap: 20px;
         align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 8px;
     }
 
     .footer-list.flex-between li a {
@@ -1144,7 +1150,7 @@ footer div {
 
     .hero-btn {
         left: -4%;
-        bottom: -70%;
+        bottom: 0;
     }
 
     .logo-slider,
@@ -1220,6 +1226,8 @@ footer div {
     .brand-section {
         margin-bottom: 64px;
         margin-top: 0;
+        overflow-x: hidden !important;
+
     }
 
     .circle-blog-image {
@@ -1320,4 +1328,33 @@ footer div {
     .features .container>:first-child {
         flex-wrap: wrap;
     }
+
+    footer .footer-list {
+        flex-direction: column;
+    }
+        footer hr {
+        display: inline-block;
+    }
+
+}
+
+@media (max-width:350px) {
+
+    footer .footer-line p,
+    footer .footer-line div {
+        flex-direction: column;
+        row-gap: 8px;
+        white-space: wrap;
+        align-items: flex-start;
+    }
+
+    .footer-line {
+        flex-direction: column;
+    }
+
+    footer i {
+        display: none !important;
+    }
+
+
 }
