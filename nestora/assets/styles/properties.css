@@ -1,0 +1,42 @@
+.hero_content {
+    width: 100%;
+}
+
+#primary-hero .hero_content figure {
+    width: 100%;
+    position: relative;
+    max-height: 484px;
+    height: 100%;
+}
+
+.hero_content .experience_card {
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.row_rev {
+    flex-direction: row-reverse;
+}
+
+#property-wrapper .property_container {
+    margin: 190px 0;
+}
+
+#property-wrapper .property_heading .h2 {
+
+    text-wrap: nowrap;
+}
+
+#property-wrapper .row_rev {
+    .property_content {
+        text-align: right;
+    }
+
+    .property_footer {
+        align-items: flex-end;
+    }
+
+    .property_details {
+        align-items: flex-end;
+    }
+}

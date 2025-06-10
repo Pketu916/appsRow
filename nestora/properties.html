@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nestora</title>
+    <title>properties</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/properties.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -17,60 +18,10 @@
         <section id="primary-hero">
             <div class="container">
                 <div class="primary-hero-container">
-                    <h1 class="h1">Discover Premium Residences in Landmark Homes</h1>
-                    <figure><img src="./assets/image/hero.svg" alt="hero image">
-                        <button class="global_button"><span>+</span>explore Properties</button>
-                    </figure>
-                </div>
-            </div>
-            <div class="hero_arrow_container"><a href="#secondary_hero"><img src="./assets/image/arrow.svg"
-                        alt="arrow"></a></div>
-        </section>
-        <header class="text_white">
-            <div class="logo-container">
-                <figure><img src="./assets/image/nestora.svg" alt="hero image">
-                </figure>
-            </div>
-            <div class="hr">
-                <hr>
-                <span class="p-base">1997</span>
-            </div>
-            <nav>
-                <ul>
-                    <li class="p-base"><a href="#"> Properties</a></li>
-                    <li class="p-base"><a href="#"> Studio</a></li>
-                    <li class="p-base"><a href="#"> process</a></li>
-                    <a href="#"><button class="p-base global_button"><span>+</span>Add Property</button></a>
-                </ul>
-
-            </nav>
-        </header>
-        <section id="secondary_hero" class="secondary_hero_section text_white">
-            <div class="secondary_hero_container container">
-                <div class="header_wrapper">
-                    <button class="global_button"><span>+</span>explore Properties</button>
-                    <h2 class="h2-alt">Modern
-                        Homes. Prime Locations.</h2>
-                </div>
-                <div class="achievement">
-                    <p class="p-sm"><span class="block h2">99%</span>Customer satisfaction</p>
-                    <p class="p-sm"><span class="block h2">56+</span>Experience agents</p>
-                    <p class="p-sm"><span class="block h2">249</span>Total property sell</p>
-                </div>
-            </div>
-            <div class="video_wrapper"><video src="./assets/video/6034778_Man_House_1920x1080.mp4" autoplay></video>
-            </div>
-        </section>
-
-        <section class="discover_section">
-            <div class="container">
-                <div class="heading_wrapper">
-                    <h4 class="h4-alt">Discover stunning residential buildings and modern apartments designed for every
-                        lifestyle — whether you're buying, renting, or investing.</h4>
-                </div>
-                <div class="discover_section_content">
-                    <div>
-                        <figure><img src="./assets/image/discover.png" alt="discover"></figure>
+                    <h1 class="h1">Modern Homes. Prime Locations.</h1>
+                    <div class="hero_content">
+                        <figure><img src="./assets/image/hero.svg" alt="hero image">
+                        </figure>
                         <div class="experience_card">
                             <div>
                                 <h4 class="h4">25 Years</h4>
@@ -79,127 +30,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="explore_container">
-                        <button class="global_button"><span>+</span>explore Properties</button>
-                        <div class="explore_item">
-                            <div>
-                                <h6 class="h6">Sell</h6>
-                                <hr>
-                                <p class="p-sm">Speedily say has suitable disposal add boy.</p>
-                            </div>
-                            <div>
-                                <h6 class="h6">Buy</h6>
-                                <hr>
-                                <p class="p-sm">Passage its ten led removal Preference any astonished</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
+            <div class="hero_arrow_container"><a href="#secondary_hero"><img src="./assets/image/arrow.svg"
+                        alt="arrow"></a></div>
         </section>
-        <section class="latest_properties_section">
+        <section class="properties">
             <div class="container">
-                <div class="header_wrapper">
-                    <h2 class="h1">Latest Properties</h2>
-                    <ul id="property-list" class="p-md text-black">
-                        <!-- JS will populate the list -->
-                    </ul>
-                    <button class="global_button"><span>+</span> explore all Projects</button>
-                </div>
-
-                <div id="property-display" class="property_container">
-                    <!-- JS will render the first property here -->
-                </div>
+                <div class="heading_wrapper">Properties (11)</div>
+                <div id="property-wrapper"></div>
             </div>
         </section>
-        <section class="properties_slider">
-            <div class="container">
-                <div class="properties_slider_container">
-                    <div class="header_wrapper">
-                        <h2 class="h1">Mapped with Purpose, Built with Heart</h2>
-                    </div>
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie1.svg" alt="Slide 1" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie2.png" alt="Slide 2" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie3.png" alt="Slide 3" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie4.png" alt="Slide 4" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie5.png" alt="Slide 5" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie6.jpg" alt="Slide 6" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie7.jpg" alt="Slide 7" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie8.jpg" alt="Slide 8" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./assets/image/properties/propertie9.jpg" alt="Slide 9" /></figure>
-                                <div class="swiper_header">
-                                    <h2 class="h2">Los Angeles</h2>
-                                    <button class="p-base global_button"><span>+</span>Add Property</button>
-                                </div>
-                                <span class="plus_icon"><img src="./assets/image/plus.svg" alt="plus icon"></span>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="reviews_slider p-md">
             <div class="swiper reviews_mySwiper">
                 <div class="swiper-wrapper">
@@ -354,7 +195,7 @@
                 <div class="marquee-wrapper">
 
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper ">
                             <div class="logo-stage topleft">
                                 <img src="./assets/brands/brand1.svg" alt="Brand 1">
@@ -363,7 +204,7 @@
                     </div>
 
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper">
                             <div class="logo-stage lefttop">
                                 <img src="./assets/brands/brand2.svg" alt="Brand 1">
@@ -371,7 +212,7 @@
                         </div>
                     </div>
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper">
                             <div class="logo-stage righttobottom">
                                 <img src="./assets/brands/brand3.svg" alt="Brand 1">
@@ -379,7 +220,7 @@
                         </div>
                     </div>
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper">
                             <div class="logo-stage lefttobottom">
                                 <img src="./assets/brands/brand4.svg" alt="Brand 1">
@@ -387,7 +228,7 @@
                         </div>
                     </div>
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper">
                             <div class="logo-stage bottomtoright">
                                 <img src="./assets/brands/brand5.svg" alt="Brand 1">
@@ -395,7 +236,7 @@
                         </div>
                     </div>
                     <div class="marquee-section">
-                        
+
                         <div class="logo-stage-wrapper">
                             <div class="logo-stage righttotop">
                                 <img src="./assets/brands/brand1.svg" alt="Brand 1">
@@ -406,7 +247,6 @@
 
             </div>
         </section>
-
         <section class="subscribe_section">
             <div class="subscribe_section_container">
                 <div class="header_container">
@@ -495,13 +335,12 @@
         </div>
 
     </footer>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="./scripts/properties.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/properties.js"></script>
     <script src="./scripts/marquee.js"></script>
-
 
 </body>
 
