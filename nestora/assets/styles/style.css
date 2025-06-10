@@ -462,9 +462,11 @@ header nav button {
     width: 228px;
     padding: 24px 24px 28px 24px;
     background-color: var(--color-orange);
-    position: absolute;
     color: var(--color-white);
-    /* transform: translate(-52%, -53%); */
+}
+
+.discover_section_content .experience_card {
+    position: absolute;
     left: 5%;
     bottom: 0;
 }
@@ -515,7 +517,10 @@ header nav button {
 .latest_properties_section ul li:hover {
     list-style-type: square;
     text-decoration: line-through;
+}
 
+.active {
+    text-decoration: line-through;
 }
 
 .latest_properties_section li::marker {
@@ -709,6 +714,59 @@ address {
 
 /* reviews_slider end */
 
+/*  partnerships_section start */
+
+.partnerships_section .header_wrapper p {
+    text-align: center;
+}
+
+.marquee-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+
+    .marquee-section {
+        text-align: center;
+        padding-top: 32px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 10%);
+        width: 100%;
+    }
+
+    .logo-stage-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto;
+        width: 142px;
+    }
+
+    .logo-stage {
+        position: relative;
+        width: 100%;
+        height: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+
+    .logo-stage img {
+        position: absolute;
+        height: 50px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0;
+        transform: translateY(-100%) scale(0.8);
+    }
+
+
+}
+
+/*  partnerships_section end */
+
 /* partnerships_section start */
 
 .partnerships_section {
@@ -802,6 +860,22 @@ address {
 .subscribe_section_container form button {
     margin-top: 32px;
     width: min-content;
+}
+
+.subscribe_section .experience_card_container {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    transform: translate(-50%, -30px);
+    right: 0;
+    top: 0;
+}
+
+.subscribe_section .experience_card_container p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* subscribe_section end */
@@ -1080,6 +1154,9 @@ footer {
         height: 150px;
         width: 166px;
         padding: 22px;
+    }
+
+    .discover_section_content .experience_card {
         left: 0;
         bottom: 0;
     }
