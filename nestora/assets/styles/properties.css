@@ -22,6 +22,10 @@
     margin: 190px 0;
 }
 
+.heading_wrapper .heading_wrapper {
+    text-align: center;
+}
+
 #property-wrapper .property_heading .h2 {
 
     text-wrap: nowrap;
