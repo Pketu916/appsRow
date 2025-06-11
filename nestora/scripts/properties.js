@@ -145,9 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <address class="p-md">${paragraph.address}</address>
         <p class="p-md">
           <span>${paragraph.size}</span>
-          <span class="opacity">/</span>
+          <span class="opacity-10 p-xl">/</span>
           <span>${paragraph.bath}</span>
-          <span class="opacity">/</span>
+          <span class="opacity-10 p-xl">/</span>
           <span>${paragraph.bed}</span>
         </p>
       </div>
@@ -187,8 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ",<br>"
           )}</address>
           <p class="p-md">
-            <span>${property.size}</span><span class="opacity">/</span>
-            <span>${property.bath}</span><span class="opacity">/</span>
+            <span>${property.size}</span><span class="opacity-10 p-xl">/</span>
+            <span>${property.bath}</span><span class="opacity-10 p-xl">/</span>
             <span>${property.bed}</span>
           </p>
         </div>

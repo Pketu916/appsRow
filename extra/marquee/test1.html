@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       const hoverCircle = document.querySelector('.custom-cursor');
+    const marqueeTexts = document.querySelectorAll('.marquee-text');
+    const marqueeSection = document.querySelector('.marquee-section');
+    const marqueeTrack = document.querySelector('.marquee-track');
+
+    function setCursorSize(widthVW, heightVW) {
+        gsap.to(hoverCircle, {
+            duration: 0.2,
+            width: `${widthVW}vw`,
+            height: `${heightVW}vw`,
+            ease: 'power3.out',
+        });
+    }
+
+    function setCursorBackground(url) {
+        gsap.to(hoverCircle, {
+            duration: 0.1,
+            opacity: 0,
+            ease: 'power2.out',
+            onComplete: () => {
+                if (url) {
+                    hoverCircle.style.backgroundImage = url ? `url(${url})` : 'none';
+                } else {
+                    hoverCircle.style.backgroundImage = 'none';
+                }
+                gsap.to(hoverCircle, {
+                    duration: 0.3,
+                    opacity: 1,
+                    ease: 'power2.in',
+                });
+            },
+        });
+    }
+
+    // // Helper: Reset all marquee-text colors
+    // function resetMarqueeTextColors() {
+    //     marqueeTexts.forEach(t => {
+    //         t.style.color = '';
+    //     });
+    // }
+
+    // Show custom cursor large size by default when inside marquee section
+    marqueeSection.addEventListener('mouseenter', () => {
+        marqueeSection.classList.add('default-cursor');
+        gsap.to(hoverCircle, {
+            duration: 0.2,
+            opacity: 1,
+            ease: 'power3.out',
+        });
+        hoverCircle.classList.remove('active');
+        setCursorSize(2.5, 2.5);
+        setCursorBackground(null);
+    });
+
+    marqueeSection.addEventListener('mouseleave', () => {
+        marqueeSection.classList.remove('default-cursor');
+        gsap.to(hoverCircle, {
+            duration: 0.2,
+            opacity: 0,
+            ease: 'power3.out',
+            onComplete: () => {
+                hoverCircle.style.backgroundImage = 'none';
+                hoverCircle.classList.remove('active');
+                // resetMarqueeTextColors();
+            },
+        });
+    });
+
+    marqueeTexts.forEach(text => {
+        text.addEventListener('mouseenter', () => {
+            const imgUrl = text.dataset.img;
+            hoverCircle.classList.add('active');
+            setCursorSize(40, 40);
+            setCursorBackground(imgUrl);
+            marqueeTrack.style.animationPlayState = 'paused';
+
+            // resetMarqueeTextColors();
+            // text.style.color = 'white';
+        });
+
+        text.addEventListener('mouseleave', () => {
+            hoverCircle.classList.remove('active');
+            setCursorSize(2.5, 2.5);
+            setCursorBackground(null);
+            marqueeTrack.style.animationPlayState = 'running';
+
+            // resetMarqueeTextColors();
+        });
+    });
+
+    marqueeTrack.addEventListener('mouseenter', () => {
+        // Optional default image or leave empty
+        const defaultImg = 'default-image-url.jpg';
+        hoverCircle.classList.add('active');
+        setCursorSize(40, 40);
+        setCursorBackground(defaultImg);
+        marqueeTrack.style.animationPlayState = 'running'; // don't pause here
+    });
+
+    marqueeTrack.addEventListener('mouseleave', () => {
+        hoverCircle.classList.remove('active');
+        setCursorSize(2.5, 2.5);
+        setCursorBackground(null);
+        marqueeTrack.style.animationPlayState = 'running';
+    });
+
+    marqueeSection.addEventListener('mousemove', (e) => {
+        const x = e.clientX - hoverCircle.offsetWidth / 2;
+        const y = e.clientY - hoverCircle.offsetHeight / 2;
+        gsap.to(hoverCircle, {
+            duration: 0,
+            x: x,
+            y: y,
+            ease: 'power3.out',
+        });
+    });
+
+
+ 
+
+    </script>
+    <style>
+        /* Show default cursor small inside marquee section */
+
+        .marquee-section {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            cursor: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .m.marquee-section.default-cursor {
+            cursor: default;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: scrollMarquee 30s linear infinite;
+            gap: 5vw;
+            /* font-size: 4vw;
+    font-weight: bold; */
+            color: var(--black);
+            padding: 5vw;
+            align-items: center;
+        }
+
+        .marquee-text {
+            position: relative;
+            cursor: pointer;
+            padding: 0 1vw;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40vw;
+            /* large by default */
+            height: 40vw;
+            /* large by default */
+            pointer-events: none;
+            border-radius: 50%;
+            z-index: 1000;
+            opacity: 0;
+            background-color: var(--dot);
+            /* default fallback */
+            transition: opacity 0.3s ease, transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+            mix-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+        }
+
+        .custom-cursor.active {
+            width: 15vw;
+            height: 15vw;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @keyframes scrollMarquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .mark-line {
+            width: 2vw;
+            height: 5vw;
+        }
+
+        .text-hover-effect {
+            color: transparent;
+            -webkit-text-stroke: 0.25vw white;
+            background: linear-gradient(90deg, white 0%, #000000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-text heading3  regular lh-46 " data-img="assets/images/at-syama-img1.png">SS 26</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/seasonal-img1.png">Autumn/Winter
+                25</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/at-syama-img1.png">Spring Summer
+                25</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/seasonal-img1.png">Fall Winter
+                24</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/at-syama-img1.png">Spring/Summer
+                2024</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <!-- Repeat for continuous effect -->
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/at-syama-img1.png">SS 26</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/seasonal-img1.png">Autumn/Winter
+                25</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/at-syama-img1.png">Spring Summer
+                25</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/seasonal-img1.png">Fall Winter
+                24</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+            <span class="marquee-text heading3  regular lh-46" data-img="assets/images/at-syama-img1.png">Spring/Summer
+                2024</span>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+                alt="Static Landscape" />
+
+
+        </div>
+    </section>
+    <div class="custom-cursor"></div>
+
+</body>
+
+</html>

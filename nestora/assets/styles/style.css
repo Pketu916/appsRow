@@ -248,7 +248,7 @@ hr {
     opacity: 10%;
 }
 
-.opacity {
+.opacity-10 {
     opacity: 10%;
 }
 
@@ -281,6 +281,11 @@ header nav button {
     padding: 0 !important;
 }
 
+.header{
+    position: absolute;
+    top: 40px;
+}
+
 /* header end */
 
 /* primary-hero start */
@@ -291,7 +296,7 @@ header nav button {
 
 #primary-hero h1 {
     max-width: 880px;
-    padding-top: 110px;
+    padding-top: 150px;
 }
 
 #primary-hero figure {
