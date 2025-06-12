@@ -4,7 +4,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 155px 0 190px 0;
+    /* margin: 155px 0 190px 0; */
+    margin: 68px 0 190px 0;
     position: relative;
     padding: 0 40px;
     overflow: hidden;
