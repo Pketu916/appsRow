@@ -1,0 +1,149 @@
+   form {
+       width: 100%;
+       background: transparent;
+       display: flex;
+       flex-direction: column;
+       gap: 32px;
+   }
+
+   form * {
+       background: transparent;
+       outline: none;
+   }
+
+   form .section {
+       display: flex;
+       flex-direction: column;
+       gap: 32px;
+   }
+
+   .grid {
+       display: grid;
+       grid-template-columns: repeat(2, minmax(200px, 1fr));
+       gap: 20px;
+   }
+
+   input,
+   select,
+   textarea {
+       width: 100%;
+       /* padding: 12px; */
+       border: none;
+       /* border-radius: 4px; */
+       box-sizing: border-box;
+       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+       padding-bottom: 16px;
+   }
+
+   .image-upload {
+       display: flex;
+       gap: 10px;
+   }
+
+   .image-upload input[type="file"] {
+       display: none;
+   }
+
+   .upload-box {
+       border: 2px dashed rgba(0, 0, 0, 0.1);
+       border-radius: 6px;
+       padding: 20px;
+       width: 100%;
+       text-align: center;
+       cursor: pointer;
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
+   }
+
+   .upload-box i {
+       margin-bottom: 16px;
+   }
+
+   .uploaded-image {
+       width: 100%;
+       max-height: 271px;
+       object-fit: cover;
+       border-radius: 6px;
+   }
+
+   .checkbox-group {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+       gap: 10px;
+   }
+
+   .checkbox-group label {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+       padding-bottom: 14px;
+   }
+
+   .checkbox-group label input {
+       width: 13px;
+   }
+
+   button {
+       background-color: #ff5c00;
+       color: #fff;
+       padding: 12px 20px;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+   }
+
+   button:hover {
+       background-color: #e14a00;
+   }
+
+   form button.global_button {
+       width: min-content;
+   }
+
+
+
+   /* enquire now */
+
+   .map-section {
+       width: 100%;
+       height: 403px;
+       background: url('../image/map.png') no-repeat center center;
+       background-size: cover;
+       mix-blend-mode: luminosity;
+   }
+
+   .info-section {
+       padding-top: 32px;
+       display: flex;
+       flex-direction: column;
+       gap: 35px;
+   }
+
+   .info-content {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       gap: 10px;
+   }
+
+   .info-row {
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       width: 100%;
+   }
+
+   .info-box {
+       flex: 1;
+   }
+
+   .text-right {
+       text-align: right;
+   }
+
+   .text-center {
+       text-align: center;
+   }

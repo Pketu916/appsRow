@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add property</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/detail.css">
+    <link rel="stylesheet" href="./assets/styles/add_property.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="text_white header">
+        <div class="logo-container">
+            <img src="./assets/image/nestora.svg" alt="hero image">
+        </div>
+        <div class="hr">
+            <hr>
+            <span class="p-base">1997</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="p-base"><a href="#"> Properties</a></li>
+                <li class="p-base"><a href="#"> Studio</a></li>
+                <li class="p-base"><a href="#"> process</a></li>
+                <a href="#"><button class="p-base global_button"><span>+</span>Add Property</button></a>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section class="detail_section text-black add_property_section">
+            <div class="detail_wrapper">
+                <div class="header_wrapper">
+                    <h1 class="h1">+Add</h1>
+                    <span class="year p-base">2024</span>
+                    <hr>
+                    <button class="global_button"><span>+</span>Enquire Now</button>
+                </div>
+                <div class="container">
+                    <form>
+                        <div class="section">
+                            <div class="h4">Personal Information</div>
+                            <div class="grid">
+                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Last Name">
+                                <input type="email" placeholder="Email Address">
+                                <input type="text" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="h4">Property Information</div>
+
+                            <div class="h6">Property Basic Info</div>
+                            <div class="grid">
+                                <input type="text" placeholder="Property Name">
+                                <input type="text" placeholder="Property Type">
+                                <input type="text" placeholder="Property Status">
+                                <input type="text" placeholder="Property Price">
+                            </div>
+
+                            <div class="h6">Property Location</div>
+                            <div class="grid">
+                                <select>
+                                    <option>Choose Country</option>
+                                    <option value="india">india</option>
+                                </select>
+                                <select>
+                                    <option>Choose State</option>
+                                </select>
+                                <input type="text" placeholder="City">
+                                <input type="text" placeholder="Zip Code">
+                                <input type="text" placeholder="Address">
+                                <input type="text" placeholder="Latitude">
+                                <input type="text" placeholder="Longitude">
+                            </div>
+
+                            <div class="h6">Property Details</div>
+                            <div class="grid">
+                                <input type="text" placeholder="Sqft Area">
+                                <input type="number" placeholder="Bathroom">
+                                <input type="number" placeholder="Bedroom">
+                                <input type="text" placeholder="Parking">
+                            </div>
+
+                            <div class="h6">Upload Images</div>
+                            <div class="image-upload">
+                                <label class="upload-box">
+                                    <i><svg width="65" height="53" viewBox="0 0 65 53" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.5 27.5864L17.0518 11.0347L39.6724 33.6553L50.1553 23.1724L64.5 37.5171V0H0.5V27.5864ZM40.2241 11.0347C42.0522 11.0347 43.5342 12.5166 43.5342 14.3447C43.5342 16.1728 42.0522 17.6553 40.2241 17.6553C38.396 17.6553 36.9136 16.1728 36.9136 14.3447C36.9136 12.5166 38.396 11.0347 40.2241 11.0347Z"
+                                                fill="#FFE2D3" />
+                                            <path
+                                                d="M39.6719 33.6548L58.9824 52.9648H64.4995V37.5166L50.1548 23.1719L39.6719 33.6548Z"
+                                                fill="#FFA473" />
+                                            <path
+                                                d="M43.5347 14.3413C43.5347 16.1694 42.0527 17.6519 40.2246 17.6519C38.3965 17.6519 36.9141 16.1694 36.9141 14.3413C36.9141 12.5132 38.3965 11.0312 40.2246 11.0312C42.0527 11.0312 43.5347 12.5132 43.5347 14.3413Z"
+                                                fill="#FF6614" />
+                                            <path
+                                                d="M17.0518 11.0312L0.5 27.583V52.9619H58.9829L39.6724 33.6519L17.0518 11.0312Z"
+                                                fill="#FF6614" />
+                                            <path
+                                                d="M40.2261 18.7573C37.7886 18.7573 35.8125 16.7812 35.8125 14.3433C35.8125 11.9058 37.7886 9.92969 40.2261 9.92969C42.6636 9.92969 44.6396 11.9058 44.6396 14.3433C44.6396 16.7812 42.6636 18.7573 40.2261 18.7573ZM40.2261 12.1362C39.0073 12.1362 38.019 13.1245 38.019 14.3433C38.019 15.562 39.0073 16.5503 40.2261 16.5503C41.4448 16.5503 42.4331 15.562 42.4331 14.3433C42.4331 13.1245 41.4448 12.1362 40.2261 12.1362Z"
+                                                fill="#FF6614" />
+                                        </svg>
+                                    </i>
+                                    <span> Drop your image here, or <span style="color:orange;">browse</span></span>
+                                    <small>Supports: JPG, JPEG2000, PNG</small>
+                                    <input type="file" id="fileInput" multiple accept="image/*">
+                                </label>
+                                <div id="preview"></div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="h6">Amenities</div>
+                            <div class="checkbox-group text-base">
+                                <label><input type="checkbox"> Kitchen</label>
+                                <label><input type="checkbox"> Back yard</label>
+                                <label><input type="checkbox"> Elevator</label>
+                                <label><input type="checkbox"> Security cameras</label>
+                                <label><input type="checkbox"> Laundry</label>
+                                <label><input type="checkbox"> Gym</label>
+                                <label><input type="checkbox"> TV</label>
+                                <label><input type="checkbox"> Wifi</label>
+                                <label><input type="checkbox"> Balcony</label>
+                                <label><input type="checkbox"> Projector Room</label>
+                                <label><input type="checkbox"> Pool</label>
+                                <label><input type="checkbox"> Refrigerator</label>
+                                <label><input type="checkbox"> Outdoor Shower</label>
+                                <label><input type="checkbox"> Alarm System</label>
+                                <label><input type="checkbox"> Air Conditioning</label>
+                                <label><input type="checkbox"> Window Covering</label>
+                            </div>
+                        </div>
+
+                        <button class="global_button"><span>+</span>Submit Property</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe_section">
+            <div class="subscribe_section_container">
+                <div class="header_container">
+                    <h2 class="h2-alt">Stay informed about upcoming listings that match your budget.</h2>
+                    <p class="p-md">Subscribe to be the first to know about my new listings!</p>
+                    <div class="experience_card_container">
+                        <div class="experience_card">
+                            <div>
+                                <h4 class="h4">25 Years</h4>
+                                <p class="p-sm">Of successful experience in trading</p>
+                                <img src="./assets/image/plus.svg" alt="plus Icon">
+                            </div>
+                        </div>
+                        <p>I want to
+                            <button class="global_button"><span>+</span>BUY</button>
+                            <button class="global_button"><span>+</span>SELL</button>
+                        </p>
+                    </div>
+                </div>
+                <form class="p-md">
+                    <input type="text" placeholder="Email" type="email" name="email" required />
+                    <select name="nudge" required>
+                        <option value="">Select budget</option>
+                        <option value="100,000">$100,000</option>
+                        <option value="200,000">$200,000</option>
+                        <option value="300,000">$300,000</option>
+                    </select>
+                    <button class="global_button"><span>+</span>submit</button>
+                </form>
+            </div>
+            <figure><img src="./assets/image/formBg.png" alt="background image"></figure>
+        </section>
+
+        <section class="get_started_section text-black">
+            <h2 class="h2-alt">Let’s Move Something Great Together</h2>
+            <span><img src="./assets/image/plusIcon.svg" alt=""></span>
+            <div class="get_started_container">
+                <button class="global_button"><span>+</span>Get Started Today</button>
+                <p class="p-md">Find your next home or connect with buyers who are already searching. Whether you're
+                    moving in or moving on, we’re here to make it effortless.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column order_2">
+                    <ul class="p-md">
+                        <li><strong>PROPERTIES</strong></li>
+                        <li>98 Hug × 26 Hug</li>
+                        <li>PROCESS</li>
+                        <li>+ADD PROPERTY</li>
+                        <li class="p-sm lowercase">Privacy Policy / Terms and Conditions</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column p-md order_3">
+                    <p>(info)</p>
+                    <p>P: +44 (445) 578 996</p>
+                    <p>E: example@gmail.com</p>
+                    <p>A: 101 Days Rd, Grange QLD 4051</p>
+                </div>
+
+                <div class="footer-column footer-heading ">
+                    <h3 class="h2-alt">Built for Buyers.<br>Sent to You.</h3>
+                    <p class="p-base">
+                        Meant balls it if up doubt small purse. Required his you put the outlived answered position.
+                    </p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="example@gmail.com" />
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_line_container">
+
+                <div class="footer-bottom">
+                    <figure><img src="./assets/image/nestora.svg" alt="logo"></figure>
+                    <div class="hr">
+                        <hr>
+                        <span class="p-base">1997</span>
+                    </div>
+                </div>
+                <p class="p-sm copyright">© Copyright 2025 NESTORA all rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/properties.js"></script>
+    <script src="./scripts/marquee.js"></script>
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const preview = document.getElementById('preview');
+
+        fileInput.addEventListener('change', function () {
+            preview.innerHTML = '';
+            for (const file of fileInput.files) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'uploaded-image';
+                    preview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+
+</html>

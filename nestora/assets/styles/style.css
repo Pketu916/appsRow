@@ -220,10 +220,14 @@ a {
 
 .logo-container {
     display: flex;
-    max-width: 157px;
     justify-content: space-between;
-    width: 100%;
+    /* width: 100%; */
     align-items: center;
+}
+
+.logo-container img {
+    width: 157px;
+    height: 25px;
 }
 
 header {
@@ -281,9 +285,20 @@ header nav button {
     padding: 0 !important;
 }
 
-.header{
-    position: absolute;
-    top: 40px;
+/* .header {
+    transform: translateY(40px);
+}
+
+.margin-top-155 {
+    margin-top: 155px;
+} */
+
+/* .transform-53 {
+    transform: translateY(-53px);
+} */
+
+.relative {
+    position: relative;
 }
 
 /* header end */
@@ -957,7 +972,7 @@ footer {
     .footer-form {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 5px;
         padding-top: 22px;
     }
@@ -1092,6 +1107,11 @@ footer {
 
     .container {
         padding: 0 15px;
+    }
+
+    .logo-container img{
+        height: 12px;
+        width: 80px;
     }
 
     .hero_arrow_container {
