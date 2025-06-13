@@ -32,6 +32,14 @@
        outline: none;
    }
 
+   select {
+       appearance: none;
+       background-image: url(../image/plusBlack.svg);
+       background-repeat: no-repeat;
+       background-position: right 20px center;
+       transition: all 0.5s ease;
+   }
+
    .image-upload {
        display: flex;
        gap: 10px;
@@ -160,8 +168,9 @@
            line-height: 32.5px;
            letter-spacing: -0.2px;
        }
-       .info-row .info-box{
-             font-size: 14.4px;
+
+       .info-row .info-box {
+           font-size: 14.4px;
            line-height: 23px;
            letter-spacing: 0;
        }

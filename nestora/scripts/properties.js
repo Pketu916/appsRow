@@ -174,7 +174,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const contentDiv = document.createElement("div");
       contentDiv.className = `property_container ${groupClass}`;
       contentDiv.innerHTML = `
-      <figure><img src="${property.image}" alt="property"></figure>
+      <figure class="relative"><img src="${property.image}" alt="property">
+         <a class="show" href="./detail.html"><button class="global_button "><span>+</span>explore Projects</button></a>
+      </figure>
       <div class="property_content">
         <div class="property_heading">
           <p class="p-md">${property.year}</p>
@@ -194,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="property_footer">
           <span class="h6">${property.price}</span>
-          <button class="global_button"><span>+</span>explore all Projects</button>
+          <a class="none" href="./detail.html"><button class="global_button none"><span>+</span>explore Projects</button></a>
         </div>
       </div>
     `;

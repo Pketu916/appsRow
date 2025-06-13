@@ -54,16 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // },
   });
 
-  const selectEl = document.querySelector(
-    ".subscribe_section_container select"
-  );
+  const selectEls = document.getElementsByTagName("select");
 
-  function updateIcon(eventType) {
+  function updateIcon(selectEl, eventType) {
     if (eventType === "mousedown") {
       selectEl.style.backgroundImage = 'url("./assets/image/arrow.svg")';
     } else if (eventType === "change" || eventType === "blur") {
-      selectEl.style.backgroundImage = 'url("./assets/image/plus.svg")';
+      selectEl.style.backgroundImage = 'url("./assets/image/plusBlack.svg")';
     }
+  }
+
+  for (let i = 0; i < selectEls.length; i++) {
+    const el = selectEls[i];
+
+    el.addEventListener("mousedown", () => updateIcon(el, "mousedown"));
+    el.addEventListener("change", () => updateIcon(el, "change"));
+    el.addEventListener("blur", () => updateIcon(el, "blur"));
   }
 
   selectEl.addEventListener("mousedown", () => updateIcon("mousedown")); // fires before click/focus
