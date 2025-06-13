@@ -7,6 +7,7 @@
     <title>add property</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/detail.css">
+    <link rel="shortcut icon" href="./assets/image/nestora.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/add_property.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -16,23 +17,29 @@
 </head>
 
 <body>
-    <header class="text_white header">
+    <header class="text_white">
         <div class="logo-container">
-            <img src="./assets/image/nestora.svg" alt="hero image">
+            <a href="./index.html">
+                <figure><img src="./assets/image/nestora.svg" alt="hero image">
+                </figure>
+            </a>
         </div>
         <div class="hr">
             <hr>
             <span class="p-base">1997</span>
         </div>
-        <nav>
+        <nav id="nav-menu">
             <ul>
-                <li class="p-base"><a href="#"> Properties</a></li>
-                <li class="p-base"><a href="#"> Studio</a></li>
-                <li class="p-base"><a href="#"> process</a></li>
-                <a href="#"><button class="p-base global_button"><span>+</span>Add Property</button></a>
+                <li class="p-base"><a class="nav-link" href="./properties.html"> Properties</a></li>
+                <li class="p-base"><a class="nav-link" href="./studio.html"> Studio</a></li>
+                <li class="p-base"><a class="nav-link" href="#"> process</a></li>
+                <a class="nav-link" href="./add_property.html"><button class="p-base global_button"><span>+</span>Add
+                        Property</button></a>
             </ul>
 
         </nav>
+        <button class="global_button" id="hamburger"><span>+</span>menu</button>
+
     </header>
     <main>
         <section class="detail_section text-black add_property_section">
@@ -239,7 +246,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/script.js"></script>
     <script src="./scripts/properties.js"></script>
     <script src="./scripts/marquee.js"></script>
     <script>

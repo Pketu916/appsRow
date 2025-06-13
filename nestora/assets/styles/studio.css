@@ -15,9 +15,12 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(50%, 50%);
 }
 
+.studio_container .studio_content {
+    padding: 0 10% 5%;
+    position: relative;
+}
 
 /* studio section end */
 
@@ -25,7 +28,7 @@
 /* architecture section start */
 
 .architecture_section {
-    margin-top: 300px;
+    margin-top: 190px;
 }
 
 .architecture_section .header_wrapper {
@@ -72,3 +75,41 @@
 }
 
 /* architecture section end */
+
+
+@media (max-width: 768px) {
+
+    .studio_container .studio_content {
+        padding: 0;
+        position: unset;
+    }
+
+    .studio_section .studio_img {
+        transform: translate(0, -10px);
+    }
+
+    .studio_container .experience_card {
+        left: 0;
+        bottom: 0;
+        transform: translate(0, -10px);
+    }
+
+    .architecture_section {
+        margin-top: 54px;
+    }
+
+    .architecture_section .header_wrapper {
+        margin-left: 0;
+    }
+
+    .architecture_section .architecture_container {
+        flex-direction: column;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .architecture_section .small_img_container p {
+        max-width: 360px;
+        padding: 24px 0 7px 0;
+    }
+}

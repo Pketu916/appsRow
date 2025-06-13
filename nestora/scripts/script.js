@@ -54,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // },
   });
 
-  const selectEl = document.getElementsByTagName("select")[0];
+  const selectEl = document.querySelector(
+    ".subscribe_section_container select"
+  );
 
   function updateIcon(eventType) {
     if (eventType === "mousedown") {
@@ -101,3 +103,63 @@ document.addEventListener("DOMContentLoaded", function () {
     ul.scrollLeft = scrollLeft - walk;
   });
 });
+
+// header
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("activeNav");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+    navMenu.classList.remove("activeNav");
+  });
+});
+
+// achievement
+
+function animateValue(el, end, suffix = "", duration = 2000) {
+  let start = 0;
+  const frameRate = 1000 / 60; // 60fps
+  const totalFrames = duration / frameRate;
+  const increment = end / totalFrames;
+
+  const counter = setInterval(() => {
+    start += increment;
+    if (start >= end) {
+      el.innerText = Math.round(end) + suffix;
+      clearInterval(counter);
+    } else {
+      el.innerText = Math.floor(start) + suffix;
+    }
+  }, frameRate);
+}
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll(".h2");
+        counters.forEach((el) => {
+          const target = parseInt(el.getAttribute("data-target"));
+          const text = el.textContent.trim();
+          const suffix = text.replace(/[0-9]/g, "").trim();
+          animateValue(el, target, suffix);
+        });
+        observer.unobserve(entry.target); // Trigger only once
+      }
+    });
+  },
+  { threshold: 0.5 }
+); // Adjust threshold if needed
+
+const achievementSection = document.querySelector(".achievement");
+if (achievementSection) {
+  observer.observe(achievementSection);
+}
