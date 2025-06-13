@@ -1,4 +1,4 @@
-   form {
+   .add_property_section form {
        width: 100%;
        background: transparent;
        display: flex;
@@ -6,12 +6,7 @@
        gap: 32px;
    }
 
-   form * {
-       background: transparent;
-       outline: none;
-   }
-
-   form .section {
+   .add_property_section form .section {
        display: flex;
        flex-direction: column;
        gap: 32px;
@@ -19,7 +14,7 @@
 
    .grid {
        display: grid;
-       grid-template-columns: repeat(2, minmax(200px, 1fr));
+       grid-template-columns: repeat(2, minmax(140px, 1fr));
        gap: 20px;
    }
 
@@ -33,6 +28,8 @@
        box-sizing: border-box;
        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
        padding-bottom: 16px;
+       background: transparent;
+       outline: none;
    }
 
    .image-upload {
@@ -98,7 +95,7 @@
        background-color: #e14a00;
    }
 
-   form button.global_button {
+   .add_property_section form button.global_button {
        width: min-content;
    }
 
@@ -146,4 +143,45 @@
 
    .text-center {
        text-align: center;
+   }
+
+   @media (max-width:768px) {
+
+       .checkbox-group {
+           grid-template-columns: repeat(2, auto);
+       }
+
+       .info-row .info-box br {
+           display: none;
+       }
+
+       .info-row .info-box.p-xl {
+           font-size: 25.5px;
+           line-height: 32.5px;
+           letter-spacing: -0.2px;
+       }
+       .info-row .info-box{
+             font-size: 14.4px;
+           line-height: 23px;
+           letter-spacing: 0;
+       }
+
+       .info-row {
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 16px;
+       }
+   }
+
+   @media (max-width:425px) {
+
+       .checkbox-group {
+           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+       }
+
+       .grid {
+           display: grid;
+           grid-template-columns: auto;
+           gap: 20px;
+       }
    }
