@@ -31,6 +31,10 @@
     text-wrap: nowrap;
 }
 
+#property-wrapper .show {
+    display: none;
+}
+
 #property-wrapper .row_rev {
     .property_content {
         text-align: right;
@@ -83,4 +87,21 @@
         gap: 16px;
     }
 
+    #property-wrapper .none {
+        display: none;
+    }
+
+    #property-wrapper .show {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 10px);
+    }
+
+    .hero_content .experience_card {
+        transform: translate(0, -80%);
+        position: absolute;
+        left: -15px;
+    }
 }
