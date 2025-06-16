@@ -208,6 +208,9 @@
 
 /* next project section end */
 
+header {
+    margin-top: 50px;
+}
 
 @media (max-width: 1024px) {
     .detail_section .header_wrapper {
@@ -289,6 +292,10 @@
 
     .next_project h2 {
         padding: 40px 0 0 0;
+    }
+
+    header {
+        margin-top: 0;
     }
 }
 

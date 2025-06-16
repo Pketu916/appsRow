@@ -45,6 +45,7 @@
 
 .architecture_section .big_img_container {
     max-height: 740px;
+    overflow: hidden;
 }
 
 .architecture_section .small_img_container {
@@ -60,6 +61,7 @@
     position: relative;
     max-height: 618px;
     height: 100%;
+    width: 45%;
 }
 
 .architecture_section .small_img_container figure img {
@@ -86,16 +88,17 @@
 
     .studio_section .studio_img {
         transform: translate(0, -10px);
+        height: 320px;
     }
 
     .studio_container .experience_card {
         left: 0;
         bottom: 0;
-        transform: translate(0, -10px);
+        transform: translate(0, 16px);
     }
 
     .architecture_section {
-        margin-top: 54px;
+        margin-top: 70px;
     }
 
     .architecture_section .header_wrapper {
@@ -106,6 +109,7 @@
         flex-direction: column;
         margin: 0;
         gap: 10px;
+        margin-top: 24px;
     }
 
     .architecture_section .small_img_container p {
