@@ -49,6 +49,16 @@
     }
 }
 
+.propertiePage {
+    #primary-hero {
+        top: -100px;
+    }
+
+    header {
+        margin-top: 50px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .row_rev {
@@ -103,5 +113,15 @@
         transform: translate(0, -80%);
         position: absolute;
         left: -15px;
+    }
+
+    .propertiePage {
+        #primary-hero {
+            top: unset;
+        }
+
+        header {
+            margin-top: 0;
+        }
     }
 }

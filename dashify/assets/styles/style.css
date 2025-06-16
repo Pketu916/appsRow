@@ -1,0 +1,134 @@
+header {
+    padding-top: 30px;
+
+    .header-wrapper {
+        background-color: var(--color-white);
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 24px;
+    }
+
+    nav {
+        max-width: 402px;
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 23.04px;
+        font-weight: 600;
+    }
+
+    li a {
+        text-decoration: none;
+        color: var(--color-gray-700);
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+.hero {
+    .hero-bg {
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        top: -272px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    /* .hero-bg img {
+        max-height: 910px;
+    } */
+
+    .hero-header {
+        max-width: 597px;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .hero-wrapper {
+        /* max-width: 597px; */
+        width: 100%;
+        gap: 50px;
+        align-items: center;
+        margin-top: 129px;
+    }
+
+    .hero-btn {
+        gap: 20px;
+    }
+
+    .card1 {
+        position: absolute;
+        top: -82px;
+        left: 0;
+    }
+
+    .card2 {
+        position: absolute;
+        bottom: -90px;
+        left: 100px;
+    }
+
+    .card3 {
+        position: absolute;
+        top: -18px;
+        right: 0;
+    }
+
+    .card4 {
+        position: absolute;
+        bottom: -120px;
+        transform: translate(-50%, 0);
+    }
+}
+
+.companies {
+    margin-top: 220px;
+}
+
+.companies-wrapper {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-column-gap: 135px;
+    grid-row-gap: 42px;
+}
+
+.built_for_you {
+    padding: 80px 0;
+}
+
+.built_for_you .section-header {
+    max-width: 736px;
+    gap: 16px;
+    align-items: center;
+}
+
+.built_for_you_wrapper{
+    display: flex;
+    align-items: center;
+}
