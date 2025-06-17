@@ -116,7 +116,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     justify-items: center;
-    grid-column-gap: 135px;
+    width: 100%;
     grid-row-gap: 42px;
 }
 
@@ -167,7 +167,7 @@ header {
     aspect-ratio: 341/435;
     padding: 40px;
     max-height: 577px;
-    background-image: linear-gradient(#FAFBFF, #ECF1FE);
+    background-image: linear-gradient(to left bottom, #FAFBFF, #ECF1FE);
     position: relative;
 }
 
@@ -236,7 +236,7 @@ section.features {
     border-radius: 12px;
     background-color: #EFF3FE;
     background-image:
-        linear-gradient(var(--color-blueviolet-300) 0%, var(--color-blueviolet-200) 49%, var(--color-blueviolet-300) 100%),
+        linear-gradient(to left bottom, var(--color-blueviolet-300) 0%, var(--color-blueviolet-200) 49%, var(--color-blueviolet-300) 100%),
         #EFF3FE;
 }
 
@@ -422,6 +422,27 @@ section.features {
     transition-duration: .2s;
 }
 
+section.plans {
+    padding: 80px 0;
+}
+
+.plans .section-header {
+    max-width: 561px;
+}
+
+.plans_wrapper .plan_grid {
+    align-items: center;
+    gap: 52px;
+    width: 100%;
+}
+
+.plan_grid .offer {
+    color: var(--color-blueviolet-600);
+    padding: 4px 8px;
+    background-color: #F5FFF6;
+    border-radius: 16px;
+}
+
 .plan_grid .header {
     gap: 12px;
     align-items: center;
@@ -432,15 +453,14 @@ section.features {
     padding: 40px;
     border-radius: 16px;
     height: 539px;
-    max-width: 341px;
+    width: 100%;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
 }
 
 .plan_grid .popular {
-    background-image: linear-gradient(var(--color-blueviolet-600) 0 , var(--color-blueviolet-500) 100%, var(--color-blueviolet-600)100% );
-    background-color: red;
+    background-image: linear-gradient(to left bottom, var(--color-blueviolet-600) 0, var(--color-blueviolet-500) 49%, var(--color-blueviolet-600)100%);
 }
 
 .plan_grid .popular::before {
@@ -454,6 +474,7 @@ section.features {
     right: 0;
     bottom: 0;
     z-index: 1000;
+    pointer-events: none;
 }
 
 .plan_grid .planCard button {
@@ -499,8 +520,69 @@ section.features {
     border-bottom: 1px solid var(--color-blueviolet-100);
 }
 
+.plan_grid .popular .plan_header {
+    border-bottom: 1px solid var(--color-blueviolet-500);
+}
+
 .plan_grid .plan_header button {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.plan_grid .planCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* questions section */
+
+#question-wrapper {
+    max-width: 556px;
+    width: 100%;
+}
+
+section.questions {
+    background-color: #FCFCFC;
+    padding: 80px 0;
+}
+
+.questions .questions-wrapper {
+    justify-content: center;
+    gap: 89px;
+}
+
+.questions .section-header {
+    max-width: 419px;
+    text-align: left;
+}
+
+.questions .faq-question {
+    cursor: pointer;
+    align-items: center;
+}
+
+.questions .faq-items {
+    gap: 12px;
+}
+
+.questions .faq-item {
+    padding: 40px 43px 40px 40px;
+    background-color: var(--color-blueviolet-50);
+    border-radius: 16px;
+    max-height: 200px;
+}
+
+.questions .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.questions .faq-active {
+    border: 1px solid var(--color-blueviolet-600);
+    border-radius: 16px;
+    gap: 16px;
 }
