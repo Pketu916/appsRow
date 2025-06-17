@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/stylesglobal.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <title>dashify</title>
 </head>
 
@@ -25,8 +25,8 @@
                     </ul>
                 </nav>
                 <div class="button-container">
-                    <button class="global-btn">Log In</button>
-                    <button class="global-btn blueviolet-600">Get Started <span><svg width="24" height="24"
+                    <button class="global-btn border-blueviolet">Log In</button>
+                    <button class="global-btn blueviolet-bg-600">Get Started <span><svg width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4301 5.92999L20.5001 12L14.4301 18.07" stroke="white" stroke-width="1.5"
                                     stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -50,7 +50,7 @@
                             employees in minutes, track company projects, and manage team performance. We’ve got you
                             covered.</p>
                     </div>
-                    <div class="hero-btn flex-row"> <button class="global-btn blueviolet-600">Get Started <span><svg
+                    <div class="hero-btn flex-row"> <button class="global-btn blueviolet-bg-600">Get Started <span><svg
                                     width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.4301 5.92999L20.5001 12L14.4301 18.07" stroke="white"
@@ -75,7 +75,7 @@
         </section>
         <section class="companies">
             <div class="container">
-                <div class="companies-wrapper wrapper flex-col gap-50">
+                <div class="companies-wrapper section-wrapper flex-col">
                     <div class="section-header">
                         <h2 class="h5 gray-900 font-500">Trusted by 8,000 leading companies</h2>
                     </div>
@@ -94,17 +94,692 @@
         </section>
         <section class="built_for_you">
             <div class="container">
-                <div class="built_for_you_wrapper wrapper flex-col gap-50">
+                <div class="built_for_you_wrapper section-wrapper flex-col">
                     <div class="section-header flex-col">
                         <h2 class="h2 font-500">Dashify is built for you</h2>
                         <p class="body-xl gray-700">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
+                    <div class="built_for_you_grid">
+                        <article class="flex-col-between">
+                            <img class="img1" src="./assets/images/built_for_you1.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Streamline your work</h2>
+                                <p class="gray-700">Efficiency starts here. Streamline your work with our project
+                                    tracking features.
+                                    Simplify tasks and maximize productivity.</p>
+                            </div>
+                        </article>
+                        <article class="flex-col-between">
+                            <img class="img2" src="./assets/images/built_for_you2.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Work with your favorite tools</h2>
+                                <p class="gray-700">Integrate quickly and directly with your tools you already love.
+                                    It’s as easy as 1, 2, 3.</p>
+                            </div>
+                        </article>
+                        <article class="flex-col-between">
+                            <img class="img3" src="./assets/images/built_for_you3.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Save hours every week</h2>
+                                <p class="gray-700">Efficiency starts here. Streamline your work with our project
+                                    tracking features. Simplify tasks and maximize productivity.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="features">
+            <div class="container">
+                <div class="features_wrapper section-wrapper">
+                    <div class="section-header flex-col">
+                        <h2 class="h2 font-600">Powerful features </h2>
+                        <p class="body-xl gray-700">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                    <div class="features_grid flex-col">
+                        <div class="feature flex-row-rev">
+                            <figure class="relative"><img src="./assets/images/features1.svg" alt="feature image">
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </figure>
+                            <div class="features_content flex-col">
+                                <button class="global-btn">Easy admin</button>
+                                <h2 class="h3 gray-950 font-500">Take the pain out of company admin</h2>
+                                <p class="body-xl gray-700">Eliminate the hassle, nobody wants it. Take the pain out of
+                                    company admin with our all-in-one platform. Simplify projects and focus on what
+                                    really drives your business forward..</p>
+                            </div>
+                        </div>
+                        <div class="feature flex-row">
+                            <figure class="relative"><img src="./assets/images/features1.svg" alt="feature image">
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </figure>
+                            <div class="features_content flex-col">
+                                <button class="global-btn">Easy admin</button>
+                                <h2 class="h3 gray-950 font-500">Take the pain out of company admin</h2>
+                                <p class="body-xl gray-700">Eliminate the hassle, nobody wants it. Take the pain out of
+                                    company admin with our all-in-one platform. Simplify projects and focus on what
+                                    really drives your business forward..</p>
+                            </div>
+                        </div>
+                        <div class="feature flex-row-rev">
+                            <figure class="relative"><img src="./assets/images/features1.svg" alt="feature image">
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </figure>
+                            <div class="features_content flex-col">
+                                <button class="global-btn">Easy admin</button>
+                                <h2 class="h3 gray-950 font-500">Take the pain out of company admin</h2>
+                                <p class="body-xl gray-700">Eliminate the hassle, nobody wants it. Take the pain out of
+                                    company admin with our all-in-one platform. Simplify projects and focus on what
+                                    really drives your business forward..</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <!-- <div class="container"> -->
+            <div class="reviews_wrapper section-wrapper">
+                <div class="section-header flex-col">
+                    <h2 class="h3 font-600">What our customer say</h2>
+                </div>
+                <div class="marquee-container flex-col">
+                    <div class="marquee-wrapper">
+                        <div class="marquee">
+                            <div class="marquee-group">
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="marquee-group" aria-hidden="true">
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="marquee-wrapper">
+                        <div class="marquee marquee-reverse">
+                            <div class="marquee-group">
+                                <div class="review flex-col ">
+                                    <div class="header flex-row">
+                                        <img src="./assets/images/customer1.png" alt="profile image">
+                                        <div class="flex-col">
+                                            <h6 class="h6 gray-900">Floyd Miles</h6>
+                                            <span class="gray-400 body-sm">CEO & Founder</span>
+                                        </div>
+                                    </div>
+                                    <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                        game-changer for us. It’s
+                                        communication features keep us connected and organized, no matter where
+                                        we are.</p>
+                                    <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"></div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="marquee-group" aria-hidden="true">
+                                <div class="review flex-col ">
+                                    <div class="header flex-row">
+                                        <img src="./assets/images/customer1.png" alt="profile image">
+                                        <div class="flex-col">
+                                            <h6 class="h6 gray-900">Floyd Miles</h6>
+                                            <span class="gray-400 body-sm">CEO & Founder</span>
+                                        </div>
+                                    </div>
+                                    <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                        game-changer for us. It’s
+                                        communication features keep us connected and organized, no matter where
+                                        we are.</p>
+                                    <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"><img
+                                            src="./assets/images/star.svg" alt="star"></div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                                <div class="marquee-logo-item">
+                                    <div class="review flex-col ">
+                                        <div class="header flex-row">
+                                            <img src="./assets/images/customer1.png" alt="profile image">
+                                            <div class="flex-col">
+                                                <h6 class="h6 gray-900">Floyd Miles</h6>
+                                                <span class="gray-400 body-sm">CEO & Founder</span>
+                                            </div>
+                                        </div>
+                                        <p class="body-xl gray-700">As a remote team, Dashify has been a
+                                            game-changer for us. It’s
+                                            communication features keep us connected and organized, no matter where
+                                            we are.</p>
+                                        <div class="starts flex-row"><img src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"><img
+                                                src="./assets/images/star.svg" alt="star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </section>
+
+        <section class="plans">
+            <div class="container">
+                <div class="plans_wrapper section-wrapper">
+                    <div class="section-header flex-col">
+                        <h2 class="h2 font-600">Transparent pricing for you and your team</h2>
+                        <p class="body-xl gray-700">Transparent pricing, with clear, accessible rates. Everyone can
+                            focus on what matters most — achieving your goals.</p>
+                    </div>
+                    <div class="plan_grid">
+                        <div class="header flex-row"><span class="body-xl">Monthly</span> <input type="checkbox"
+                                id="checkboxInput">
+                            <label for="checkboxInput" class="toggleSwitch">
+                            </label><span class="body-xl">Yearly</span><span>-10%</span>
+                        </div>
+                        <div class="planCards flex-row gap-20">
+                            <div class="planCard flex-col">
+                                <div>
+                                    <p class="plan_header flex-col gray-950 font-500">
+                                        <span class="body-lg">Basic</span>
+                                        <span class="h4 font-500">$26 <span class="body-lg gray-500">/ mo</span></span>
+                                    </p>
+                                    <ul class="gray-800 body-lg font-500 flex-col">
+                                        <li>2 seats</li>
+                                        <li>Simple support</li>
+                                        <li>Simple onboarding features</li>
+                                    </ul>
+                                </div>
+
+                                <button class="global-btn blueviolet-100">Choose plan <span><img
+                                            src="./assets/images/rightArrow2.svg" alt="right arrow"></span></button>
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </div>
+                            <div class="planCard flex-col popular relative">
+                                <div>
+                                    <p class="plan_header flex-col white font-500 relative">
+                                        <span class="body-lg">Basic</span>
+                                        <span class="h4 font-500">$26 <span class="body-lg white">/ mo</span></span>
+                                        <button class="global-btn blueviolet-600">Popular</button>
+                                    </p>
+                                    <ul class="white body-lg font-500 flex-col">
+                                        <li>2 seats</li>
+                                        <li>Simple support</li>
+                                        <li>Simple onboarding features</li>
+                                    </ul>
+                                </div>
+
+                                <button class="global-btn blueviolet-600">Choose plan <span><img
+                                            src="./assets/images/rightArrow2.svg" alt="right arrow"></span></button>
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </div>
+                            <div class="planCard flex-col">
+                                <div>
+                                    <p class="plan_header flex-col gray-950 font-500">
+                                        <span class="body-lg">Basic</span>
+                                        <span class="h4 font-500">$26 <span class="body-lg gray-500">/ mo</span></span>
+                                    </p>
+                                    <ul class="gray-800 body-lg font-500 flex-col">
+                                        <li>2 seats</li>
+                                        <li>Simple support</li>
+                                        <li>Simple onboarding features</li>
+                                    </ul>
+                                </div>
+
+                                <button class="global-btn blueviolet-100">Choose plan <span><img
+                                            src="./assets/images/rightArrow2.svg" alt="right arrow"></span></button>
+                                <img class="rectangleGroup1 " src="./assets/images/rectangleGroup1.svg"
+                                    alt="rectangle Group ">
+                                <img class="rectangleGroup2 " src="./assets/images/rectangleGroup2.svg"
+                                    alt="rectangle Group ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+    <script src="./scripts/marquee.js"></script>
+
 </body>
 
 </html>
