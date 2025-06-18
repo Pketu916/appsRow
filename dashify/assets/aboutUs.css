@@ -1,0 +1,136 @@
+    .hero .hero-wrapper {
+        text-align: center;
+        margin-top: 214px;
+        padding-bottom: 214px;
+        max-width: 529px;
+    }
+
+    /* our mission section start */
+
+    .our_mission {
+        padding: 80px 0;
+    }
+
+    .our_mission_wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .our_mission_wrapper .heading {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        gap: 30px;
+    }
+
+    .our_mission_wrapper .content {
+        max-height: 794px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .our_mission_wrapper .figure1 {
+        width: 100%;
+        max-height: 530px;
+    }
+
+    .our_mission_wrapper figure img {
+        border-radius: 16px;
+    }
+
+    .our_mission_wrapper .figure2 {
+        width: 100%;
+        max-height: 230px;
+    }
+
+    .our_mission_wrapper .heading h2 {
+        max-width: 330px;
+        text-align: left;
+    }
+
+    .our_mission_wrapper .heading p {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .our_mission_wrapper .heading p span {
+        display: block;
+        max-width: 330px;
+    }
+
+
+    /* our value section */
+
+    section.our_value {
+        padding: 80px 0;
+    }
+
+    .our_value_grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(341px, 700px));
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+    .our_value_grid article {
+        padding: 40px;
+        height: 279px;
+        align-items: flex-start;
+        background-image: linear-gradient(to left top, #FAFBFF, #ECF1FE);
+        border-radius: 16px;
+        border: 1px solid var(--color-blueviolet-100);
+        position: relative;
+    }
+
+    .our_value_grid article::before {
+        background-image: url(../assets/images/articleGrid2.svg);
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .our_value_grid article img {
+        height: 40px;
+        padding: 15px;
+        background-color: var(--color-white);
+        box-sizing: content-box;
+        border-radius: 16px;
+    }
+
+    /* collaboration section start */
+
+    .collaboration {
+        padding: 80px 0;
+    }
+
+    .collaboration-wrapper {
+        display: flex;
+        gap: 128px;
+    }
+
+    .collaboration-wrapper .header {
+        max-width: 414px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .collaboration-wrapper figure {
+        width: 100%;
+        max-height: 530px;
+        border-radius: 16px;
+    }
+
+    .collaboration-wrapper figure img {
+        border-radius: 16px;
+    }
