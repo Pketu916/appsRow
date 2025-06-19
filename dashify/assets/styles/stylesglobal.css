@@ -350,3 +350,39 @@ figure img {
 .mt-22 {
     margin-top: 22px;
 }
+
+@media (max-width:768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .h1 {
+        font-size: var(--fs-h5);
+        line-height: var(--lh-31);
+        letter-spacing: var(--ls-31);
+    }
+
+    .h2,
+    .h3 {
+        font-size: var(--fs-h6);
+        line-height: var(--lh-25);
+        letter-spacing: var(--ls-25);
+    }
+
+    .h5,
+    .h6 {
+        font-size: var(--fs-body-xl);
+        line-height: var(--lh-18);
+        letter-spacing: var(--ls-18);
+    }
+
+    .body-xl {
+        font-size: var(--fs-body-sm);
+        line-height: var(--lh-14);
+        letter-spacing: var(--ls-14);
+    }
+
+    .section-wrapper {
+        gap: 30px;
+    }
+}

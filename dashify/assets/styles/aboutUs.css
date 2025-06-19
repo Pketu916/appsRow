@@ -89,7 +89,7 @@
     }
 
     .our_value_grid article::before {
-        background-image: url(../assets/images/articleGrid2.svg);
+        background-image: url(../images/articleGrid2.svg);
         content: "";
         position: absolute;
         height: 100%;
