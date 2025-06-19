@@ -153,6 +153,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -244,6 +245,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-grow {
+    flex-grow: 1;
 }
 
 .relative {
@@ -338,6 +347,6 @@ figure img {
     width: 100%;
 }
 
-.mt-22{
+.mt-22 {
     margin-top: 22px;
 }

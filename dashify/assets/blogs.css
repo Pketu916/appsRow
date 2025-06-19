@@ -1,0 +1,60 @@
+.hero .hero-wrapper p {
+    text-align: center;
+}
+
+.hero .hero-wrapper {
+    margin-top: 214px;
+    padding-bottom: 214px;
+}
+
+.blogs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 17px;
+    grid-row-gap: 30px;
+    padding: 80px 0;
+}
+
+.blogs-wrapper button {
+    padding-left: 0;
+    margin-top: 16px;
+}
+
+.wrapper figure,
+.wrapper figure img {
+    border-radius: 16px;
+}
+
+.blogs-wrapper a {
+    text-decoration: none;
+}
+
+.blogs-wrapper .blog {
+    gap: 20px;
+}
+
+.blogs-wrapper .content {
+    gap: 12px;
+}
+
+/* blog details */
+.blog-body {
+    .hero-wrapper .hero-header {
+        flex-direction: column-reverse;
+        max-width: 919px;
+        text-align: center;
+    }
+}
+
+.blog-details-wrapper figure{
+    height: 595px;
+}
+
+.blog-details-wrapper {
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+.blog-detail {
+    gap: 24px;
+}

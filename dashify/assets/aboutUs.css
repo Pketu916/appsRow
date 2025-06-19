@@ -110,27 +110,60 @@
 
     /* collaboration section start */
 
-    .collaboration {
+    .split {
         padding: 80px 0;
     }
 
-    .collaboration-wrapper {
+    .split-wrapper {
         display: flex;
         gap: 128px;
     }
 
-    .collaboration-wrapper .header {
+    .split-wrapper .header {
         max-width: 414px;
         width: 100%;
         justify-content: center;
     }
 
-    .collaboration-wrapper figure {
+    .split-wrapper figure {
         width: 100%;
         max-height: 530px;
         border-radius: 16px;
     }
 
-    .collaboration-wrapper figure img {
+    .split-wrapper figure img {
         border-radius: 16px;
+    }
+
+
+    /* couter */
+    .counter {
+        padding: 80px 0;
+    }
+
+    .counter-wrapper {
+        gap: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .counter-grid {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .counter-grid p {
+        max-width: 328px;
+        width: 100%;
+        gap: 24px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    /* our team section start*/
+
+    .our-team-wrapper{
+        flex-direction: row-reverse;
     }
