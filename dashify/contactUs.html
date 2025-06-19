@@ -6,127 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/stylesglobal.css">
-    <link rel="stylesheet" href="./assets/aboutUs.css">
+    <link rel="stylesheet" href="./assets/contactUs.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <title>About Us</title>
+    <title>Contact Us</title>
 </head>
 
-<body class="aboutUs">
+<body>
     <header id="common-header"></header>
 
     <main>
         <section class="hero relative">
             <div class="container">
                 <div class="hero-wrapper wrapper relative flex-col">
-                    <div class="hero-header flex-col">
-                        <h1 class="h1">About Us</h1>
-                        <p class="body-xl gray-700">Dashify gives you the blocks needed to create a truly professional
-                            website for your SaaS.</p>
+                    <div class="hero-header flex-col align-center">
+                        <h1 class="h1">Contact Us</h1>
+                        <p class="body-xl gray-700">We are here ready to solve your problem</p>
                     </div>
                 </div>
                 <figure class="hero-bg"><img src="./assets/images/heroBg.svg" alt="hero background"></figure>
             </div>
         </section>
 
-
-        <section class="our_mission">
+        <section class="contactUs">
             <div class="container">
-                <div class="our_mission_wrapper wrapper">
-                    <figure class="figure1"><img src="./assets/images/our_mission.png" alt="our mission image"></figure>
-                    <div class="content">
-                        <div class="heading">
-                            <h2 class="h3 font-500 gray-950">Our mission has meaning</h2>
-                            <p class="body-lg gray-700"><span>Every action we take is one step closer to achieving our
-                                    mission: to
-                                    bring meaningful change to the workplace.</span></p>
+                <div class="section-wrapper contactUs-wrapper flex-col">
+                    <div class="header flex-col">
+                        <h2 class="h3 white font-500">Let's Start a Conversation Today.</h2>
+                        <p class="body-lg white">Have questions? We’ve got answers. For everything else email us on
+                            <span class="font-700">hi@gmail.com</span>
+                        </p>
+                    </div>
+                    <form class="body-lg gray-50">
+                        <div class="flex-col flex-grow">
+                            <label for="first-name">First Name*</label>
+                            <input class="body-lg gray-50" type="text" id="first-name" placeholder="enter first name"
+                                required>
                         </div>
-                        <figure class="figure2"><img src="./assets/images/our_mission2.png" alt="our mission image">
-                        </figure>
-                    </div>
+
+                        <div class="flex-col flex-grow">
+                            <label for="last-name">Last Name*</label>
+                            <input class="body-lg gray-50" type="text" id="last-name" placeholder="enter last name"
+                                required>
+                        </div>
+
+                        <div class="flex-col flex-grow w-100">
+                            <label for="email">Email ID*</label>
+                            <input class="body-lg gray-50" type="email" id="email" placeholder="enter email id"
+                                required>
+                        </div>
+
+                        <div class="flex-col flex-grow w-100">
+                            <label for="message">Message</label>
+                            <textarea class="body-lg gray-50" id="message"
+                                placeholder="write your message here"></textarea>
+                        </div>
+
+                        <button class="global-btn blueviolet-600">Choose plan <span><img
+                                    src="./assets/images/rightArrow2.svg" alt="right arrow"></span></button>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <section class="our_value">
+        <section class="built_for_you">
             <div class="container">
-                <div class="section-wrapper">
-                    <div class="section-header">
-                        <h2 class="h3 font-500 gray-950">Our value guide us</h2>
+                <div class="built_for_you_wrapper section-wrapper flex-col">
+                    <div class="section-header flex-col">
+                        <h2 class="h2 font-500">Dashify is built for you</h2>
+                        <p class="body-xl gray-700">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
-                    <div class="our_value_grid">
+                    <div class="built_for_you_grid">
                         <article class="flex-col-between">
-                            <img class="img1" src="./assets/images/our_value1.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Streamline your work</h2>
+                            <img class="img1" src="./assets/images/built_for_you1.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Streamline your work</h2>
+                                <p class="gray-700">Efficiency starts here. Streamline your work with our project
+                                    tracking features.
+                                    Simplify tasks and maximize productivity.</p>
+                            </div>
                         </article>
                         <article class="flex-col-between">
-                            <img class="img2" src="./assets/images/our_value2.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Work with your favorite tools</h2>
+                            <img class="img2" src="./assets/images/built_for_you2.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Work with your favorite tools</h2>
+                                <p class="gray-700">Integrate quickly and directly with your tools you already love.
+                                    It’s as easy as 1, 2, 3.</p>
+                            </div>
                         </article>
                         <article class="flex-col-between">
-                            <img class="img3" src="./assets/images/our_value3.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Save hours every week</h2>
-                        </article>
-                        <article class="flex-col-between">
-                            <img class="img1" src="./assets/images/our_value4.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Streamline your work</h2>
-                        </article>
-                        <article class="flex-col-between">
-                            <img class="img2" src="./assets/images/our_value5.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Work with your favorite tools</h2>
-                        </article>
-                        <article class="flex-col-between">
-                            <img class="img3" src="./assets/images/our_value6.svg" alt="built for you image">
-                            <h2 class="h6 gray-950 font-500">Save hours every week</h2>
+                            <img class="img3" src="./assets/images/built_for_you3.svg" alt="built for you image">
+                            <div class="article-content flex-col">
+                                <h2 class="h6 gray-950 font-500">Save hours every week</h2>
+                                <p class="gray-700">Efficiency starts here. Streamline your work with our project
+                                    tracking features. Simplify tasks and maximize productivity.</p>
+                            </div>
                         </article>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="collaboration split">
-            <div class="container">
-                <div class="collaboration-wrapper split-wrapper wrapper">
-                    <div class="header flex-col">
-                        <h2 class="h3 gray-950 font-500">Collaboration is in our nature</h2>
-                        <p class="body-lg gray-700">Collaboration isn’t just a goal - it’s woven into the very fabric of
-                            who we are. Experience the power of teamwork and collective innovation with us.</p>
-                    </div>
-                    <figure class="figure1"><img src="./assets/images/our_mission.png" alt="our mission image"></figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="counter">
-            <div class="container">
-                <div class="counter-wrapper wrapper">
-                    <div class="header_wrapper">
-                        <h2 class="gray-950 font-500 h3">Our impact in numbe.</h2>
-                    </div>
-                    <div class="counter-grid gray-950 font-500">
-                        <p class="body-lg gray-800 flex-col"><span class="h2 count gray-950"
-                                data-target="99">0%</span>Customer
-                            satisfaction</p>
-                        <p class="body-lg gray-800 flex-col"><span class="h2 count gray-950"
-                                data-target="56">0+</span>Experience
-                            agents</p>
-                        <p class="body-lg gray-800 flex-col"><span class="h2 count gray-950"
-                                data-target="249">0</span>Total
-                            property sell</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="our-team split">
-            <div class="container">
-                <div class="our-team-wrapper split-wrapper wrapper">
-                    <div class="header flex-col">
-                        <h2 class="h3 gray-950 font-500">We invest in our team</h2>
-                        <p class="body-lg gray-700">Investing in our team isn’t just a priority-it’s cornerstone of our
-                            identity. We nurture talent, foster growth, and create an environment where every individual
-                            can thrive.</p>
-                    </div>
-                    <figure class="figure1"><img src="./assets/images/our-team.png" alt="our    team image"></figure>
                 </div>
             </div>
         </section>
@@ -198,17 +175,17 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer id="common-footer" class="relative"> </footer>
-    
+
     <script src="./scripts/script.js"></script>
     <script src="./scripts/faq.js"></script>
-    <script src="./scripts/counter.js"></script>
 
 
 </body>

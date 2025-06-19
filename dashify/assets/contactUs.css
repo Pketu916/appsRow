@@ -1,0 +1,40 @@
+     .hero .hero-wrapper {
+         margin-top: 228px;
+         padding-bottom: 228px;
+     }
+
+     .contactUs .header {
+         gap: 16px;
+     }
+
+     .contactUs-wrapper {
+         padding: 80px;
+         background: var(--color-blueviolet-600);
+         gap: 38px;
+     }
+
+     .contactUs form {
+         display: flex;
+         flex-wrap: wrap;
+         width: 100%;
+         justify-content: space-between;
+         gap: 30px;
+     }
+
+     .contactUs form textarea,
+     .contactUs form input {
+         padding: 16px;
+         background: transparent;
+         border: none;
+         border-bottom: 1px solid var(--color-blueviolet-200);
+     }
+
+     .contactUs form textarea:focus,
+     .contactUs form input:focus {
+         outline: none;
+     }
+
+     .contactUs form textarea::placeholder,
+     .contactUs form input::placeholder {
+         color: var(--color-blueviolet-100);
+     }
