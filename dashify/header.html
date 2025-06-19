@@ -1,7 +1,14 @@
-<div class="container ">
-    <div class="header-wrapper wrapper border">
-        <figure class="logo_container"><img src="./assets/images/Logo.png" alt="logo"></figure>
-        <nav>
+
+<div class="container">
+    <div  class="header-wrapper wrapper border">
+        <a href="./index.html">
+            <figure class="logo_container">
+                <img src="./assets/images/Logo.png" alt="logo">
+            </figure>
+        </a>
+
+        <!-- NAV MENU -->
+        <nav class="nav-menu">
             <ul class="body-sm">
                 <li><a href="./features.html">Features</a></li>
                 <li><a href="./pricing.html">Pricing</a></li>
@@ -9,11 +16,23 @@
                 <li><a href="./about_us.html">About Us</a></li>
                 <li><a href="./contactUs.html">Contact Us</a></li>
             </ul>
+            <div class="mobile-buttons">
+                <button class="global-btn border-blueviolet">Log In</button>
+                <button class="global-btn blueviolet-bg-600">
+                    Get Started <span><img src="./assets/images/rightArrow.svg" alt="arrow"></span>
+                </button>
+            </div>
         </nav>
+
+        <!-- DESKTOP BUTTONS -->
         <div class="button-container">
             <button class="global-btn border-blueviolet">Log In</button>
-            <button class="global-btn blueviolet-bg-600">Get Started <span><img src="./assets/images/rightArrow.svg"
-                        alt="arrow"></span></button>
+            <button class="global-btn blueviolet-bg-600">
+                Get Started <span><img src="./assets/images/rightArrow.svg" alt="arrow"></span>
+            </button>
         </div>
+
+        <!-- TOGGLER -->
+        <button class="global-btn gray-950 menu-toggle">Menu</button>
     </div>
 </div>
