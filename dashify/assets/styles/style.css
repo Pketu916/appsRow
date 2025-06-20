@@ -906,6 +906,9 @@ footer {
         padding: 0
     }
 
+    .marquee-wrapper.none {
+        display: none;
+    }
 
     header .menu-toggle {
         display: flex;
