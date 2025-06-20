@@ -60,6 +60,16 @@ header {
         color: #5A50D8;
     }
 
+    nav a.navActive {
+        color: #5A50D8;
+        font-weight: bold;
+    }
+
+    li a.navActive::before {
+        height: 2px;
+        width: 100%;
+    }
+
     .button-container {
         display: flex;
         gap: 12px;
@@ -984,7 +994,7 @@ footer {
 
         .card4 {
             width: 168px;
-            height: 72px;
+            height: 75px;
         }
     }
 
@@ -1114,7 +1124,6 @@ footer {
 
     .reviews .review {
         padding: 30px;
-        /* height: 294px; */
         width: 320px;
     }
 
@@ -1168,6 +1177,17 @@ footer {
     .reviews {
         padding: 40px 0;
     }
+
+    /* marquee */
+
+    /* .marquee-group {
+        animation: none;
+    }
+
+    .marquee {
+        overflow-x: scroll;
+        scrollbar-color: var(--color-blueviolet-600) var(--color-gray-50);
+    } */
 }
 
 @media (max-width:425px) {
