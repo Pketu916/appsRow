@@ -46,7 +46,7 @@
     }
 }
 
-.blog-details-wrapper figure{
+.blog-details-wrapper figure {
     height: 595px;
 }
 
@@ -57,4 +57,34 @@
 
 .blog-detail {
     gap: 24px;
+}
+
+
+@media (max-width:768px) {
+    .hero .hero-wrapper {
+        margin-top: 0;
+        padding: 91px 0;
+    }
+}
+
+@media (max-width:767px) {
+    .blogs-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogs-wrapper .content {
+        gap: 8px;
+    }
+
+    .blogs-wrapper button {
+        margin-top: 8px;
+    }
+
+    .blog-details-wrapper {
+        gap: 30px;
+    }
+
+    .blog-detail {
+        gap: 12px;
+    }
 }
