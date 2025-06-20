@@ -1,33 +1,41 @@
-   function loadHTML(id, file) {
-      fetch(file)
-        .then((response) => {
-          if (!response.ok) throw new Error("Failed to load");
-          return response.text();
-        })
-        .then((data) => {
-          document.getElementById(id).innerHTML = data;
+function loadHTML(id, file, callback) {
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to load");
+      return response.text();
+    })
+    .then((data) => {
+      document.getElementById(id).innerHTML = data;
 
-          // Add toggle logic after header is loaded
-          if (file === "header.html") {
-            const toggleBtn = document.querySelector(".menu-toggle");
-            const navMenu = document.querySelector(".nav-menu");
+      // ✅ Run any logic after HTML is loaded
+      if (typeof callback === "function") callback();
+    })
+    .catch((error) => {
+      console.error(`Error loading ${file}:`, error);
+    });
+}
 
-            if (toggleBtn && navMenu) {
-              toggleBtn.addEventListener("click", () => {
-                  // navMenu.style.maxHeight === "0" ? "500px" : "0";
-                  navMenu.style.display === "flex" ? "none" : "flex";
-                  navMenu.classList.toggle("show");
-              });
-            }
-          }
-        })
-        .catch((error) => {
-          console.error(`Error loading ${file}:`, error);
-        });
+window.addEventListener("DOMContentLoaded", () => {
+  loadHTML("common-header", "header.html", () => {
+    // ✅ Toggle menu for mobile
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
     }
 
-    // Load header and footer after DOM is ready
-    window.addEventListener("DOMContentLoaded", () => {
-      loadHTML("common-header", "header.html");
-      loadHTML("common-footer", "footer.html");
+    // ✅ Highlight current nav link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach((link) => {
+      const linkPage = link.getAttribute("href").split("/").pop();
+      if (linkPage === currentPage) {
+        link.classList.add("navActive"); // 👈 your correct class
+      }
     });
+  });
+
+  loadHTML("common-footer", "footer.html");
+});
