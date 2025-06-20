@@ -9,6 +9,7 @@
 
     .our_mission {
         padding: 80px 0;
+        background-color: var(--color-white);
     }
 
     .our_mission_wrapper {
@@ -72,10 +73,9 @@
 
     .our_value_grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(341px, 700px));
+        grid-template-columns: repeat(3, minmax(200px, 700px));
         gap: 20px;
         justify-content: center;
-
     }
 
     .our_value_grid article {
@@ -98,6 +98,7 @@
         left: 0;
         right: 0;
         bottom: 0;
+        pointer-events: none;
     }
 
     .our_value_grid article img {
@@ -135,6 +136,10 @@
         border-radius: 16px;
     }
 
+    .split .header {
+        gap: 30px;
+    }
+
 
     /* couter */
     .counter {
@@ -164,6 +169,116 @@
 
     /* our team section start*/
 
-    .our-team-wrapper{
+    .our-team-wrapper {
         flex-direction: row-reverse;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+        .hero .hero-wrapper {
+            margin-top: 0;
+            padding: 164px 0;
+        }
+
+        .counter,
+        .split,
+        .our_mission,
+        section.our_value {
+            padding: 40px 0;
+        }
+
+        .our_value_grid {
+            grid-template-columns: repeat(2, minmax(100px, 700px));
+        }
+
+        .our_value_grid article {
+            padding: 30px;
+        }
+
+        .our_value_grid article img {
+            height: 30px;
+        }
+
+        .our_mission_wrapper {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .our_mission_wrapper .figure1 {
+            max-width: 295px;
+            max-height: 299px;
+        }
+
+        .our_mission_wrapper .figure2 {
+            max-width: 364px;
+            max-height: 243px;
+        }
+
+        .our_mission_wrapper .heading {
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .our_mission_wrapper .content {
+            gap: 30px;
+            align-items: flex-end;
+        }
+
+        .our_mission_wrapper .heading h2 {
+            max-width: 300px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .our_mission_wrapper .heading p span {
+            max-width: 300px;
+        }
+
+        .split-wrapper {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .split-wrapper figure img {
+            max-width: 357px;
+            max-height: 299px;
+        }
+
+        .split-wrapper figure {
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .split .header {
+            gap: 8px;
+        }
+
+        .counter-wrapper {
+            gap: 30px;
+        }
+        .our-team-wrapper{
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .our_value_grid {
+            grid-template-columns: repeat(1, minmax(100px, 700px));
+        }
+    }
+
+    @media (max-width: 655px) {
+        .counter-grid {
+            flex-wrap: wrap;
+        }
+
+        .counter-grid p {
+            max-width: 100%;
+            padding-bottom: 30px;
+            gap: 12px
+        }
     }

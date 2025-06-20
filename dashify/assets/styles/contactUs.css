@@ -11,6 +11,7 @@
          padding: 80px;
          background: var(--color-blueviolet-600);
          gap: 38px;
+         border-radius: 16px;
      }
 
      .contactUs form {
@@ -37,4 +38,36 @@
      .contactUs form textarea::placeholder,
      .contactUs form input::placeholder {
          color: var(--color-blueviolet-100);
+     }
+
+     @media (max-width:768px) {
+         .hero .hero-wrapper {
+             margin-top: 0;
+             padding: 176px 0;
+         }
+
+         .contactUs-wrapper {
+             padding: 30px;
+             gap: 30px;
+             margin: 30px 0;
+         }
+
+         .contactUs form {
+             flex-direction: column;
+             gap: 20px;
+         }
+
+         .contactUs form textarea,
+         .contactUs form input {
+             padding: 16px 0;
+         }
+
+         .contactUs form button {
+             width: min-content;
+         }
+
+         .contactUs .header {
+             width: 100%;
+             gap: 8px;
+         }
      }

@@ -176,6 +176,22 @@
     border: none;
     cursor: pointer;
     z-index: 1;
+    white-space: nowrap;
+}
+
+.list {
+    position: relative;
+    /* padding-left: 1.5em; */
+}
+
+.list::before {
+     content: '';
+  position: absolute;
+  top: 9px;
+  left: -20px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gray-400);
 }
 
 .border {
@@ -331,6 +347,10 @@ figure img {
     color: var(--color-white);
 }
 
+.bgWhite {
+    background-color: var(--color-white);
+}
+
 .font-500 {
     font-weight: 500;
 }
@@ -369,11 +389,22 @@ figure img {
         letter-spacing: var(--ls-25);
     }
 
-    .h5,
-    .h6 {
+    .h4 {
+        font-size: var(--fs-h5);
+        line-height: var(--lh-31);
+        letter-spacing: var(--ls-31);
+    }
+
+    .h5 {
         font-size: var(--fs-body-xl);
         line-height: var(--lh-18);
         letter-spacing: var(--ls-18);
+    }
+
+    .h6 {
+        font-size: var(--fs-body-xl);
+        line-height: var(--lh-18);
+        letter-spacing: var(--ls-25);
     }
 
     .body-xl {
@@ -382,7 +413,25 @@ figure img {
         letter-spacing: var(--ls-14);
     }
 
+    .body-lg {
+        font-size: var(--fs-body-sm);
+        line-height: var(--lh-14);
+        letter-spacing: var(--ls-14);
+    }
+
     .section-wrapper {
         gap: 30px;
     }
+}
+
+button.blueviolet-bg-600:hover{
+    background-color: var(--color-blueviolet-700);
+}
+
+button.blueviolet-100:hover{
+    background-color: var(--color-blueviolet-200);
+}
+
+button.menu-toggle:hover{
+    background-color: var(--color-blueviolet-100);
 }

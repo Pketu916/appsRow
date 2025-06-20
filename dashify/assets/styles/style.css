@@ -8,7 +8,10 @@ header {
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 24px;
+        padding: 16px 24px;
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid #EFF3FE;
     }
 
     nav {
@@ -27,16 +30,46 @@ header {
     li a {
         text-decoration: none;
         color: var(--color-gray-700);
+        transition: all 0.5s ease;
+
     }
 
     li {
         list-style: none;
+        transition: all 0.5s ease;
+        position: relative;
+        /* box-shadow: 1px 0px 0px 0px red; */
+    }
+
+    li a::before {
+        position: absolute;
+        content: "";
+        background-color: #5A50D8;
+        height: 2px;
+        bottom: 0;
+        transition: all 0.5s ease;
+        width: 0;
+    }
+
+    li a:hover::before {
+        height: 2px;
+        width: 100%;
+    }
+
+    li a:hover {
+        color: #5A50D8;
     }
 
     .button-container {
         display: flex;
         gap: 12px;
     }
+}
+
+header .menu-toggle {
+    display: none;
+    padding: 13px 12px;
+    background-color: #FAFAFA;
 }
 
 .mobile-buttons {
@@ -52,7 +85,8 @@ header {
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: -40px;
+        /* height: 100vh; */
     }
 
     /* .hero-bg img {
@@ -63,6 +97,7 @@ header {
         max-width: 597px;
         width: 100%;
         gap: 16px;
+        text-align: center;
     }
 
     .hero-wrapper {
@@ -105,9 +140,9 @@ header {
 
 /* companies section start  */
 
-/* .companies {
-    margin-top: 220px;
-} */
+.companies {
+    background-color: var(--color-white);
+}
 
 .companies-wrapper {
     padding: 80px 0;
@@ -196,7 +231,8 @@ header {
 }
 
 section.features {
-    margin: 80px 0;
+    padding: 80px 0;
+    background-color: var(--color-white);
 }
 
 .features_wrapper {
@@ -231,13 +267,13 @@ section.features {
 .features_content {
     align-items: flex-start;
     aspect-ratio: 476/302;
-    gap: 16px;
+    gap: 12px;
     justify-content: center;
     max-width: 476px;
 }
 
 .features_content p {
-    padding: 4px;
+    padding: 4px 0;
 }
 
 .features_grid .feature figure {
@@ -581,7 +617,7 @@ section.questions {
     padding: 40px 43px 40px 40px;
     background-color: var(--color-blueviolet-50);
     border-radius: 16px;
-    max-height: 200px;
+    /* max-height: 200px; */
 }
 
 .questions .faq-answer {
@@ -789,10 +825,6 @@ footer {
 
     .hero {
 
-        .hero-wrapper {
-            padding-bottom: 0;
-        }
-
         .card-container {
             position: relative;
             width: 100%;
@@ -817,31 +849,80 @@ footer {
             left: 50%;
         }
     }
+
+    .plan_grid .planCard {
+        padding: 30px;
+    }
+
+    #hero .hero-bg {
+        height: 1400px;
+    }
+
+    header .button-container {
+        display: none;
+    }
 }
 
 
 @media (max-width:768px) {
+    #hero .hero-bg {
+        height: unset;
+    }
+
+    .hero .hero-bg {
+        bottom: 0;
+    }
+
+    section.hero {
+        position: relative;
+    }
+
     header .button-container {
         display: none;
     }
 
-    .header-wrapper {
+    header {
+        padding-top: 0;
+    }
+
+    header .header-wrapper {
+        border-radius: 0;
+        border: none;
         flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+
+    header .container {
+        padding: 0
+    }
+
+
+    header .menu-toggle {
+        display: flex;
     }
 
     .nav-menu {
         order: 4;
         flex-direction: column;
         gap: 25px;
-        max-width: 100%;
-        transition: all 0.4s ease;
+        max-width: none;
+        width: calc(100% + 2px);
+        transition: all 0.8s ease-in-out;
         max-height: 0;
         opacity: 0;
         overflow: hidden;
+        position: absolute;
+        top: 70px;
+        background-color: var(--color-white);
+        z-index: 10;
+        left: -1px;
+        right: 0;
+        padding: 0 20px 38px;
+        box-shadow: 0px 25px 20px 0px #00000013;
     }
 
     .nav-menu.show {
-        max-height: 500px;
+        max-height: 550px;
         opacity: 1;
     }
 
@@ -863,12 +944,19 @@ footer {
         align-items: flex-start;
     }
 
+
+    #hero .hero-wrapper {
+        padding-bottom: 50px;
+    }
+
+
     .hero {
 
         .hero-wrapper {
-            margin-top: 40px;
+            padding-top: 40px;
             text-align: center;
             gap: 38px;
+            margin-top: 0;
         }
 
         .hero-header {
@@ -935,18 +1023,23 @@ footer {
         text-align: center;
     }
 
-    .questions .faq-item {
-        gap: 30px;
-    }
-
     .questions .faq-active {
         gap: 12px;
+    }
+
+    footer {
+        padding-top: 40px;
     }
 
     footer .footer_top {
         justify-content: center;
         text-align: center;
         padding: 30px;
+        flex-direction: column;
+    }
+
+    footer .footer_top div {
+        gap: 8px;
     }
 
     footer .footer-center {
@@ -967,9 +1060,17 @@ footer {
         row-gap: 20px;
     }
 
+    footer .footer-center figure {
+        max-width: 242px;
+    }
+
     footer .footer-link a {
         flex-grow: 1;
         text-align: center;
+    }
+
+    .features_content {
+        aspect-ratio: unset;
     }
 
     .built_for_you article .article-content {
@@ -985,7 +1086,7 @@ footer {
     }
 
     .section-header {
-        gap: 8px;
+        gap: 16px;
     }
 
     .features_grid figure img:first-child {
@@ -1003,6 +1104,10 @@ footer {
         padding: 25px;
     }
 
+    .features_grid .feature {
+        gap: 34px;
+    }
+
     .features_grid {
         gap: 60px;
     }
@@ -1013,22 +1118,62 @@ footer {
         width: 320px;
     }
 
-
-
-
-
-
-
-
-
-
-    section.features {
-        margin: 40px 0;
+    .plan_grid .planCard>button {
+        justify-content: center;
+        width: 100%;
     }
 
+    .plan_grid .planCard .plan_header {
+        gap: 8px;
+        padding-bottom: 20px;
+    }
+
+    .plan_grid .planCard ul {
+        padding-top: 30px;
+    }
+
+    .plans_wrapper .plan_grid {
+        gap: 30px;
+    }
+
+    .feature-page {
+        .hero .hero-wrapper {
+            padding: 80px 0;
+        }
+
+        button.mt-22 {
+            display: none;
+        }
+    }
+
+
+    .features_content {
+        gap: 16px;
+    }
+
+    .features_content p {
+        padding: 0;
+    }
+
+    .tooltip .tooltiptext {
+        top: -1px;
+        left: 40%;
+    }
+
+    section.features,
+    section.questions,
+    section.plans,
     .companies-wrapper,
     .built_for_you,
     .reviews {
         padding: 40px 0;
+    }
+}
+
+@media (max-width:425px) {
+    .hero .hero-btn {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
     }
 }
