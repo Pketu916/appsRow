@@ -224,6 +224,10 @@ header .menu-toggle {
     position: relative;
 }
 
+.built_for_you article:hover {
+    background-image: none;
+}
+
 .built_for_you article::before {
     content: "";
     position: absolute;
@@ -673,6 +677,8 @@ footer {
         align-items: center;
         gap: 24px;
         flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
     }
 
     .footer_top div {
@@ -687,6 +693,10 @@ footer {
         justify-content: space-between;
         align-items: center;
         gap: 40px;
+    }
+
+    .footer-center a {
+        z-index: 1;
     }
 
     .footer-center figure {
@@ -722,6 +732,20 @@ footer {
     .footer-line .social {
         gap: 20px;
         display: flex;
+    }
+
+    .footer_top::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-image: url(../images/footerHeading.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
     }
 }
 
