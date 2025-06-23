@@ -177,6 +177,7 @@
     cursor: pointer;
     z-index: 1;
     white-space: nowrap;
+    transition:all 0.6s ease ;
 }
 
 .list {
@@ -428,7 +429,9 @@ figure img {
         gap: 30px;
     }
 }
-
+button.global-btn:hover {
+    background-color: var(--color-blueviolet-100);
+}
 button.blueviolet-bg-600:hover {
     background-color: var(--color-blueviolet-700);
 }

@@ -39,3 +39,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   loadHTML("common-footer", "footer.html");
 });
+
+const toggle = document.getElementById("checkboxInput");
+const priceElements = document.querySelectorAll(".planCard .h4");
+
+// Example Monthly and Yearly prices
+const monthlyPrices = ["$26", "$59", "$99"];
+const yearlyPrices = ["$280", "$640", "$1080"]; // 10% off approx
+
+toggle.addEventListener("change", () => {
+  priceElements.forEach((priceEl, index) => {
+    if (toggle.checked) {
+      priceEl.innerHTML = `${yearlyPrices[index]} <span class="body-lg gray-500">/ yr</span>`;
+    } else {
+      priceEl.innerHTML = `${monthlyPrices[index]} <span class="body-lg gray-500">/ mo</span>`;
+    }
+  });
+});
