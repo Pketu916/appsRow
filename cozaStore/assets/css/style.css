@@ -1,0 +1,113 @@
+.menu {
+    display: none;
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header ul,
+header nav {
+    max-width: 437px;
+}
+
+.wrap-icon-header {
+    height: 84px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+}
+
+.logo-container {
+    margin-right: 65px;
+}
+
+.hero {
+    min-height: 100vh;
+}
+
+.hero-content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    /* opacity: 0; */
+    /* transition: all 0.5s ease; */
+}
+
+.hero-content p {
+    width: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.active.hero-content p {
+    text-align: left;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.2s ease;
+}
+
+.hero-content h1 {
+    transform: translate(-50%, 100%);
+    rotate: -100deg;
+    opacity: 0;
+}
+
+.active.hero-content h1 {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all 1.2s ease;
+    rotate: 0deg;
+}
+
+.hero-content button {
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+.active.hero-content button {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.2s ease;
+}
+
+.active.hero-content {
+    opacity: 1;
+}
+
+.hero h1 {
+    padding: 19px 0 43px;
+}
