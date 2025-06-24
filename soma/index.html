@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header-wrapper col-between align-center">
+    <header class="relative">
+        <div class="container ">
+            <div class="header-wrapper col-between align-center ">
                 <div class="logo-container"><a href="./index.html">
                         <figure><img src="./assets/images/logo.svg" alt="logo"></figure>
                     </a></div>
@@ -31,13 +31,21 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#">shop</a></li>
-                        <li><a href="#">about</a></li>
+                        <li class="onHoverUnderLine"><a href="#">shop</a></li>
+                        <li class="onHoverUnderLine"><a href="#">about</a></li>
                     </ul>
+                    <div class=" col-between uppercase font-600 mobile-header-links">
+                        <a class="onHoverUnderLine" href="#">login</a>
+                        <a class="onHoverUnderLine" href="#">cart</a>
+                    </div>
                 </nav>
                 <div class="header-links col-between uppercase font-600">
-                    <a href="#">login</a>
-                    <a href="#">cart</a>
+                    <a class="onHoverUnderLine" href="#">login</a>
+                    <a class="onHoverUnderLine" href="#">cart</a>
+                </div>
+
+                <div class="flex-col menu "><img class="img1" src="./assets/images/menu.svg" alt="menu"><img
+                        class="img2" src="./assets/images/menu.svg" alt="menu">
                 </div>
             </div>
         </div>
@@ -52,7 +60,7 @@
                             <p aria-colspan="p-base" class="font-400">Elevate Your Everyday Ritual with Natural,
                                 Luxurious
                                 Skincare Products That Nourish</p>
-                            <a class="font-400 p-lg text-gray" href="#">Explore Rituals</a>
+                            <a class="font-400 p-lg text-gray onHoverUnderLine" href="#">Explore Rituals</a>
                         </div>
                         <!-- <figure><img src="./assets/images/hero.png" alt="hero image"></figure> -->
                     </div>
@@ -72,7 +80,7 @@
                         <div class="product-card blur flex-col">
                             <figure>
                                 <img src="./assets/images/product1.png" alt="product image">
-                                <a class="border-bottom" href="#">Shop Now</a>
+                                <a class="border-bottom onHoverUnderLine" href="#">Shop Now</a>
                             </figure>
                             <div class="card-heading flex-col">
                                 <p class="p-lg ">Pure Radiance Cleanser</p>
@@ -82,7 +90,7 @@
                         <div class="product-card blur flex-col">
                             <figure>
                                 <img src="./assets/images/product2.png" alt="product image">
-                                <a class="border-bottom" href="#">Shop Now</a>
+                                <a class="border-bottom onHoverUnderLine" href="#">Shop Now</a>
                             </figure>
                             <div class="card-heading flex-col">
                                 <p class="p-lg ">Pure Radiance Cleanser</p>
@@ -92,7 +100,7 @@
                         <div class="product-card blur flex-col">
                             <figure>
                                 <img src="./assets/images/product3.png" alt="product image">
-                                <a class="border-bottom" href="#">Shop Now</a>
+                                <a class="border-bottom onHoverUnderLine" href="#">Shop Now</a>
                             </figure>
                             <div class="card-heading flex-col">
                                 <p class="p-lg ">Pure Radiance Cleanser</p>
@@ -102,7 +110,7 @@
                         <div class="product-card blur flex-col">
                             <figure>
                                 <img src="./assets/images/product4.png" alt="product image">
-                                <a class="border-bottom" href="#">Shop Now</a>
+                                <a class="border-bottom onHoverUnderLine" href="#">Shop Now</a>
                             </figure>
                             <div class="card-heading flex-col">
                                 <p class="p-lg ">Pure Radiance Cleanser</p>
@@ -124,19 +132,19 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide blur">
                                 <figure><img src="./assets/images/product1.png" alt="product image"><a
-                                        class="border-none" href="#">Shop Now</a></figure>
+                                        class="border-none onHoverUnderLine" href="#">Shop Now</a></figure>
                             </div>
                             <div class="swiper-slide blur">
                                 <figure><img src="./assets/images/product2.png" alt="product image"><a
-                                        class="border-none" href="#">Shop Now</a></figure>
+                                        class="border-none onHoverUnderLine" href="#">Shop Now</a></figure>
                             </div>
                             <div class="swiper-slide blur">
                                 <figure><img src="./assets/images/product3.png" alt="product image"><a
-                                        class="border-none" href="#">Shop Now</a></figure>
+                                        class="border-none onHoverUnderLine" href="#">Shop Now</a></figure>
                             </div>
                             <div class="swiper-slide blur">
                                 <figure><img src="./assets/images/product4.png" alt="product image"><a
-                                        class="border-none" href="#">Shop Now</a></figure>
+                                        class="border-none onHoverUnderLine" href="#">Shop Now</a></figure>
                             </div>
                         </div>
                     </div>
@@ -144,7 +152,7 @@
             </div>
         </section>
 
-        <section class="Offers">
+        <section class="offers">
             <div class="container">
                 <div class="section-wrapper flex-col">
                     <div class="section-header">
@@ -159,8 +167,9 @@
                             <div class="card-content text-white flex-col">
                                 <p class="p-lg font-400">Söma Radiance Collection</p>
                                 <h2 class="h3 font-500">Bulk Discounts on This Product</h2>
-                                <span class="p-base font-400">in Stock</span>
-                                <a class="font-400 text-white" href="#">Shop Now</a>
+                                <span class="p-base font-400"><img src="./assets/images/greenDot.svg" alt="">in
+                                    Stock</span>
+                                <a class="font-400 text-white onHoverUnderLine" href="#">Shop Now</a>
                             </div>
                         </div>
                         <div class="relative offer-card flex-col">
@@ -170,8 +179,9 @@
                             <div class="card-content text-white flex-col">
                                 <p class="p-lg font-400">Söma Luxe Travel Set</p>
                                 <h2 class="h3 font-500">15% OFF This Week Only</h2>
-                                <span class="p-base font-400">in Stock</span>
-                                <a class="font-400 text-white" href="#">Shop Now</a>
+                                <span class="p-base font-400"><img src="./assets/images/greenDot.svg" alt="">in
+                                    Stock</span>
+                                <a class="font-400 text-white onHoverUnderLine" href="#">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -180,68 +190,79 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-column footer-column1 ">
-                <h4>OUR STORES</h4>
-                <ul>
-                    <li>New York</li>
-                    <li>Los Angeles</li>
-                    <li>Miami</li>
-                    <li>Söma Flagship Store</li>
-                </ul>
-            </div>
-
-            <div class="footer-column footer-column2 ">
-                <h4>CUSTOMER SERVICE</h4>
-                <ul>
-                    <li>Contact Us</li>
-                    <li>FAQ</li>
-                    <li>Shipping</li>
-                    <li>Returns</li>
-                    <li>Claims</li>
-                    <li>Care Guide</li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                </ul>
-            </div>
-
-            <div class="footer-column footer-column3 ">
-                <h4>SÖMA</h4>
-                <ul>
-                    <li>About Soma</li>
-                    <li>Söma Social Club</li>
-                    <li>Sustainability</li>
-                    <li>Contact</li>
-                    <li>Press</li>
-                    <li>Careers</li>
-                </ul>
-            </div>
-
-            <div class="footer-column footer-column4 ">
-                <h4>SÖMA SOCIAL CLUB</h4>
-                <p>Join our club and get 10% off your first purchase!</p>
-                <form class="social-form">
-                    <input type="email" placeholder="Enter your email here">
-                    <div class="form-row">
-                        <input type="checkbox" id="agree">
-                        <label for="agree">I agree to Söma's <a href="#">[Privacy Policy]</a></label>
+        <div class="container">
+            <div class="footer-wrapper flex-col">
+                <div class="footer-top p-">
+                    <div class="footer-column footer-column1 p-base-alt2 font-600 ">
+                        <h4>OUR STORES</h4>
+                        <ul class="text-gray">
+                            <li>New York</li>
+                            <li>Los Angeles</li>
+                            <li>Miami</li>
+                            <li>Söma Flagship Store</li>
+                        </ul>
                     </div>
-                </form>
-            </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>© Söma 2025</p>
-            <div class="social-links">
-                <a href="#">Instagram</a> /
-                <a href="#">Facebook</a> /
-                <a href="#">Twitter</a>
+                    <div class="footer-column footer-column2 p-base-alt2 font-600 ">
+                        <h4>CUSTOMER SERVICE</h4>
+                        <ul class="text-gray">
+                            <li>Contact Us</li>
+                            <li>FAQ</li>
+                            <li>Shipping</li>
+                            <li>Returns</li>
+                            <li>Claims</li>
+                            <li>Care Guide</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column footer-column3 p-base-alt2 font-600 ">
+                        <h4>SÖMA</h4>
+                        <ul class="text-gray">
+                            <li>About Soma</li>
+                            <li>Söma Social Club</li>
+                            <li>Sustainability</li>
+                            <li>Contact</li>
+                            <li>Press</li>
+                            <li>Careers</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column footer-column4 ">
+                        <h4 class="p-base-alt2 font-600 text-gray">SÖMA SOCIAL CLUB</h4>
+                        <p class="p-sm">Join our club and get 10% off your first purchase!</p>
+                        <form action="" class="social-form p-sm flex-col">
+                            <div class="email relative">
+                                <input class="input text-gray" type="email" placeholder="Enter your email here"
+                                    required>
+                                <button type="submit"><img src="./assets/images/emailButton.svg" alt=""></button>
+                            </div>
+                            <div class="form-row ">
+                                <input type="checkbox" id="agree" required>
+                                <label class="p-xs" for="agree">I agree to Söma's <a class="text-gray" href="#">[Privacy
+                                        Policy]</a></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© Söma 2025</p>
+                    <div class="social-links flex">
+                        <a class="text-gray" href="#">Instagram</a> /
+                        <a class="text-gray" href="#">Facebook</a> /
+                        <a class="text-gray" href="#">Twitter</a>
+                    </div>
+                    <div class="logo-footer text-gray"><a href="./index.html">
+                            <figure><img src="./assets/images/logoFooter.svg" alt="logo"></figure>
+                        </a></div>
+                </div>
             </div>
-            <h2 class="footer-logo">Söma</h2>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>;
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./assets/scripts/script.js"></script>
 </body>
