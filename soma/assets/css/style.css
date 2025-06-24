@@ -23,13 +23,22 @@
     --p-base-line-height: 24px;
     --p-base-letter-spacing: 0;
 
-    --p-base-alt-font-size: 16px;
     --p-base-alt-line-height: 24px;
     --p-base-alt-letter-spacing: 0.64px;
+
+    --p-base-alt2-letter-spacing: 0.32px;
 
     --p-lg-font-size: 18px;
     --p-lg-line-height: 27px;
     --p-lg-letter-spacing: 0.72px;
+
+    --p-sm-font-size: 14.4px;
+    --p-sm-line-height: 21.6px;
+    --p-sm-letter-spacing: 0.288px;
+
+    --p-xs-font-size: 11.1px;
+    --p-xs-line-height: 16.6px;
+    --p-xs-letter-spacing: 0.222px;
 }
 
 
@@ -146,9 +155,14 @@ figure img {
 }
 
 .p-base-alt {
-    font-size: var(--p-base-alt-font-size);
+    font-size: var(--p-base-font-size);
     line-height: var(--p-base-alt-line-height);
     letter-spacing: var(--p-base-alt-letter-spacing);
+}
+
+.p-base-alt2 {
+    font-size: var(--p-base-font-size);
+    letter-spacing: var(--p-base-alt2-letter-spacing);
 }
 
 .p-base {
@@ -163,6 +177,18 @@ figure img {
     letter-spacing: var(--p-lg-letter-spacing);
 }
 
+.p-sm {
+    font-size: var(--p-sm-font-size);
+    line-height: var(--p-sm-line-height);
+    letter-spacing: var(--p-sm-letter-spacing);
+}
+
+.p-xs {
+    font-size: var(--p-xs-font-size);
+    line-height: var(--p-xs-line-height);
+    letter-spacing: var(--p-xs-letter-spacing);
+}
+
 body {
     background-color: var(--color-bg-light);
 }
@@ -174,6 +200,7 @@ body {
 /* header */
 header {
     padding: 18.5px 0;
+    box-shadow: 0 4px 20px 0 #00000040;
 }
 
 .logo-container figure {
@@ -218,7 +245,7 @@ a {
     background-color: #444;
     min-width: 160px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 10;
     border-radius: 4px;
 }
 
@@ -232,8 +259,33 @@ a {
 .dropdown-menu a:hover {
     background-color: #555;
     border-radius: 4px;
-
 }
+
+.menu {
+    display: none;
+    gap: 4px;
+}
+
+.menu img {
+    transition: all 0.5s ease;
+}
+
+.activeMenu {
+    gap: 0;
+}
+
+.activeMenu .img1 {
+    rotate: 40deg;
+}
+
+.activeMenu .img2 {
+    rotate: -40deg;
+}
+
+.mobile-header-links {
+    display: none;
+}
+
 
 /* Show dropdown on hover */
 .dropdown-container:hover .dropdown-menu {
@@ -242,6 +294,25 @@ a {
 
 .relative {
     position: relative;
+}
+
+.onHoverUnderLine {
+    position: relative;
+    cursor: pointer;
+}
+
+.onHoverUnderLine::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    z-index: 100;
+    background-color: var(--color-accent);
+    bottom: -2px;
+    transition: all 0.5s ease;
+}
+.onHoverUnderLine:hover::before {
+width: 100%;
 }
 
 /* hero */
@@ -382,6 +453,8 @@ a {
     width: 100%;
     height: 100%;
     cursor: grab;
+    padding: 0 50px !important;
+    /* overflow: visible !important; */
 }
 
 .swiper:active {
@@ -402,6 +475,7 @@ a {
     object-fit: cover;
 }
 
+
 /* offer-card */
 
 .offers {
@@ -413,9 +487,13 @@ a {
     max-width: 738px;
 }
 
-.offer-card .figure2 img {
+.offer-card .figure2 {
     max-height: 684px;
     max-width: 521px;
+}
+
+.offer-card .figure2 img {
+    height: 684px;
 }
 
 .offer-card .card-content {
@@ -424,9 +502,19 @@ a {
     transform: translate(-50%, 50%);
     left: 50%;
     bottom: 50%;
-    width: max-content;
+    max-width: 449px;
+    width: 100%;
     align-items: center;
     gap: 12px;
+    text-align: center;
+}
+
+.offer-card .card-content span {
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #00000040;
 }
 
 .offer-card .card-content a {
@@ -447,7 +535,104 @@ a {
     pointer-events: none;
 }
 
+/* footer */
 
+footer {
+    background-color: var(--color-accent);
+    padding: 68px 0 49px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column,
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.footer-column h4 {
+    opacity: 40%;
+}
+
+.footer-column1 {
+    max-width: 167px;
+}
+
+.footer-column2 {
+    max-width: 170px;
+}
+
+.footer-column3 {
+    max-width: 171px;
+}
+
+.footer-column4 {
+    max-width: 578px;
+    gap: 12px;
+}
+
+.footer-column4 form {
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.footer-column4 .input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2B2B2B40;
+    padding-bottom: 4px;
+    opacity: 80%;
+    width: 100%;
+}
+
+.footer-column4 .email button {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    border: none;
+    background: transparent;
+}
+
+.footer-column4 .input:focus {
+    outline: none;
+    opacity: 1;
+
+}
+
+.form-row {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.footer-wrapper {
+    gap: 83px;
+}
+
+.logo-footer figure {
+    max-width: 630px;
+}
+
+.footer-bottom p,
+.social-links {
+    padding-bottom: 32px;
+}
+
+.social-links {
+    gap: 16px;
+    color: #2B2B2B40;
+}
 
 /* resposive */
 
@@ -502,9 +687,11 @@ a {
         position: relative;
         z-index: 10;
     }
-    .hero .header *{
+
+    .hero .header * {
         color: white;
     }
+
     .hero .header a {
         border-color: white;
     }
@@ -514,26 +701,183 @@ a {
         align-items: center;
         justify-content: center;
     }
+
+    .offers.flex-between {
+        flex-direction: column;
+    }
+
+    .offer-card .figure1,
+    .offer-card .figure2 {
+        max-width: unset;
+        overflow: hidden;
+    }
+
+    .offer-card .figure2 img {
+        height: 100%;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
 
 @media (max-width:768px) {
-    .container {
+
+    .heroContainer,
+    .container,
+    .ritual .section-header {
         padding: 0 15px;
     }
 
-    .ritual .section-header {
-        padding-right: 15px;
+    .section-wrapper {
+        margin: 74px 0 67px;
+        gap: 40px;
     }
 
     .custom-container {
-        padding: 0 0 0 15px;
+        padding: 0;
     }
 
-    .heroContainer {
-        padding: 0 0 0 15px;
+
+    .mobile-header-links {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .header-links {
+        display: none;
+    }
+
+    .header-wrapper nav {
+        display: flex;
+        position: absolute;
+        background-color: var(--color-bg-light);
+        z-index: 11;
+        top: 72px;
+        width: calc(100% + 1px);
+        left: 0;
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 15px 0;
+        transition: all 0.6s ease;
+        height: 0;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .header-wrapper nav.active {
+        height: 500px;
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .header-wrapper nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .logo-footer figure {
+        max-width: 250px;
+        /* order: 0; */
+    }
+
+    .footer-bottom p,
+    .social-links {
+        padding-bottom: 0px;
+        order: 3;
+    }
+
+    .social-links {
+        order: 2;
+    }
+
+    .footer-bottom {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    footer {
+        padding: 34px 0 25px;
+    }
+
+    .footer-wrapper {
+        gap: 40px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
+@media (max-width: 576px) {
+    :root {
+        --h1-font-size: 48px;
+        --h1-line-height: 56px;
 
-/* footer */
+        --h2-font-size: 28px;
+        --h2-line-height: 34px;
 
+        /* H3 Mobile */
+        --h3-font-size: 22px;
+        --h3-line-height: 28px;
+
+        --p-base-font-size: 14px;
+        --p-base-line-height: 22px;
+
+        --p-lg-font-size: 16px;
+        --p-lg-line-height: 24px;
+
+        --p-sm-font-size: 12.5px;
+        --p-sm-line-height: 19px;
+
+        --p-xs-font-size: 11.1px;
+        --p-xs-line-height: 16.6px;
+    }
+
+    .hero .hero-wrapper {
+        height: 600px;
+    }
+
+    .card-heading {
+        gap: 8px;
+    }
+
+    .product-card {
+        gap: 16px;
+    }
+
+    .offer-card .card-content a {
+        padding-top: 12px;
+    }
+}
+
+@media (max-width:425px) {
+    .product-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        border-bottom: 1px solid var(--color-dark);
+        padding-bottom: 10px;
+        max-width: none;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
