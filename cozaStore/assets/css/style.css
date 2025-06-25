@@ -8,6 +8,12 @@ header {
     width: 100%;
     top: 0;
     z-index: 10;
+    transition: background-color 0.6s ease;
+}
+
+header.scrolled {
+    background-color: white;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 header ul,
@@ -28,6 +34,17 @@ header nav {
     margin-right: 65px;
 }
 
+header ul li a {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease;
+    color: var(--color-gray-700);
+}
+
+header ul li a:hover {
+    color: var(--color-primary);
+}
+
+/* hero started */
 .hero {
     min-height: 100vh;
 }
@@ -93,12 +110,12 @@ header nav {
     rotate: 0deg;
 }
 
-.hero-content button {
+.below-top-animation {
     transform: translateY(200%);
     opacity: 0;
 }
 
-.active.hero-content button {
+.active .below-top-animation {
     opacity: 1;
     transform: translateY(0);
     transition: all 1.2s ease;
@@ -110,4 +127,218 @@ header nav {
 
 .hero h1 {
     padding: 19px 0 43px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.swiper-button-next i:hover,
+.swiper-button-prev i:hover {
+    color: var(--color-primary);
+}
+
+.swiper-button-next {
+    left: 95% !important;
+}
+
+.swiper-button-prev {
+    right: 95% !important;
+    left: auto !important;
+}
+
+/* block section */
+
+.block {
+    position: relative;
+    overflow: hidden;
+    height: 248px;
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 34px 36px;
+    transition: all 0.5s ease;
+}
+
+.block:hover {
+    background-color: rgba(103, 117, 214, 0.8);
+}
+
+.hover:hover .below-top-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.b-b {
+    border-bottom: 2px solid;
+    width: fit-content;
+}
+
+.block-container {
+    gap: 32px;
+}
+
+.block::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+.block1::before {
+    background-image: url(../images/banner-01.jpg);
+}
+
+.block2::before {
+    background-image: url(../images/banner-02.jpg);
+}
+
+.block3::before {
+    background-image: url(../images/banner-03.jpg);
+}
+
+
+/* Product Overview */
+.product-card {
+    transition: all 0.5s ease;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.product-card figure {
+    max-height: 343px;
+    max-width: 315px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 34px;
+}
+
+
+.product-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+}
+
+
+.below-top-animation-2 {
+    transform: translate(50%, 200%);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.hover:hover .below-top-animation-2 {
+    opacity: 1;
+    transform: translate(50%, 0);
+}
+
+.categories {
+    gap: 32px;
+}
+
+.categories button {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.categories button::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--color-gray-900);
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.categories button.active::before {
+    width: 100%;
+}
+
+.categories button:hover::before {
+    width: 100%;
+}
+
+.product-overview .header {
+    gap: 50px;
+}
+
+
+/* footer */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+}
+
+footer {
+    background-color: var(--color-gray-800);
+    padding: 75px 0 32px;
+}
+
+.footer-column .links {
+    gap: 22px;
+}
+
+.footer-column form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-gray-600);
+    padding-bottom: 5px;
+}
+
+.footer-column form input:focus {
+    outline: none;
+}
+
+.onHoverUnderLine:focus-within::before {
+    width: 100%;
+}
+
+.filter-groups {
+    background-color: #f2f2f2;
+    margin-top: 24px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    opacity: 0;
+    padding: 0 35px;
+}
+
+.filter-slide {
+    padding: 27px 35px;
+    opacity: 1;
+    max-height: 300px;
+}
+
+.filter-btns button {
+    border-radius: 27px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+}
+
+.filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 217px;
 }
