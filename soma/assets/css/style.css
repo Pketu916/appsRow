@@ -311,8 +311,9 @@ a {
     bottom: -2px;
     transition: all 0.5s ease;
 }
+
 .onHoverUnderLine:hover::before {
-width: 100%;
+    width: 100%;
 }
 
 /* hero */

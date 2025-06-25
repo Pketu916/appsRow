@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/globalStyle.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/globalStyle.css">
 
     <title>Coza Store</title>
 </head>
@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="header-wrapper flex align-center">
+            <div class="header-wrapper flex align-center gray-700">
                 <div class="logo-container align-center">
                     <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt=""></figure>
                 </div>
@@ -30,9 +30,9 @@
                     </ul>
                 </nav>
                 <div class="wrap-icon-header">
-                    <i class="fas fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-regular fa-heart"></i>
+                    <a href="#"><i class="fas fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
                 </div>
                 <div class="menu"><i class="fa-solid fa-bars"></i></div>
             </div>
@@ -43,15 +43,16 @@
         <section class="hero">
             <div class="hero-wrapper">
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper gray-700">
                         <div class="swiper-slide">
                             <figure><img src="https://themewagon.github.io/cozastore/images/slide-03.jpg"
                                     alt="hero image"></figure>
                             <div class="hero-content w-full active">
                                 <div class="container">
                                     <p class="p-lg">Men New-Season</p>
-                                    <h1 class="h1">Jackets & Coats </h1>
-                                    <button class="global-btn">Shop Now</button>
+                                    <h1 class="h1 font-playfair">Jackets & Coats </h1>
+                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
+                                        Now</button>
                                 </div>
                             </div>
                         </div>
@@ -61,8 +62,9 @@
                             <div class="hero-content w-full">
                                 <div class="container">
                                     <p class="p-lg">Men Collection 2018</p>
-                                    <h1 class="h1">NEW SEASON</h1>
-                                    <button class="global-btn">Shop Now</button>
+                                    <h1 class="h1 font-playfair">NEW SEASON</h1>
+                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
+                                        Now</button>
                                 </div>
                             </div>
                         </div>
@@ -72,19 +74,267 @@
                             <div class="hero-content w-full">
                                 <div class="container">
                                     <p class="p-lg">Men Collection 2018</p>
-                                    <h1 class="h1">NEW SEASON</h1>
-                                    <button class="global-btn">Shop Now</button>
+                                    <h1 class="h1 font-playfair">NEW SEASON</h1>
+                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
+                                        Now</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"><i class="fa-solid fa-caret-right"></i></div>
+                    <div class="swiper-button-prev"><i class="fa-solid fa-caret-left"></i></div>
                     <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="container">
+                <div class="flex-between pb-50 pt-80 block-container ">
+                    <div class="block block1 hover hover-white"><a class="flex-col-between" href="#">
+                            <div>
+                                <h2 class="h6 font-700  gray-700">Women</h2>
+                                <p class="body-sm  gray-500">Spring 2025</p>
+                            </div>
+                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
+                        </a></div>
+                    <div class="block block2 hover hover-white"><a class="flex-col-between" href="#">
+                            <div>
+                                <h2 class="h6 font-700  gray-700">Men</h2>
+                                <p class="body-sm  gray-500">Spring 2025</p>
+                            </div>
+                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
+                        </a></div>
+                    <div class="block block3 hover hover-white"><a class="flex-col-between" href="#">
+                            <div>
+                                <h2 class="h6 font-700  gray-700">Accessories</h2>
+                                <p class="body-sm  gray-500">New Trand</p>
+                            </div>
+                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
+                        </a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-overview">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header flex-col">
+                        <h2 class="h2 uppercase">Product Overview</h2>
+                        <div class="filter-section flex-col gap-16">
+                            <div class="filter-header flex-between">
+                                <div class="categories flex">
+                                    <button class="body-sm gray-300 active" data-category="all">All Products</button>
+                                    <button class="body-sm gray-300" data-category="women">Women</button>
+                                    <button class="body-sm gray-300" data-category="men">Men</button>
+                                    <button class="body-sm gray-300" data-category="bag">Bag</button>
+                                    <button class="body-sm gray-300" data-category="shoes">Shoes</button>
+                                    <button class="body-sm gray-300" data-category="watches">Watches</button>
+                                </div>
+                                <div class="filter-button flex gap-6"><button id="filterBtn" class="sq-btn  h-tw-bp h-borer-n">Filter</button><button
+                                        class="sq-btn h-tw-bp h-borer-n">Search</button></div>
+                            </div>
+
+                            <div id="filter" class="filter-groups gray-400 flex-between">
+                                <div class="filter-group gap-6 flex-col body-lg">
+                                    <h4 class="gray-800 pb-10">Sort By</h4>
+                                    <a href="#">Default</a>
+                                    <a href="#">Popularity</a>
+                                    <a href="#">Average rating</a>
+                                    <a href="#">Newness</a>
+                                    <a href="#">Price: Low to High</a>
+                                    <a href="#">Price: High to Low</a>
+                                </div>
+
+                                <div class="filter-group gap-6 flex-col body-lg">
+                                    <h4 class="gray-800 pb-10">Price</h4>
+                                    <a href="#">All</a>
+                                    <a href="#">$0 - $50</a>
+                                    <a href="#">$50 - $100</a>
+                                    <a href="#">$100 - $150</a>
+                                    <a href="#">$150 - $200</a>
+                                    <a href="#">$200+</a>
+                                </div>
+
+                                <div class="filter-group gap-6 flex-col body-lg">
+                                    <h4 class="gray-800 pb-10">Color</h4>
+                                    <a href="#"><span class="round bg-black"></span> Black</a>
+                                    <a href="#"><span class="round bg-blue"></span> Blue</a>
+                                    <a href="#"><span class="round bg-Gray"></span> Gray</a>
+                                    <a href="#"><span class="round bg-green"></span> Green</a>
+                                    <a href="#"><span class="round bg-red"></span> Red</a>
+                                    <a href="#"><span class="round bg-white"></span> White</a>
+                                </div>
+                                <div class="filter-group gap-6 flex-col body-xs">
+                                    <h4 class="gray-800 pb-10">Tags</h4>
+                                    <div class="filter-btns">
+                                        <button>Fashion</button><button>Lifestyle</button><button>Denim</button><button>Streetstyle</button><button>Crafts</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-card show" data-category="women">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-01.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="men">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-02.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="bag">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-03.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="shoes">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-04.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="watches">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-05.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="women">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-06.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="men">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-07.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                        <div class="product-card show" data-category="shoes">
+                            <figure class="hover scale of-hidden relative"><img src="./assets/images/product-08.jpg"
+                                    alt="product 1"><button
+                                    class="global-btn h-tw-bb below-top-animation-2 product-btn"><a href="#">Quick
+                                        View</a> </button>
+                            </figure>
+                            <div class="card-footer flex-col gap-6">
+                                <p class="body-sm gray-200">Esprit Ruffle Shirt</p>
+                                <span class="body-sm gray-400">$16.64</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-center ">
+                        <button class="load-more h-tw-bb global-btn flex-between">Load More</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper flex-col gap-100">
+                <div class="footer-grid">
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Categories</h5>
+                        <div class="links flex-col body-xs gray-300">
+                            <a href="#">Women</a>
+                            <a href="#">Men</a><a href="#">Shoes</a><a href="#">Watches</a>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Help</h5>
+                        <div class="links flex-col body-xs gray-300">
+                            <a href="#">Women</a>
+                            <a href="#">Men</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Watches</a>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">GET IN TOUCH</h5>
+                        <div class=" flex-col body-xs gray-300  gap-27">
+                            <p class="lh-19">Any questions? Let us know in store at 8th floor, 379 Hudson St, New York,
+                                NY 10018 or
+                                call us on
+                                <a href="tel:(+1) 96 716 6879">call us on (+1) 96 716 6879</a>
+                            </p>
+                            <div class="social flex gap-16">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Newsletter</h5>
+                        <form class="form flex-col body-xs gray-300 gap-18">
+                            <div class=" relative onHoverUnderLine ">
+                                <input class="text-white w-full" type="email" name="" id=""
+                                    placeholder="emailexample@gmail.com">
+                            </div>
+                            <button class="global-btn h-tp-bw font-500" type="button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom flex-col gap-16">
+                    <div class="pay-icons flex-center   ">
+                        <img src="./assets/images/icons/icon-pay-01.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-02.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-03.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-04.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-05.png" alt="pay icon">
+                    </div>
+                    <p class="body-lg flex-center gray-300">Copyright ©2025 All rights reserved | Made with by &nbsp<a
+                            class="text-primary" href="#"> Colorlib </a>&nbsp & distributed by <a class="text-primary"
+                            href="#">&nbsp
+                            ThemeWagon
+                        </a> &nbsp</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/script.js"></script>
