@@ -1,0 +1,151 @@
+.cart-table {
+    width: 100%;
+    padding-bottom: 30px;
+    max-width: 788px;
+    border: 1px solid var(--color-gray-100);
+
+    height: min-content;
+}
+.wrapper{
+    margin-top: 0;
+}
+table {
+    width: 100%;
+
+}
+
+.cart-table th,
+.cart-table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table td img {
+    width: 60px;
+    height: auto;
+}
+
+.cart-table td figure::before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    background-image: url(../images/crossIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.cart-table td figure:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.qty-btn {
+    padding: 5px 10px;
+    border: 1px solid var(--color-gray-100);
+    background: #fff;
+    cursor: pointer;
+    height: 43px;
+    width: 45px;
+
+}
+
+.qty-input {
+    width: 45px;
+    text-align: center;
+    border: 1px solid var(--color-gray-100);
+    padding: 5px;
+    height: 43px;
+}
+
+.cart-product {
+    padding: 38px 23px 43px 50px !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-actions {
+    padding: 28px 41px;
+}
+
+.cart-actions button {
+    border: 1px solid var(--color-gray-100);
+
+}
+
+.cart-actions input {
+    padding: 10px 20px;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 28px;
+}
+
+.cart-actions input:focus {
+    outline: none;
+}
+
+.quantity-control input {
+    background-color: var(--color-gray-50);
+}
+
+/* cart summary */
+
+.cart-summary {
+    max-width: 442px;
+    width: 100%;
+    border: 1px solid var(--color-gray-100);
+    padding: 31px 41px 41px;
+}
+
+.cart-summary h3 {
+    padding-bottom: 20px;
+}
+
+.shipping-section {
+    border-bottom: 1px dashed var(--color-gray-100);
+    border-top: 1px dashed var(--color-gray-100);
+    padding: 15px 0 30px;
+    margin: 15px 0;
+}
+
+.cart-summary select,
+.cart-summary input {
+    padding: 10px 5px;
+    border: 1px solid var(--color-gray-100);
+}
+
+.cart-summary select:focus,
+.cart-summary input:focus {
+    outline: none;
+}
+
+#checkoutBtn{
+    width: 100%;
+    background-color: var(--color-gray-900);
+    color: white;
+}
+
+#checkoutBtn:hover{
+    background-color: var(--color-primary);
+}

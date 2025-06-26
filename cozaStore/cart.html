@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/globalStyle.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+     <div class="top-bar">
+        <div class="container">
+            <div class="bar-wrapper flex-between">
+                <p class="body-xs silver">Free shipping for standard order over $100</p>
+                <div class="links"><a href="#">Helps & Faqs</a><a href="#">My Account</a><a href="#">EN</a><a href="#">USD</a></div>
+            </div>
+        </div>
+    </div>
+    <header class="top-0">
+        <div class="container">
+            <div class="header-wrapper flex align-center gray-700">
+                <div class="logo-container align-center"><a href="./index.html">
+                        <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt="">
+                        </figure>
+                    </a>
+                </div>
+                <nav class="w-full">
+                    <ul class="flex-between">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a class="active" href="#">Features</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="wrap-icon-header">
+                    <a href="#"><i class="fas fa-magnifying-glass"></i></a>
+                    <a href="./cart.html"><i class="fa-solid fa-cart-shopping active"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header">
+                        <nav class="breadcrumb gap-10 flex align-center body-sm"><a class="gray-500"
+                                href="./index.html">Home</a><i class="fa fa-angle-right gray-200"></i><span
+                                class="gray-200">Shoping Cart</span></nav>
+                    </div>
+                    <div class="flex-between gap-30">
+                        <div class="cart-table">
+                            <table>
+                                <thead>
+                                    <tr class="body-xs uppercase gray-500 ">
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Cart Item 1 -->
+                                    <tr>
+                                        <td class="cart-product align-center gap-23">
+                                            <figure class="relative">
+                                                <img src="./assets/images/item-cart-01.jpg" alt="Product">
+                                            </figure>
+                                            <span>Fresh Strawberries</span>
+                                        </td>
+                                        <td>$36.00</td>
+                                        <td>
+                                            <div class="quantity-control">
+                                                <button class="h-tw-bp qty-btn minus">-</button>
+                                                <input type="number" class="qty-input" value="1" min="1">
+                                                <button class="h-tw-bp qty-btn plus">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="item-total">$36.00</td>
+                                    </tr>
+
+                                    <!-- Cart Item 2 -->
+                                    <tr>
+                                        <td class="cart-product align-center gap-23">
+                                            <figure class="relative">
+                                                <img src="./assets/images/item-cart-02.jpg" alt="Product">
+                                            </figure>
+                                            <span>Lightweight Jacket</span>
+                                        </td>
+                                        <td>$16.00</td>
+                                        <td>
+                                            <div class="quantity-control">
+                                                <button class="h-tw-bp qty-btn minus">-</button>
+                                                <input type="number" class="qty-input" value="1" min="1">
+                                                <button class="h-tw-bp qty-btn plus">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="item-total">$16.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Cart Bottom Controls -->
+                            <div class="cart-actions flex-between">
+                                <div class="coupon-area flex gap-10">
+                                    <input type="text" id="couponCode" placeholder="Coupon Code">
+                                    <button id="applyCoupon" class="h-tw-bp global-btn">Apply Coupon</button>
+                                </div>
+                                <button id="updateCart" class="global-btn h-tw-bp">Update Cart</button>
+                            </div>
+                        </div>
+
+                        <!-- Cart Summary -->
+                        <div class="cart-summary">
+                            <h3 class="body-xl gray-700 ">Cart Totals</h3>
+                            <div class="subtotal gray-700 flex gap-30">
+                                <span class="body-lg mw-70">Subtotal:</span>
+                                <span class="body-lg" id="cartSubtotal">$79.65</span>
+                            </div>
+
+                            <div class="shipping-section flex gap-30">
+                                <strong class="font-400 body-lg gray-700 mw-70">Shipping:</strong>
+                                <div class="flex-col gap-16 w-full gray-500">
+                                    <p class="body-xs gray-200 pt-5">
+                                        There are no shipping methods available. Please double check your address, or
+                                        contact us if you need any help..</p>
+                                    <h4 class="body-xs gray-500 font-400 uppercase">Calculate Shipping</h4>
+                                    <select id="countrySelect body-xs gray-200" class="gray-700">
+                                        <option>Select a country...</option>
+                                        <option>India</option>
+                                        <option>USA</option>
+                                    </select>
+                                    <input type="text" id="stateInput" placeholder="State / Country">
+                                    <input type="text" id="postcodeInput" placeholder="Postcode / Zip">
+                                    <button id="updateTotals" class="h-tw-bp global-btn  gray-700">Update
+                                        Totals</button>
+                                </div>
+                            </div>
+                            <div class="flex-col gap-30">
+
+                                <div class="total-section flex gap-30 body-lg gray-700">
+                                    <strong class="font-400 mw-70">Total:</strong>
+                                    <strong class="font-400 " id="cartTotal">$79.65</strong>
+                                </div>
+
+                                <button id="checkoutBtn" class="h-tw-bp checkout-btn global-btn">Proceed to
+                                    Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper flex-col gap-100">
+                <div class="footer-grid">
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Categories</h5>
+                        <div class="links flex-col body-xs gray-300">
+                            <a href="#">Women</a>
+                            <a href="#">Men</a><a href="#">Shoes</a><a href="#">Watches</a>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Help</h5>
+                        <div class="links flex-col body-xs gray-300">
+                            <a href="#">Women</a>
+                            <a href="#">Men</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Watches</a>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">GET IN TOUCH</h5>
+                        <div class=" flex-col body-xs gray-300  gap-27">
+                            <p class="lh-19">Any questions? Let us know in store at 8th floor, 379 Hudson St, New York,
+                                NY 10018 or
+                                call us on
+                                <a href="tel:(+1) 96 716 6879">call us on (+1) 96 716 6879</a>
+                            </p>
+                            <div class="social flex gap-16">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column gap-30 flex-col">
+                        <h5 class="text-white body-lg uppercase font-400">Newsletter</h5>
+                        <form class="form flex-col body-xs gray-300 gap-18">
+                            <div class=" relative onHoverUnderLine ">
+                                <input class="text-white w-full" type="email" name="" id=""
+                                    placeholder="emailexample@gmail.com">
+                            </div>
+                            <button class="global-btn h-tp-bw font-500" type="button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom flex-col gap-16">
+                    <div class="pay-icons flex-center   ">
+                        <img src="./assets/images/icons/icon-pay-01.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-02.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-03.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-04.png" alt="pay icon">
+                        <img src="./assets/images/icons/icon-pay-05.png" alt="pay icon">
+                    </div>
+                    <p class="body-lg flex-center gray-300">Copyright ©2025 All rights reserved | Made with by &nbsp<a
+                            class="text-primary" href="#"> Colorlib </a>&nbsp & distributed by <a class="text-primary"
+                            href="#">&nbsp
+                            ThemeWagon
+                        </a> &nbsp</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/cart.js"></script>
+
+</body>
+
+</html>

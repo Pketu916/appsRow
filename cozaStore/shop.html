@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="top-bar">
+     <div class="top-bar">
         <div class="container">
             <div class="bar-wrapper flex-between">
                 <p class="body-xs silver">Free shipping for standard order over $100</p>
@@ -21,21 +21,20 @@
             </div>
         </div>
     </div>
-    <header id="header">
+    <header class="top-0">
         <div class="container">
             <div class="header-wrapper flex align-center gray-700">
                 <div class="logo-container align-center">
                     <a href="./index.html">
-                        <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt="">
-                        </figure>
+                        <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt=""></figure>
                     </a>
                 </div>
                 <nav class="w-full">
                     <ul class="flex-between">
-                        <li><a href="./index.html" class="active">Home</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./shop.html" class="active">Shop</a></li>
                         <li><a href="./cart.html">Features</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -51,87 +50,10 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-wrapper">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper gray-700">
-                        <div class="swiper-slide">
-                            <figure><img src="https://themewagon.github.io/cozastore/images/slide-03.jpg"
-                                    alt="hero image"></figure>
-                            <div class="hero-content w-full active">
-                                <div class="container">
-                                    <p class="p-lg">Men New-Season</p>
-                                    <h1 class="h1 font-playfair">Jackets & Coats </h1>
-                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
-                                        Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure><img src="https://themewagon.github.io/cozastore/images/slide-02.jpg"
-                                    alt="hero image"></figure>
-                            <div class="hero-content w-full">
-                                <div class="container">
-                                    <p class="p-lg">Men Collection 2018</p>
-                                    <h1 class="h1 font-playfair">NEW SEASON</h1>
-                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
-                                        Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <figure><img src="https://themewagon.github.io/cozastore/images/slide-01.jpg"
-                                    alt="hero image"></figure>
-                            <div class="hero-content w-full">
-                                <div class="container">
-                                    <p class="p-lg">Men Collection 2018</p>
-                                    <h1 class="h1 font-playfair">NEW SEASON</h1>
-                                    <button class="global-btn bg-primary text-white below-top-animation">Shop
-                                        Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"><i class="fa-solid fa-caret-right"></i></div>
-                    <div class="swiper-button-prev"><i class="fa-solid fa-caret-left"></i></div>
-                    <!-- <div class="swiper-pagination"></div> -->
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <div class="flex-between pb-50 pt-80 block-container ">
-                    <div class="block block1 hover hover-white"><a class="flex-col-between" href="#">
-                            <div>
-                                <h2 class="h6 font-700  gray-700">Women</h2>
-                                <p class="body-sm  gray-500">Spring 2025</p>
-                            </div>
-                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
-                        </a></div>
-                    <div class="block block2 hover hover-white"><a class="flex-col-between" href="#">
-                            <div>
-                                <h2 class="h6 font-700  gray-700">Men</h2>
-                                <p class="body-sm  gray-500">Spring 2025</p>
-                            </div>
-                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
-                        </a></div>
-                    <div class="block block3 hover hover-white"><a class="flex-col-between" href="#">
-                            <div>
-                                <h2 class="h6 font-700  gray-700">Accessories</h2>
-                                <p class="body-sm  gray-500">New Trand</p>
-                            </div>
-                            <p class="below-top-animation transition b-b text-white uppercase body-lg">Shop Now</p>
-                        </a></div>
-                </div>
-            </div>
-        </section>
-
         <section class="product-overview">
             <div class="container">
                 <div class="wrapper">
                     <div class="header flex-col">
-                        <h2 class="h2 uppercase">Product Overview</h2>
                         <div class="filter-section flex-col gap-16">
                             <div class="filter-header flex-between">
                                 <div class="categories flex">
@@ -143,7 +65,7 @@
                                     <button class="body-sm gray-300" data-category="watches">Watches</button>
                                 </div>
                                 <div class="filter-button flex gap-6"><button id="filterBtn"
-                                        class="sq-btn relative h-tw-bp h-borer-n">Filter</button><button
+                                        class="sq-btn  h-tw-bp h-borer-n">Filter</button><button
                                         class="sq-btn h-tw-bp h-borer-n">Search</button></div>
                             </div>
 
@@ -281,7 +203,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
     <footer>
