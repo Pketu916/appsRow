@@ -4,11 +4,12 @@
     /* Font Sizes */
     --fs-h1: 80px;
     --fs-h2: 60px;
-    --fs-h3: 48px;
+    --fs-h3: 50px;
     --fs-h4: 39px;
-    --fs-h5: 31px;
+    --fs-h5: 26px;
     --fs-h6: 25px;
-    --fs-body-xl: 18px;
+    --fs-body-xl: 20px;
+    --fs-body-xl2: 20px;
     --fs-body-lg: 15px;
     --fs-body-sm: 14px;
     --fs-body-xs: 13px;
@@ -108,6 +109,11 @@
     line-height: var(--lh-18);
     /* letter-spacing: var(--ls-18); */
 }
+.body-xl2 {
+    font-size: var(--fs-body-xl);
+    line-height: var(--lh-18);
+    /* letter-spacing: var(--ls-18); */
+}
 
 .body-lg {
     font-size: var(--fs-body-lg);
@@ -124,7 +130,7 @@
 .body-xs {
     font-size: var(--fs-body-xs);
     line-height: var(--lh-11);
-    /* letter-spacing: var(--ls-11); */
+    letter-spacing: var(--ls-11);
 }
 
 * {
@@ -212,6 +218,10 @@ figure img {
     color: white;
 }
 
+.silver {
+    color: #b2b2b2;
+}
+
 .gray-900 {
     color: var(--color-gray-900);
 }
@@ -252,6 +262,10 @@ figure img {
     color: var(--color-gray-50);
 }
 
+.font-400 {
+    font-weight: 400;
+}
+
 .font-500 {
     font-weight: 500;
 }
@@ -282,19 +296,15 @@ figure img {
 
 .global-btn {
     line-height: 22px;
-    padding: 0 15px;
+    padding: 0 20px;
     border-radius: 23px;
     font-size: 15px;
     border: none;
     height: 46px;
-    width: 146px;
+    /* width: 146px; */
+    width: max-content;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-}
-
-.sq-btn{
-    padding: 5px 15px;
-border: 1px solid;
 }
 
 .uppercase {
@@ -307,6 +317,19 @@ border: 1px solid;
 
 .pt-80 {
     padding-top: 80px;
+}
+
+.py-15 {
+    padding: 15px 0;
+}
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.mw-70 {
+    max-width: 70px;
+    width: 100%;
 }
 
 figure img {
@@ -344,16 +367,24 @@ figure img {
     color: white;
     background-color: var(--color-primary);
 }
+
 .h-tp-bw {
     background-color: var(--color-primary);
     color: white;
+    border-color: var(--color-primary);
+}
+
+.sq-btn {
+    padding: 5px 15px;
+    border: 1px solid var(--color-gray-600);
 }
 
 .h-tp-bw:hover {
     background-color: white;
     color: var(--color-primary);
 }
-.h-borer-n:hover{
+
+.h-borer-n:hover {
     border: 1px solid;
 }
 
@@ -365,8 +396,20 @@ figure img {
     margin: 81px 0 104px;
 }
 
+.wrapper-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 62px 0 60px;
+}
+
+
 .gap-6 {
     gap: 6px;
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 .gap-16 {
@@ -379,6 +422,10 @@ figure img {
 
 .gap-27 {
     gap: 27px;
+}
+
+.gap-23 {
+    gap: 23px;
 }
 
 .gap-30 {
@@ -424,7 +471,7 @@ figure img {
     background-color: white;
 }
 
-.round{
+.round {
     border: 1px solid var(--color-gray-200);
     border-radius: 50%;
     height: 12px;
@@ -432,6 +479,95 @@ figure img {
     display: inline-block;
 }
 
-.lh-19{
+.lh-19 {
     line-height: 1.9;
+}
+
+.breadcrumb {
+    padding-top: 30px;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .active {
+    color: var(--color-primary);
+}
+
+
+/* top bar */
+.top-bar {
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    transition: none !important;
+    height: 45px;
+    align-items: center;
+}
+
+.top-bar .container {
+    height: 100%;
+}
+
+.top-bar a {
+    color: #b2b2b2;
+    padding: 10px 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    display: inline-block;
+    height: 100%;
+}
+
+.top-bar .links {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.bar-wrapper {
+    /* padding: 10px 0; */
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.center-hero figure {
+    height: 239px;
+    position: relative;
+}
+
+.center-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#search{
+    position: relative;
+}
+
+#search input{
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 28px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+#search input:focus{
+    outline: none;
+}
+#search button{
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }

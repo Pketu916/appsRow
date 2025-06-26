@@ -2,19 +2,25 @@
     display: none;
 }
 
-header {
+#header {
+    background-color: transparent;
     background-color: transparent;
     position: fixed;
+}
+
+header {
     width: 100%;
-    top: 0;
-    z-index: 10;
+    top: 45px;
+    z-index: 100;
     transition: background-color 0.6s ease;
 }
 
-header.scrolled {
-    background-color: white;
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+#header.scrolled {
+    background-color: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    top: 0 !important;
 }
+
 
 header ul,
 header nav {
@@ -46,6 +52,7 @@ header ul li a:hover {
 
 /* hero started */
 .hero {
+    /* min-height: calc(100vh - 45px); */
     min-height: 100vh;
 }
 
@@ -324,10 +331,33 @@ footer {
     padding: 0 35px;
 }
 
+/* filter active class */
+
 .filter-slide {
     padding: 27px 35px;
     opacity: 1;
     max-height: 300px;
+}
+
+.tooltip-bottom::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(50%, 100%);
+    bottom: 8px;
+    width: 15px;
+    height: 15px;
+    background: #f2f2f2;
+    rotate: 45deg;
+    border: 1px solid var(--color-gray-600);
+    border-left-style: none;
+    border-top-style: none;
+    transition: all 0.6s ease;
+}
+
+.tooltip-bottom:hover::before {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .filter-btns button {

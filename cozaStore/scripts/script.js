@@ -38,29 +38,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// const categoryButtons = document.querySelectorAll(".categories button");
-// const products = document.querySelectorAll(".product-card");
-
-// categoryButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     // Remove active class from all buttons
-//     categoryButtons.forEach((btn) => btn.classList.remove("active"));
-//     button.classList.add("active");
-
-//     const selectedCategory = button.dataset.category;
-
-//     products.forEach((product) => {
-//       const productCategory = product.dataset.category;
-
-//       if (selectedCategory === "all" || selectedCategory === productCategory) {
-//         product.style.display = "block";
-//       } else {
-//         product.style.display = "none";
-//       }
-//     });
-//   });
-// });
-
 // product card -------------------------------------------
 
 const categoryButtons = document.querySelectorAll(".categories button");
@@ -118,21 +95,25 @@ loadMoreBtn.addEventListener("click", () => {
 showProducts();
 
 // header---------------------------------------------------
-const header = document.querySelector("header");
+const header = document.getElementById("header");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     // Change 50 to desired scroll amount
     header.classList.add("scrolled");
+    console.log("12")
   } else {
     header.classList.remove("scrolled");
+    console.log("120")
   }
 });
 
-//
+
+//filter button
 const filterBtn = document.getElementById("filterBtn");
 const filter = document.getElementById("filter");
 
 filterBtn.addEventListener("click", () => {
-    filter.classList.toggle("filter-slide");
+  filter.classList.toggle("filter-slide");
+  filterBtn.classList.toggle("tooltip-bottom");
 });
