@@ -1,0 +1,76 @@
+article figure {
+    width: 370px;
+    height: 370px;
+}
+
+article {
+    gap: 30px;
+}
+
+article .content {
+    max-width: 685px;
+}
+
+article .before {
+    max-height: 370px;
+}
+
+article .before::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ccc;
+    right: 15px;
+    bottom: -21px;
+    z-index: -1;
+}
+
+.wrapper {
+    gap: 148px;
+    margin-bottom: 0;
+}
+
+.article-2 {
+    flex-direction: row-reverse;
+}
+
+.article-2 .before::before {
+    right: -19px;
+    bottom: -21px;
+}
+
+.article-2 .content div {
+    margin-top: 30px;
+    padding-left: 30px;
+    border-left: 3px solid #e6e6e6;
+}
+
+@media (max-width:767px) {
+    .about-section article {
+        flex-direction: column;
+    }
+
+    article figure {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+    }
+
+    article .before {
+        max-height: unset;
+    }
+
+    .article-2 .before::before {
+        right: 0px;
+        bottom: -15px;
+    }
+
+    article .before::before {
+        right: 0px;
+        bottom: -16px;
+    }
+
+    .wrapper {
+        gap: 100px;
+    }
+}
