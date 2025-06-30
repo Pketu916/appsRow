@@ -26,31 +26,6 @@ table {
     height: auto;
 }
 
-.cart-table td figure::before {
-    content: '';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
-    background-image: url(../images/crossIcon.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-
-.cart-table td figure:hover::before {
-    visibility: visible;
-    opacity: 1;
-}
-
-
 
 .qty-control {
     display: flex;
@@ -148,4 +123,34 @@ input::-webkit-inner-spin-button {
 
 #checkoutBtn:hover{
     background-color: var(--color-primary);
+}
+.quantity-control{
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width:1024px) {
+    .content-wrappwer{
+        flex-direction: column;
+    }
+    .cart-summary{
+        max-width: 100%;
+        padding: 20px 30px;
+    }
+    .cart-table {
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+    .cart-actions{
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 20px 10px;
+    }
+    .cart-summary .shipping-section.flex{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .coupon-area{
+        flex-direction: column;
+    }
 }

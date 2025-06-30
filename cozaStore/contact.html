@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="./assets/css/globalStyle.css">
-    <link rel="stylesheet" href="./assets/css/cart.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
@@ -42,10 +42,10 @@
                     <ul class="flex-between">
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./shop.html">Shop</a></li>
-                        <li><a href="./cart.html" class="active">Features</a></li>
+                        <li><a href="./cart.html">Features</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./about.html">About</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./contact.html" class="active">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="wrap-icon-header">
@@ -104,115 +104,57 @@
     </header>
     <main>
         <section>
+            <div class="center-hero">
+                <figure><img src="./assets/images/bg-01.jpg" alt="contact bg">
+                    <h1 class="h3 text-white">Contact</h1>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-section">
             <div class="container">
-                <div class="wrapper">
-                    <div class="header">
-                        <nav class="breadcrumb gap-10 flex align-center body-sm"><a class="gray-500"
-                                href="./index.html">Home</a><i class="fa fa-angle-right gray-200"></i><span
-                                class="gray-200">Shoping Cart</span></nav>
+                <div class="content flex-between ">
+                    <div class="form flex-col">
+                        <h2 class="h6 font-400">Send Us A Message</h2>
+                        <form action="" class="flex-col">
+                            <input type="email" placeholder="Your Email Address" name="" id="">
+                            <textarea name="msg" rows="8" placeholder="How Can We Help?"></textarea>
+                            <button class="global-btn w-full h-tw-bp bg-black text-white">SUBMIT</button>
+                        </form>
                     </div>
-                    <div class="flex-between gap-30 content-wrappwer">
-                        <div class="cart-table">
-                            <table>
-                                <thead>
-                                    <tr class="body-xs uppercase gray-500 ">
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Cart Item 1 -->
-                                    <tr>
-                                        <td class="cart-product align-center gap-23">
-                                            <figure class="relative hover-close">
-                                                <img src="./assets/images/item-cart-01.jpg" alt="Product">
-                                            </figure>
-                                            <span>Fresh Strawberries</span>
-                                        </td>
-                                        <td>$36.00</td>
-                                        <td>
-                                            <div class="quantity-control">
-                                                <button class="h-tw-bp qty-btn minus">-</button>
-                                                <input type="number" class="qty-input" value="1" min="1">
-                                                <button class="h-tw-bp qty-btn plus">+</button>
-                                            </div>
-                                        </td>
-                                        <td class="item-total">$36.00</td>
-                                    </tr>
-
-                                    <!-- Cart Item 2 -->
-                                    <tr>
-                                        <td class="cart-product align-center gap-23">
-                                            <figure class="relative hover-close">
-                                                <img src="./assets/images/item-cart-02.jpg" alt="Product">
-                                            </figure>
-                                            <span>Lightweight Jacket</span>
-                                        </td>
-                                        <td>$16.00</td>
-                                        <td>
-                                            <div class="quantity-control">
-                                                <button class="h-tw-bp qty-btn minus">-</button>
-                                                <input type="number" class="qty-input" value="1" min="1">
-                                                <button class="h-tw-bp qty-btn plus">+</button>
-                                            </div>
-                                        </td>
-                                        <td class="item-total">$16.00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- Cart Bottom Controls -->
-                            <div class="cart-actions flex-between">
-                                <div class="coupon-area flex gap-10">
-                                    <input type="text" id="couponCode" placeholder="Coupon Code">
-                                    <button id="applyCoupon" class="h-tw-bp global-btn">Apply Coupon</button>
-                                </div>
-                                <button id="updateCart" class="global-btn h-tw-bp">Update Cart</button>
-                            </div>
+                    <div class="hr"></div>
+                    <div class="contact-details flex-col">
+                        <div class="flex gap-16"><i class="fa-solid fa-location-dot"></i>
+                            <p class="body-lg gray-200 flex-col gap-18"><span class="body-xl2 gray-700">
+                                    Address</span>Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US</p>
                         </div>
+                        <div class="flex gap-16"><i class="fa-solid fa-phone"></i>
+                            <p class="body-lg gray-200 flex-col gap-18"><span class="body-xl2 gray-700">
+                                    Lets Talk</span><a class="text-primary" href="tel:+1 800 1236879">+1 800 1236879</a>
+                            </p>
+                        </div>
+                        <div class="flex gap-16"><i class="fa-solid fa-envelope"></i>
+                            <p class="body-lg gray-200 flex-col gap-18"><span class="body-xl2 gray-700">
 
-                        <!-- Cart Summary -->
-                        <div class="cart-summary">
-                            <h3 class="body-xl gray-700 ">Cart Totals</h3>
-                            <div class="subtotal gray-700 flex gap-30">
-                                <span class="body-lg mw-70">Subtotal:</span>
-                                <span class="body-lg" id="cartSubtotal">$79.65</span>
-                            </div>
-
-                            <div class="shipping-section flex gap-30">
-                                <strong class="font-400 body-lg gray-700 mw-70">Shipping:</strong>
-                                <div class="flex-col gap-16 w-full gray-500">
-                                    <p class="body-xs gray-200 pt-5">
-                                        There are no shipping methods available. Please double check your address, or
-                                        contact us if you need any help..</p>
-                                    <h4 class="body-xs gray-500 font-400 uppercase">Calculate Shipping</h4>
-                                    <select id="countrySelect body-xs gray-200" class="gray-700">
-                                        <option>Select a country...</option>
-                                        <option>India</option>
-                                        <option>USA</option>
-                                    </select>
-                                    <input type="text" id="stateInput" placeholder="State / Country">
-                                    <input type="text" id="postcodeInput" placeholder="Postcode / Zip">
-                                    <button id="updateTotals" class="h-tw-bp global-btn  gray-700">Update
-                                        Totals</button>
-                                </div>
-                            </div>
-                            <div class="flex-col gap-30">
-
-                                <div class="total-section flex gap-30 body-lg gray-700">
-                                    <strong class="font-400 mw-70">Total:</strong>
-                                    <strong class="font-400 " id="cartTotal">$79.65</strong>
-                                </div>
-
-                                <button id="checkoutBtn" class="h-tw-bp checkout-btn global-btn">Proceed to
-                                    Checkout</button>
-                            </div>
+                                    Sale Support</span><a class="text-primary"
+                                    href="mailto:contact@example.com">contact@example.com</a></p>
                         </div>
                     </div>
+                    </article>
                 </div>
             </div>
+        </section>
+        <section>
+            <div class="map-wrapper relative">
+                <iframe id="mapFrame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8705.585736031187!2d72.54082910000001!3d23.114170800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8104a1643441%3A0x3c0bac022162dc61!2sAppsrow%20-%20Best%20Webflow%20Development%20Agency!5e1!3m2!1sen!2sin!4v1751260493793!5m2!1sen!2sin"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="map-controls">
+                    <button id="fullscreenBtn"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer>
@@ -280,8 +222,9 @@
         </div>
     </footer>
     <script src="./scripts/cart.js"></script>
+    <script src="./scripts/map.js"></script>
     <script src="./scripts/header.js"></script>
-
+    <script src="./scripts/script.js"></script>
 
 </body>
 

@@ -101,13 +101,10 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     // Change 50 to desired scroll amount
     header.classList.add("scrolled");
-    console.log("12")
   } else {
     header.classList.remove("scrolled");
-    console.log("120")
   }
 });
-
 
 //filter button
 const filterBtn = document.getElementById("filterBtn");

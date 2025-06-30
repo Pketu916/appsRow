@@ -13,11 +13,12 @@
 </head>
 
 <body>
-     <div class="top-bar">
+    <div class="top-bar top-bar-1">
         <div class="container">
             <div class="bar-wrapper flex-between">
                 <p class="body-xs silver">Free shipping for standard order over $100</p>
-                <div class="links"><a href="#">Helps & Faqs</a><a href="#">My Account</a><a href="#">EN</a><a href="#">USD</a></div>
+                <div class="links"><a href="#">Helps & Faqs</a><a href="#">My Account</a><a href="#">EN</a><a
+                        href="#">USD</a></div>
             </div>
         </div>
     </div>
@@ -26,24 +27,77 @@
             <div class="header-wrapper flex align-center gray-700">
                 <div class="logo-container align-center">
                     <a href="./index.html">
-                        <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt=""></figure>
+                        <figure><img src="https://themewagon.github.io/cozastore/images/icons/logo-01.png" alt="">
+                        </figure>
                     </a>
                 </div>
                 <nav class="w-full">
+                    <div class="top-bar top-bar-2">
+                        <div class="bar-wrapper flex-between">
+                            <p class="body-xs silver">Free shipping for standard order over $100</p>
+                            <div class="links"><a href="#">Helps & Faqs</a><a href="#">My Account</a><a
+                                    href="#">EN</a><a href="#">USD</a></div>
+                        </div>
+                    </div>
                     <ul class="flex-between">
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./shop.html" class="active">Shop</a></li>
                         <li><a href="./cart.html">Features</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="wrap-icon-header">
                     <a href="#"><i class="fas fa-magnifying-glass"></i></a>
-                    <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="javascript:void(0);" id="cartToggle"><i class="fa-solid fa-cart-shopping"></i></a>
                     <a href="#"><i class="fa-regular fa-heart"></i></a>
                 </div>
+                <div id="overlay"></div>
+
+                <div class="cart-aside" id="cartAside">
+                    <div class="aside-container flex-col-between">
+                        <div class="flex-col gap-100">
+                            <div class="flex-between align-center gray-700">
+                                <h2 class="body-xl2">Your Cart</h2>
+                                <div id="cartClose" class="gray-700" style="cursor:pointer;"><i
+                                        class="fa-solid fa-x h6"></i></div>
+                            </div>
+                            <!-- Cart items... -->
+                            <div class="flex-col gap-16 gray-300 body-sm">
+                                <div class="flex gap-18">
+                                    <figure class="relative hover-close">
+                                        <img src="./assets/images/item-cart-01.jpg" alt="Product">
+                                    </figure>
+                                    <p class="flex-col gap-20">
+                                        <span>Fresh Strawberries</span>
+                                        <td>1 x $36.00</td>
+                                    </p>
+                                </div>
+
+                                <div class="flex gap-18">
+                                    <figure class="relative hover-close">
+                                        <img src="./assets/images/item-cart-02.jpg" alt="Product">
+                                    </figure>
+                                    <p class="flex-col gap-20">
+                                        <span>Fresh Strawberries</span>
+                                        <td>1 x $36.00</td>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-summary flex-col">
+                            <span class="gray-800 body-xl2">Total: <strong>$75.00</strong></span>
+                            <div class="flex gap-10">
+                                <button class="global-btn bg-black text-white h-tw-bp"><a href="./cart.html">View
+                                        Cart</a></button>
+                                <button class="global-btn bg-black text-white h-tw-bp"><a href="./cart.html">Check
+                                        Out</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="menu"><i class="fa-solid fa-bars"></i></div>
             </div>
         </div>
@@ -212,17 +266,18 @@
                     <div class="footer-column gap-30 flex-col">
                         <h5 class="text-white body-lg uppercase font-400">Categories</h5>
                         <div class="links flex-col body-xs gray-300">
-                            <a href="#">Women</a>
-                            <a href="#">Men</a><a href="#">Shoes</a><a href="#">Watches</a>
+                            <a class="h-primary" href="#">Women</a>
+                            <a class="h-primary" href="#">Men</a><a class="h-primary" href="#">Shoes</a><a
+                                class="h-primary" href="#">Watches</a>
                         </div>
                     </div>
                     <div class="footer-column gap-30 flex-col">
                         <h5 class="text-white body-lg uppercase font-400">Help</h5>
                         <div class="links flex-col body-xs gray-300">
-                            <a href="#">Women</a>
-                            <a href="#">Men</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Watches</a>
+                            <a class="h-primary" href="#">Women</a>
+                            <a class="h-primary" href="#">Men</a>
+                            <a class="h-primary" href="#">Shoes</a>
+                            <a class="h-primary" href="#">Watches</a>
                         </div>
                     </div>
                     <div class="footer-column gap-30 flex-col">
@@ -234,9 +289,9 @@
                                 <a href="tel:(+1) 96 716 6879">call us on (+1) 96 716 6879</a>
                             </p>
                             <div class="social flex gap-16">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a class="h-primary body-xl" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="h-primary body-xl" href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="h-primary body-xl" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +314,7 @@
                         <img src="./assets/images/icons/icon-pay-04.png" alt="pay icon">
                         <img src="./assets/images/icons/icon-pay-05.png" alt="pay icon">
                     </div>
-                    <p class="body-lg flex-center gray-300">Copyright ©2025 All rights reserved | Made with by &nbsp<a
+                    <p class="body-lg gray-300">Copyright ©2025 All rights reserved | Made with by &nbsp<a
                             class="text-primary" href="#"> Colorlib </a>&nbsp & distributed by <a class="text-primary"
                             href="#">&nbsp
                             ThemeWagon
@@ -271,6 +326,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/header.js"></script>
+
 </body>
 
 </html>

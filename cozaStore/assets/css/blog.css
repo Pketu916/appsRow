@@ -80,9 +80,36 @@
     border-radius: 50%;
 }
 
-.pagination > :first-child {
+.pagination> :first-child {
     background: var(--color-gray-200);
 }
-.pagination button:hover{
+
+.pagination button:hover {
     background: var(--color-gray-200);
+}
+
+.blog .date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.blog .date p {
+    font-size: 30px;
+}
+
+@media (max-width:767px) {
+    .wrapper-2 {
+        flex-direction: column;
+    }
+
+    .aside {
+        max-width: unset;
+    }
+
+    .pagination {
+        margin: 30px 0 40px;
+    }
 }
