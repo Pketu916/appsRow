@@ -10,7 +10,7 @@ export default function AdminSignup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/admin/signup", {
+      const res = await fetch("https://user-management-backend-1-0wkr.onrender.com/admin/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })

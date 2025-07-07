@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";  // Update this when deploying backend
+const BASE_URL = "https://user-management-backend-1-0wkr.onrender.com";  // Update this when deploying backend
 
 // GET All Users
 export const getUsers = async () => {
