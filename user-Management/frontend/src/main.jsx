@@ -16,7 +16,7 @@ import './index.css'
 //   </React.StrictMode>
 // );
 
-
+const container = document.getElementById('app');
 
 if (container) {
   const root = ReactDOM.createRoot(container);
