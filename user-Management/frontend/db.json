@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "74ed",
+      "name": "Ketu Patel",
+      "age": "21",
+      "email": "pketu916@gmail.com",
+      "mobile_number": "9265650606"
+    },
+    {
+      "id": "8c24",
+      "name": "Michael Johnson",
+      "age": "50",
+      "email": "michael.johnson@example.com",
+      "mobile_number": "9879879878"
+    },
+    {
+      "id": "c4a5",
+      "name": "John Smith",
+      "age": "40",
+      "email": "john.smith@example.com",
+      "mobile_number": "1234567890"
+    },
+    {
+      "id": "c0d3",
+      "name": "text",
+      "age": "50",
+      "email": "text@gmail.com",
+      "mobile_number": "8798799874"
+    },
+    {
+      "id": "aa98",
+      "name": "test",
+      "age": "58",
+      "email": "john.smith@example.com5",
+      "mobile_number": "5464565461"
+    },
+    {
+      "id": "95db",
+      "name": "Michael Johnson",
+      "age": "65",
+      "email": "ketu916@gmail.com",
+      "mobile_number": "5465466541"
+    }
+  ]
+}
