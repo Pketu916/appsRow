@@ -1,8 +1,8 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const WebflowSwiper = () => {
   return (
@@ -31,7 +31,9 @@ const WebflowSwiper = () => {
               className="slide-image"
             />
             <h3 className="slide-title">Web Design</h3>
-            <p className="slide-text">Modern and responsive web design services.</p>
+            <p className="slide-text">
+              Modern and responsive web design services.
+            </p>
           </div>
         </SwiperSlide>
 
@@ -43,10 +45,65 @@ const WebflowSwiper = () => {
               className="slide-image"
             />
             <h3 className="slide-title">App Development</h3>
-            <p className="slide-text">Custom mobile and web applications built for you.</p>
+            <p className="slide-text">
+              Custom mobile and web applications built for you.
+            </p>
           </div>
         </SwiperSlide>
 
+        <SwiperSlide>
+          <div className="slide-card">
+            <img
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="Slide 2"
+              className="slide-image"
+            />
+            <h3 className="slide-title">App Development</h3>
+            <p className="slide-text">
+              Custom mobile and web applications built for you.
+            </p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="slide-card">
+            <img
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="Slide 2"
+              className="slide-image"
+            />
+            <h3 className="slide-title">App Development</h3>
+            <p className="slide-text">
+              Custom mobile and web applications built for you.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide-card">
+            <img
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="Slide 2"
+              className="slide-image"
+            />
+            <h3 className="slide-title">App Development</h3>
+            <p className="slide-text">
+              Custom mobile and web applications built for you.
+            </p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide-card">
+            <img
+              src="https://picsum.photos/seed/picsum/200/300"
+              alt="Slide 2"
+              className="slide-image"
+            />
+            <h3 className="slide-title">App Development</h3>
+            <p className="slide-text">
+              Custom mobile and web applications built for you.
+            </p>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>
           <div className="slide-card">
             <img
@@ -55,7 +112,9 @@ const WebflowSwiper = () => {
               className="slide-image"
             />
             <h3 className="slide-title">Digital Marketing</h3>
-            <p className="slide-text">Grow your brand with our marketing experts.</p>
+            <p className="slide-text">
+              Grow your brand with our marketing experts.
+            </p>
           </div>
         </SwiperSlide>
 
