@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+
+    /* Primary Colors */
+    --color-primary: #0F0503;
+    --color-secondary: #AA3C28;
+    --color-light: #FFFFFF;
+    --color-body-bg: #F7F9FA;
+
+
+    /* Font Sizes */
+    --fs-h1: 64px;
+    --fs-h2: 40px;
+    --fs-h4: 24px;
+    --fs-lg: 20px;
+    --fs-body-base: 16px;
+    --fs-body-md: 14px;
+
+    /* Letter Spacing */
+    --ls-64: -2px;
+    --ls-40: -1.5px;
+    --ls-24: 0px;
+    --ls-20: 0px;
+    --ls-16: 0px;
+
+    /* Line Heights */
+    --lh-64: 76.8px;
+    --lh-40: 52px;
+    --lh-24: 33.6px;
+    --lh-20: 32px;
+    --lh-16: 25.6px;
+}
+
+.h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: var(--ls-64);
+    line-height: var(--lh-64);
+}
+
+.h2 {
+    font-size: var(--fs-h2);
+    letter-spacing: var(--ls-40);
+    line-height: var(--lh-40);
+}
+
+.h4 {
+    font-size: var(--fs-h4);
+    letter-spacing: var(--ls-24);
+    line-height: var(--lh-24);
+}
+
+.body-lg {
+    font-size: var(--fs-lg);
+    letter-spacing: var(--ls-20);
+    line-height: var(--lh-20);
+}
+
+.body-base {
+    font-size: var(--fs-body-base);
+    letter-spacing: var(--ls-16);
+    line-height: var(--lh-16);
+}
+
+.body-md {
+    font-size: var(--fs-body-md);
+    letter-spacing: var(--ls-16);
+    line-height: var(--fs-body-md);
+}
+
+/* Font Weights */
+.font-400 {
+    font-weight: 400;
+}
+
+.font-500 {
+    font-weight: 500;
+}
+
+.font-600 {
+    font-weight: 600;
+}
+
+.font-700 {
+    font-weight: 700;
+}
+
+.font-800 {
+    font-weight: 800;
+}
+
+/* Text Colors */
+.text-light {
+    color: var(--color-light);
+}
+
+.text-dark {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+/* Background Colors */
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.bg-dark {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-body {
+    background-color: var(--color-body-bg);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Instrument Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section_padding_1 {
+    padding: 0 40px;
+}
+
+.section_padding_2 {
+    padding: 0 120px;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.gap-12{
+    gap: 12px;
+}
+
+.align-content-end {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.button-primary {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.relative {
+    position: relative;
+}
+
+.section-wrapper {
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.opacity-80 {
+    opacity: 80%;
+}
+
+.section-header-2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.section-header-2 h2{
+    max-width: 360px;
+    width: 100%;
+}
+
+.automation .section-header-2 h2{
+    max-width: 433px;
+
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-blur{
+       backdrop-filter: blur(19.64px);
+    background-color: var(--color-light);
+    background-color: rgba(255,255,255,0.1);
+}
