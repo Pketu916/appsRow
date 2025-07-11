@@ -1,0 +1,257 @@
+/* header */
+
+.logo-wrapper {
+    padding: 30px 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+/* hero section */
+
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 72px 0 438px;
+    margin-bottom: 448px;
+}
+
+.hero-content {
+    max-width: 807px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+
+}
+
+.hero-button-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-top-p {
+    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 200px;
+}
+
+.hero-img {
+    position: absolute;
+    top: calc(100% - 392px);
+    filter: drop-shadow(40px 24px 26px #37120B1A);
+}
+
+.hero-vector {
+    position: absolute;
+    z-index: 10;
+    bottom: -49px;
+    left: -215px;
+}
+
+
+/* review section   */
+
+.review .section-wrapper {
+    margin: 120px 0;
+}
+
+.rating-star {
+    display: flex;
+    gap: 1px;
+}
+
+.review .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 390px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.review .review-card {
+    padding: 48px 43px 38px 40px;
+    backdrop-filter: blur(19.64px);
+    background-color: var(--color-light);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.review .highlight {
+    background-color: #AA3C285C;
+}
+
+
+.review .review-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.review .reviewer-details p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review .review-content {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.review .review-vector {
+    position: absolute;
+    left: -40px;
+}
+
+
+/* features section  */
+
+.feature-content {
+    gap: 10px;
+}
+
+.features .feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features-wrapper {
+    gap: 60px;
+}
+
+.features ul {
+    gap: 8px;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.features li {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-image {
+    background-color: #AA3C280D;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.feature-image-1 {
+    padding-top: 25px;
+}
+
+.feature-image-1 img {
+    transform: translateY(22px);
+}
+
+.feature-image-2 {
+    padding-top: 3px;
+}
+
+.feature-image-2 img {
+    transform: translateY(41px);
+}
+
+.feature-image-3 {
+    padding-top: 12px;
+}
+
+.feature-image-3 img {
+    transform: translateY(42px);
+}
+
+.feature-image-4 {
+    padding-top: 54px;
+}
+
+/* .feature-image-4 img {
+    transform: translateY(42px);
+} */
+
+
+/* automation */
+
+.automation .section-wrapper {
+    margin: 120px 0;
+
+}
+
+.automation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 372px);
+    gap: 20px;
+}
+
+.automation .automation-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px;
+    backdrop-filter: blur(19.64px);
+    background-color: var(--color-light);
+    border-radius: 20px;
+}
+
+.automation .automation-card figure {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.automation .automation-card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* get_started section  */
+
+.get_started_padding {
+    padding: 90px 103px;
+}
+
+/* .get_started .section-wrapper{
+
+} */
+
+.get_started .steps-wrapper {
+    display: flex;
+    gap: 32px;
+}
+
+.get_started .step {
+    align-items: flex-start;
+    gap: 16px;
+}
+.get_started .step-4 .h4{
+    max-width: 288px;
+}
+
+.get_started .step-button {
+    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 200px;
+}
+
+.get_startedVector{
+    position: absolute;
+    left: 64px;
+    top: 0;
+}
