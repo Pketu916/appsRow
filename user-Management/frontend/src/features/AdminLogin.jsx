@@ -12,17 +12,20 @@ export default function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://user-management-backend-1-0wkr.onrender.com/admin/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
-      });
+      const res = await fetch(
+        "https://user-management-backend-1-0wkr.onrender.com/admin/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await res.json();
 
       if (res.ok) {
         login(data.adminId);
-        navigate("/");  // "/" shows UsersManagement based on your setup
+        navigate("/"); // "/" shows UsersManagement based on your setup
       } else {
         setMessage(data.message || "Login failed");
       }
@@ -67,7 +70,9 @@ export default function AdminLogin() {
 
         <p className="mt-6 text-center">
           Don't have an account?{" "}
-          <a href="/signup" className="text-blue-500 hover:underline">Signup</a>
+          <link href="/signup" className="text-blue-500 hover:underline">
+            Signup
+          </link>
         </p>
       </div>
     </div>
