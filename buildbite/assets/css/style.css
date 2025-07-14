@@ -730,10 +730,30 @@ ul li {
     .get_started .step {
         gap: 8px;
     }
-    .hero .gap-12{
+
+    .hero .gap-12 {
         gap: 0;
     }
-    .comparison-grid p.body-lg{
+
+    .comparison-grid p.body-lg {
         font-size: 14px;
     }
+
+    .footer-vector img {
+        width: 80px;
+    }
+
+    .get_startedVector img {
+        width: 150px;
+    }
+
+    .hero-vector {
+        left: -28px;
+        bottom: -8px;
+    }
+
+    .hero-vector img {
+        width: 80px;
+    }
+
 }
