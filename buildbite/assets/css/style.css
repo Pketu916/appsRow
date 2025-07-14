@@ -145,6 +145,10 @@ ul li {
 }
 
 .feature-image {
+    padding: 0 15px;
+}
+
+.feature-image {
     background-color: #AA3C280D;
     width: 100%;
     display: flex;
@@ -196,7 +200,7 @@ ul li {
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 325px));
     grid-template-rows: repeat(1, 372px);
-    gap: 10px;
+    gap: 20px;
     justify-items: center;
     justify-content: space-between;
     width: 100%;
@@ -435,7 +439,7 @@ ul li {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.6s ease, padding 0.6s ease;
+    transition: all 0.8s ease;
     /* padding: 0 16px; */
 
 }
@@ -445,7 +449,7 @@ ul li {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px;
+    max-height: 400px;
 }
 
 /* footer */
@@ -473,6 +477,40 @@ ul li {
 
 /* responsive */
 
-@media (max-width:1023) {
-    
+@media (max-width:1023px) {
+    .review .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .get_started_padding {
+        padding: 80px 60px;
+    }
+
+    .automation-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, 372px);
+
+    }
+
+    .comparison .comparison-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+    }
+
+    .comparison-wrapper .section-header {
+        flex-direction: row;
+        width: 100%;
+        max-width: unset;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .comparison-wrapper .section-header h2 {
+        max-width: 500px;
+    }
+    .comparison-grid {
+        max-width: none;
+        width: 100%;
+    }
 }
