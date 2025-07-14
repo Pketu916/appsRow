@@ -273,7 +273,7 @@ a {
     }
 }
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
 
     :root {
         --fs-h1: 48px;
@@ -297,9 +297,9 @@ a {
     .section_padding_1 {
         padding: 0 30px;
     }
-}
+} */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     :root {
         --fs-h1: 36px;
         --fs-h2: 28px;
@@ -322,11 +322,5 @@ a {
     .section_padding_2,
     .section_padding_1 {
         padding: 0 20px;
-    }
-}
-
-@media (max-width:475px) {
-    .section-wrapper {
-        gap: 24px;
     }
 }

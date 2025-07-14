@@ -83,6 +83,7 @@ ul li {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    gap: 20px;
 }
 
 .review .highlight {
@@ -231,16 +232,16 @@ ul li {
 /* get_started section  */
 
 .get_started_padding {
-    padding: 90px 103px;
+    padding: 90px 102.5px;
 }
 
-/* .get_started .section-wrapper{
-
-} */
-
 .get_started .steps-wrapper {
-    display: flex;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: minmax(80px, 176px) auto minmax(80px, 163px) auto minmax(80px, 254px) auto minmax(120px, 288px);
+    grid-template-rows: auto;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    align-items: center;
 }
 
 .get_started .step {
@@ -264,8 +265,15 @@ ul li {
     left: 64px;
     top: 0;
 }
-.get_started .section-header{
+
+.get_started .section-header {
     gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.get_started .arrow2 {
+    display: none;
 }
 
 /* comparison section */
@@ -306,7 +314,7 @@ ul li {
     }
 
     .main-heading {
-        padding: 26px 0;
+        padding: 26px 15px;
     }
 
     .heading {
@@ -401,6 +409,8 @@ ul li {
 .reminders-wrapper .payment-logos {
     display: flex;
     gap: 32px;
+    justify-content: center;
+    align-items: center;
 }
 
 .reminders-wrapper .reminders-main-image {
@@ -479,20 +489,30 @@ ul li {
 }
 
 /* responsive */
+@media (max-width:1024px) {
+    .get_started_padding {
+        padding: 80px 60px;
+    }
+}
 
 @media (max-width:1023px) {
     .review .review-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .get_started_padding {
-        padding: 80px 60px;
-    }
-
     .automation-grid {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         grid-template-rows: repeat(2, 372px);
 
+    }
+
+    .get_started .steps-wrapper {
+        grid-template-columns: minmax(80px, 176px) auto minmax(80px, 163px);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .get_started .bigArrow2 {
+        display: none;
     }
 
     .comparison .comparison-wrapper {
@@ -526,11 +546,6 @@ ul li {
         align-content: flex-start;
     }
 
-    .get_started .steps-wrapper {
-        /* gap: 16px; */
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
 
     .section-header-2 h2 {
         max-width: 100% !important;
@@ -563,7 +578,7 @@ ul li {
     }
 
     .hero-img {
-        top: calc(69%);
+        top: 69%;
     }
 
     .hero-wrapper {
@@ -601,16 +616,15 @@ ul li {
     .comparison-grid,
     .comparison-grid .parent-2 {
         grid-template-columns: minmax(120px, 1fr) minmax(90px, 1fr) minmax(90px, 1fr);
-
     }
 
     .comparison-grid .main-heading img {
-        width: 80px;
+        width: 100%;
     }
 
     .review .review-grid {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 280px);
+        grid-template-rows: repeat(6, auto);
     }
 
     .review .review-card {
@@ -659,21 +673,7 @@ ul li {
 
 @media (max-width:475px) {
     .reminders-wrapper .payment-logos {
-        gap: 16px;
         flex-wrap: wrap;
-    }
-
-    .steps-wrapper figure {
-        display: none;
-        rotate: 90deg;
-        transform-origin: center;
-    }
-
-    .get_started .steps-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        /* gap: 0; */
-        width: 100%;
     }
 
     .hero {
@@ -692,12 +692,6 @@ ul li {
     .footer-wrapper {
         gap: 30px;
     }
-/* 
-    .hero-img img {
-        max-width: 450px;
-        width: 100%;
-        padding: 0 30px;
-    } */
 
     .hero-img {
         top: 78%;
@@ -705,9 +699,41 @@ ul li {
 
     .hero-wrapper {
         padding: 40px 0 200px;
-        margin-bottom: calc(100% - 110px);
+        margin-bottom: calc(100% - 100px);
     }
-    .hero-content {
+
+    .get_started .steps-wrapper {
+        grid-template-columns: minmax(80px, 1fr);
+        grid-template-rows: repeat(2, auto);
+        width: 100%;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    .get_started .bigArrow2 {
+        display: block;
+    }
+
+    .get_started .arrow1 {
+        display: none;
+    }
+
+    .get_started .arrow2 {
+        display: block;
+    }
+
+    .get_started .section-header {
+        text-align: left;
+        width: 100%;
+    }
+
+    .get_started .step {
         gap: 8px;
+    }
+    .hero .gap-12{
+        gap: 0;
+    }
+    .comparison-grid p.body-lg{
+        font-size: 14px;
     }
 }
