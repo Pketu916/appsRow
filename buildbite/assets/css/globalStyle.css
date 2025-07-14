@@ -251,6 +251,21 @@ a {
     background-color: var(--color-light);
     background-color: rgba(255, 255, 255, 0.1);
 }
+button{
+    transition: all 0.7s ease;
+}
+.hover1:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+.hover2:hover{
+    background-color: transparent;
+    /* color: var(--color-secondary); */
+}
+.hover3:hover{
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+}
 
 
 /*  */
