@@ -127,6 +127,10 @@
     font-family: "Instrument Sans", sans-serif;
     scroll-behavior: smooth;
 }
+figure img{
+    height: auto;
+    width: 100%;
+}
 
 .container {
     max-width: 1440px;
@@ -228,7 +232,6 @@
 
 .automation .section-header-2 h2{
     max-width: 433px;
-
 }
 
 .text-center{

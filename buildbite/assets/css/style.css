@@ -124,6 +124,7 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 .features-wrapper {
@@ -193,9 +194,12 @@ ul li {
 
 .automation-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(200px, 325px));
     grid-template-rows: repeat(1, 372px);
-    gap: 20px;
+    gap: 10px;
+    justify-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .automation .automation-card {
@@ -239,7 +243,8 @@ ul li {
     align-items: flex-start;
     gap: 16px;
 }
-.get_started .step-4 .h4{
+
+.get_started .step-4 .h4 {
     max-width: 288px;
 }
 
@@ -250,8 +255,224 @@ ul li {
     border-radius: 200px;
 }
 
-.get_startedVector{
+.get_startedVector {
     position: absolute;
     left: 64px;
     top: 0;
+}
+
+/* comparison section */
+
+.comparison-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+    /* gap: 82px; */
+    align-items: flex-end;
+}
+
+.comparison-wrapper .section-header {
+    max-width: 444px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    align-items: flex-start;
+}
+
+.comparison-grid {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr) minmax(120px, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 703px;
+
+
+    .main-heading,
+    .parent-2 .div2,
+    .parent-2 .div3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-heading {
+        padding: 26px 0;
+    }
+
+    .heading {
+        padding: 11px 30px 11px 28px;
+    }
+}
+
+.div1 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.div3 {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.div4 {
+    grid-area: 3 / 1 / 4 / 4;
+}
+
+.div5 {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+.div6 {
+    grid-area: 5 / 1 / 6 / 4;
+    padding-bottom: 38px;
+}
+
+.div7 {
+    grid-area: 1 / 2 / 6 / 3;
+    background-color: white;
+    position: relative;
+    z-index: -1;
+    box-shadow: -6px 8px 32px 0px #AA3C2814;
+    border-radius: 20px;
+}
+
+
+.parent-2 {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr) minmax(120px, 1fr);
+
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+        background-color: white;
+    }
+
+    .div3 {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+}
+
+.parent-2.bg {
+    background: linear-gradient(90deg, rgba(245, 232, 229, 0) 0%, rgba(245, 232, 229, 1) 50%, rgba(245, 232, 229, 0) 100%);
+}
+
+
+/* reminders section */
+
+.reminders .reminders-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.reminders-wrapper .section-header {
+    align-items: flex-start;
+    max-width: 464px;
+    gap: 16px;
+}
+
+.reminders-wrapper .section-header button {
+    margin: 8px 0 16px;
+}
+
+.reminders-wrapper .payment-logos {
+    display: flex;
+    gap: 32px;
+}
+
+.reminders-wrapper .reminders-main-image {
+    filter: drop-shadow(35px 21px 22px #37120B1A);
+
+}
+
+/* faq section */
+.faq-wrapper .section-header {
+    max-width: 231px;
+}
+
+.faq-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 137px;
+    margin: 120px 0;
+}
+
+.faq-items-wrapper {
+    width: 100%;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(15, 5, 3, 0.1);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.6s ease;
+    /* padding: 0 16px; */
+
+}
+
+.faq-answer p {
+    margin-bottom: 20px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+/* footer */
+.footer-wrapper {
+    display: flex;
+    text-align: center;
+    gap: 72px;
+    padding: 90px 0 38px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-wrapper .footer-center {
+    max-width: 620px;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 29px;
+}
+
+.footer-vector {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* responsive */
+
+@media (max-width:1023) {
+    
 }
