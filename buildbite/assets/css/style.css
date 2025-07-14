@@ -264,6 +264,9 @@ ul li {
     left: 64px;
     top: 0;
 }
+.get_started .section-header{
+    gap: 16px;
+}
 
 /* comparison section */
 
