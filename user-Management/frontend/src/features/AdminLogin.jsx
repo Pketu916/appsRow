@@ -70,9 +70,9 @@ export default function AdminLogin() {
 
         <p className="mt-6 text-center">
           Don't have an account?{" "}
-          <link href="/signup" className="text-blue-500 hover:underline">
+          <a href="/signup" className="text-blue-500 hover:underline">
             Signup
-          </link>
+          </a>
         </p>
       </div>
     </div>
