@@ -144,7 +144,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'HelveticaNeue', sans-serif;
+    font-family: 'HelveticaNeueLight', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -202,20 +202,20 @@ a {
     white-space: nowrap;
     align-items: center;
     text-transform: uppercase;
-    /* font-family: 'HelveticaNeueLight', sans-serif; */
+    font-family: 'HelveticaNeueLight', sans-serif;
     vertical-align: middle;
 }
 
 .global_button span {
-    transition: transform 0.5s;
-    line-height: unset;
-    font-size: 23px;
-    letter-spacing: -0.2px;
-    vertical-align: middle;
+   transition: transform 0.5s;
+   font-size: 25px;
+   font-weight: 600;
+   padding-bottom: 2.5px;
+    transform-origin: center;
 }
 
 .global_button:hover span {
-    transform: rotate(405deg);
+    transform: rotate(45deg);
 }
 
 /* header start */
@@ -472,6 +472,8 @@ header nav button {
     gap: 48px;
     align-items: flex-start;
     padding-bottom: 5%;
+    max-width: 475px;
+    width: 100%;
 }
 
 .experience_card {
