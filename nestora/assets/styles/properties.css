@@ -22,9 +22,29 @@
     margin: 190px 0;
 }
 
-.heading_wrapper .heading_wrapper {
+#property-wrapper .heading_wrapper {
     text-align: center;
 }
+
+.properties .heading_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.properties .heading_wrapper h4{
+    background-color: #EDEBEB;
+    padding: 0 10px;
+}
+
+.properties .heading_wrapper hr{
+    opacity: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+}
+
 
 #property-wrapper .property_heading .h2 {
 
@@ -58,6 +78,8 @@
         margin-top: 50px;
     }
 }
+
+
 
 
 @media (max-width: 768px) {
