@@ -207,10 +207,10 @@ a {
 }
 
 .global_button span {
-   transition: transform 0.5s;
-   font-size: 25px;
-   font-weight: 600;
-   padding-bottom: 2.5px;
+    transition: transform 0.5s;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 2.5px;
     transform-origin: center;
 }
 
@@ -639,6 +639,17 @@ address {
     justify-content: center;
     align-items: center;
     cursor: grab;
+    position: relative;
+}
+
+.properties_slider .swiper-slide figure::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #020202;
+    opacity: 15%;
+
 }
 
 .swiper-slide:active {
@@ -1460,11 +1471,13 @@ footer {
             height: 10px;
         }
     }
-    .home{
-        header{
+
+    .home {
+        header {
             position: fixed;
         }
-        #primary-hero{
+
+        #primary-hero {
             margin-top: 50px;
         }
     }
