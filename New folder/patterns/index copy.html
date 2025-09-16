@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Text Change</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            font-size: 20px;
+            border-radius: 16px;
+            padding: 15px 30px;
+            background-color: aqua;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn p {
+            transition: transform 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: "Ketu";
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%, 100%);
+            /* start hidden below */
+            transition: transform 0.5s ease;
+            font-size: 20px;
+        }
+
+        .btn:hover p {
+            transform: translateY(-150%);
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -60%);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button class="btn">
+            <p>Hello</p>
+        </button>
+    </section>
+</body>
+
+</html>

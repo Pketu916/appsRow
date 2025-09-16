@@ -152,9 +152,8 @@ h1 {
 }
 
 button.global-button:hover {
-    /* background-color: orangered; */
+    background-color: orangered;
     color: white;
-    box-shadow: inset 250px 10px 0 0 orangered;
 }
 
 button.global-button:active {
