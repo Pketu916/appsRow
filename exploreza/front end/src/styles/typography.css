@@ -1,0 +1,96 @@
+/* Typography Standards for Rajkamal Travel */
+
+/* Section Headings */
+.section-heading {
+    @apply text-4xl font-bold text-center mb-8;
+}
+
+.section-heading-large {
+    @apply text-5xl font-bold text-center mb-8;
+}
+
+/* Page Headings */
+.page-heading {
+    @apply text-4xl font-bold mb-6;
+}
+
+.page-heading-large {
+    @apply text-5xl font-bold mb-8;
+}
+
+/* Subsection Headings */
+.subsection-heading {
+    @apply text-3xl font-bold mb-6;
+}
+
+.subsection-heading-small {
+    @apply text-2xl font-bold mb-4;
+}
+
+/* Card Headings */
+.card-heading {
+    @apply text-xl font-semibold mb-2;
+}
+
+.card-heading-large {
+    @apply text-2xl font-semibold mb-3;
+}
+
+/* Section Spacing */
+.section-spacing {
+    @apply py-28 px-5;
+}
+
+.section-spacing-small {
+    @apply py-20 px-5;
+}
+
+.section-spacing-large {
+    @apply py-32 px-5;
+}
+
+/* Container */
+.section-container {
+    @apply max-w-7xl mx-auto;
+}
+
+/* Text Colors */
+.text-primary {
+    @apply text-gray-900;
+}
+
+.text-secondary {
+    @apply text-gray-600;
+}
+
+.text-muted {
+    @apply text-gray-500;
+}
+
+/* Brand Colors */
+.text-brand {
+    @apply text-orange-500;
+}
+
+.bg-brand {
+    @apply bg-orange-500;
+}
+
+.bg-brand-hover {
+    @apply hover:bg-orange-600;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .section-heading {
+        @apply text-3xl;
+    }
+
+    .page-heading {
+        @apply text-3xl;
+    }
+
+    .subsection-heading {
+        @apply text-2xl;
+    }
+}

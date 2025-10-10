@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Scroll: Cards Move Down</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background: #f6f7ff;
+        }
+
+        section {
+            height: 200vh;
+            /* 100vh for part1 + 100vh for part2 */
+            /* position:relative; */
+        }
+
+        .part1,
+        .part2 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .part1 {
+            background: #e6efff;
+            color: #333;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .part2 {
+            background: #222;
+            color: #fff;
+        }
+
+        .card {
+            width: 200px;
+            height: 130px;
+            background: #3498db;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="part1">Part 1</div>
+
+        <div class="part2">
+            <div class="card card1">Card 1</div>
+            <div class="card card2">Card 2</div>
+        </div>
+    </section>
+    <section></section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Cards start in part 1 and move down into part 2
+        gsap.fromTo(".card1",
+            { y: "-120vh", x: "30vh" },   // start higher (visible in part 1)
+            {
+                y: "0vh",
+                x: "0vh",
+                scrollTrigger: {
+                    trigger: ".part2",
+                    start: "-70%",  // when part2 enters view
+                    end: "top top",       // until it reaches top
+                    scrub: true,
+                    markers: true,
+                }
+            }
+        );
+
+        gsap.fromTo(".card2",
+            { y: "-100vh", x: "30vh" },
+            {
+                y: "0vh",
+                x: "0vh",
+                scrollTrigger: {
+                    trigger: ".part2",
+                    start: "-70%",
+                    end: "top top",
+                    scrub: true,
+                }
+            }
+        );
+    </script>
+
+</body>
+
+</html>
