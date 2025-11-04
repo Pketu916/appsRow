@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/globalStyle.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        /* ===== HEADER V4 ===== */
+        .header-v4 {
+            width: 100%;
+            /* background: white; */
+            position: relative;
+            z-index: 1000;
+            color: black;
+        }
+
+        .right-part-v4 {
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 50px;
+        }
+
+        .header-main-v4 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .container-v4 {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .inner-v4 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+        }
+
+        /* ===== LOGO ===== */
+        .logo-v4 img {
+            display: block;
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* ===== NAV LINKS ===== */
+        .nav-links-v4 ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-links-btn .dropdown-v4 {
+            cursor: pointer;
+        }
+        .dropdown-v4 h3{
+            font-weight: 400;
+        }
+
+        .dropdown-v4.relative {
+            position: relative;
+        }
+
+        .dropdown-v4.relative .dropdown-menu-v4 {
+            margin-top: 41px;
+        }
+
+        .nav-links-v4 a:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== DROPDOWN ===== */
+        .dropdown-v4:hover .dropdown-menu-v4 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .dropdown-v4 .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-v4 .nav-dropdown::after {
+            display: block;
+            position: absolute;
+            content: "";
+            height: 50px;
+            width: 100%;
+        }
+
+        .dropdown-menu-v4 {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            /* left: 0; */
+            max-width: 1166px;
+            width: 100%;
+            display: none;
+            min-width: 463px;
+            /* max-width: 100vw; */
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            box-sizing: border-box;
+            border-radius: 16px;
+            padding: 66px 75px;
+            margin-top: 20px;
+        }
+
+        .dropdown-language .dropdown-menu-v4 {
+            left: auto;
+            padding: 20px 40px;
+        }
+
+        .dropdown-menu-v4 .row-v4 {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        .dropdown-menu-v4 .text-v4,
+        .dropdown-menu-v4 .items-v4 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+            opacity: 80%;
+        }
+
+        .dropdown-menu-v4 .cover-v4 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex-direction: row;
+        }
+
+        .dropdown-menu-v4.pricing .cover-v4 {
+            flex-direction: column;
+        }
+
+        .dropdown-menu-v4.pricing {
+            transform: translateX(-15%);
+            left: auto;
+            right: auto;
+        }
+
+        .menu-strip-v4 {
+            padding: 20px 25px;
+            border: 2px solid #AA3C28;
+            border-radius: 13px;
+            background-color: #aa3b284d;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .menu-strip-v4 .button-v4-1 {
+            width: max-content;
+        }
+
+        .dropdown-menu-v4 .cover-v4.grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px 40px;
+        }
+
+        .dropdown-menu-v4 .cover-v4 .items-v4 a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-menu-v4 .box-v4 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 220px;
+        }
+
+        .dropdown-v4.dropdown-language .dropdown-menu-v4 {
+            min-width: 150px;
+        }
+
+        .dropdown-menu-v4 .box-v4 a {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .buttons-v4 {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .button-v4-1,
+        .button-v4-2 {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 24px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            border: 2px solid #AA3C28;
+            font-weight: 700;
+        }
+
+        .button-v4-1 {
+            background-color: #AA3C28;
+            color: white;
+        }
+
+        .button-v4-2 {
+            background: white;
+            color: #AA3C28;
+        }
+
+        .buttons-v4 a:hover {
+            opacity: 0.85;
+        }
+
+        /* ===== LANGUAGE SWITCHER ===== */
+        .language-switcher-v4 {
+            margin-left: 1rem;
+            position: relative;
+        }
+
+        .language-switcher-v4 ul {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== QR POPUP ===== */
+        .qr-popup-v4 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .qr-popup-v4 .inside-v4 {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .language-menu-v4 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .nav-links-v4 ul {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                gap: 1rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links-btn {
+                display: none;
+            }
+
+            .open-v4 .nav-links-btn {
+                display: flex;
+            }
+
+            .nav-links-v4.open-v4 ul {
+                display: flex;
+                align-items: flex-start;
+                border-radius: 20px;
+                margin-top: 25px;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 {
+                position: relative;
+            }
+
+            .nav-links-v4 {
+                height: 45px;
+                width: 45px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 i {
+                width: 25px;
+                height: 3px;
+                background: #000;
+                display: block;
+                position: relative;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 i::before,
+            .nav-links-v4 .mobile-trigger-v4 i::after {
+                content: '';
+                width: 25px;
+                height: 3px;
+                background: #000;
+                position: absolute;
+                left: 0;
+                transition: 0.3s ease;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 i::before {
+                top: -8px;
+            }
+
+            .nav-links-v4 .mobile-trigger-v4 i::after {
+                top: 8px;
+            }
+
+            .nav-links-v4.open-v4 .mobile-trigger-v4 i {
+                background: transparent;
+            }
+
+            .nav-links-v4.open-v4 .mobile-trigger-v4 i::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            .nav-links-v4.open-v4 .mobile-trigger-v4 i::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            .buttons-v4 {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .language-switcher-v4 {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .right-part-v4 {
+                position: static;
+                padding: 0;
+            }
+
+            .dropdown-menu-v4 {
+                position: static;
+                border: none;
+                box-shadow: none;
+                padding: 15px;
+                min-width: unset;
+            }
+
+            .dropdown-menu-v4 .cover-v4 {
+                flex-wrap: wrap;
+            }
+
+            .inner-v4 {
+                flex-wrap: nowrap;
+            }
+
+            .dropdown-menu-v4 .cover-v4 {
+                gap: 15px;
+            }
+
+            .menu-strip-v4 {
+                padding: 15px 20px;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .dropdown-menu-v4 .cover-v4.grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 30px;
+
+            }
+
+            .dropdown-menu-v4 .box-v4 {
+                min-width: unset;
+                gap: 10px;
+            }
+
+            .dropdown-menu-v4 .row-v4 {
+                gap: 10px;
+            }
+
+            .dropdown-v4:hover .dropdown-menu-v4 {
+                gap: 20px;
+            }
+
+            .dropdown-menu-v4.pricing {
+                transform: translateX(0%);
+            }
+            .dropdown-v4.relative .dropdown-menu-v4{
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width:475px) {
+            .dropdown-menu-v4 .cover-v4.grid {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px 30px;
+
+            }
+
+            .dropdown-menu-v4 .row-v4 {
+                min-width: unset;
+                max-width: unset;
+            }
+
+            .dropdown-v4 .nav-dropdown::after {
+                display: none;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header class="header-v4">
+        <div class="header-main-v4">
+            <div class="container-v4">
+                <div class="inner-v4">
+                    <div class="logo-v4">
+                        <div class="logo-white-v4">
+                            <a href="/" target="_parent">
+                                <img src="https://buildbite.com/hs-fs/hubfs/Buildbite%20logo_white.webp?width=161&name=Buildbite%20logo_white.webp"
+                                    width="161" alt="Buildbite logo" title="Buildbite logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="right-part-v4">
+                        <nav class="nav-links-v4">
+                            <a class="mobile-trigger-v4"><i></i></a>
+                            <div class="nav-links-btn">
+                                <ul>
+                                    <li class="dropdown-v4">
+                                        <p class="nav-dropdown">How it works</p>
+                                        <div class="dropdown-menu-v4">
+                                            <div class="cover-v4 grid">
+                                                <div class="row-v4">
+                                                    <div class="text-v4">
+                                                        <h3>Collaborate effectively</h3>
+                                                        <p>Keep your team aligned, clients informed, and all
+                                                            communication
+                                                            in one place</p>
+                                                    </div>
+                                                    <div class="items-v4">
+                                                        <a
+                                                            href="https://buildbite.com/real-time-multimedia-communication">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(1).svg"
+                                                                    alt="Real-time communication" width="18"
+                                                                    height="18">
+                                                            </div>
+                                                            <p>Real-time communication</p>
+                                                        </a>
+                                                        <a href="https://buildbite.com/task-management">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector.svg"
+                                                                    alt="Task management" width="16" height="18">
+                                                            </div>
+                                                            <p>Task management</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row-v4">
+                                                    <div class="text-v4">
+                                                        <h3>Collaborate effectively</h3>
+                                                        <p>Keep your team aligned, clients informed, and all
+                                                            communication
+                                                            in one place</p>
+                                                    </div>
+                                                    <div class="items-v4">
+                                                        <a
+                                                            href="https://buildbite.com/real-time-multimedia-communication">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(1).svg"
+                                                                    alt="Real-time communication" width="18"
+                                                                    height="18">
+                                                            </div>
+                                                            <p>Real-time communication</p>
+                                                        </a>
+                                                        <a href="https://buildbite.com/task-management">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector.svg"
+                                                                    alt="Task management" width="16" height="18">
+                                                            </div>
+                                                            <p>Task management</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row-v4">
+                                                    <div class="text-v4">
+                                                        <h3>Collaborate effectively</h3>
+                                                        <p>Keep your team aligned, clients informed, and all
+                                                            communication
+                                                            in one place</p>
+                                                    </div>
+                                                    <div class="items-v4">
+                                                        <a
+                                                            href="https://buildbite.com/real-time-multimedia-communication">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(1).svg"
+                                                                    alt="Real-time communication" width="18"
+                                                                    height="18">
+                                                            </div>
+                                                            <p>Real-time communication</p>
+                                                        </a>
+                                                        <a href="https://buildbite.com/task-management">
+                                                            <div class="icon-v4">
+                                                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector.svg"
+                                                                    alt="Task management" width="16" height="18">
+                                                            </div>
+                                                            <p>Task management</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="menu-strip-v4">
+                                                <div class="text-v4">
+                                                    <strong>Start your 14-day free trial.</strong> Unlock the full
+                                                    potential of your construction jobs.
+                                                </div>
+                                                <div class="button-v4">
+                                                    <a class="button-v4-1"
+                                                        href="https://dashboard.buildbite.com/en/register">GET
+                                                        STARTED</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="dropdown-v4">
+                                        <p class="nav-dropdown">Who it's for</p>
+                                        <div class="dropdown-menu-v4">
+                                            <div class="cover-v4 grid">
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/persona/general-contractors">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Vector%20(11).svg"
+                                                                alt="Contractor icon" width="16" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>General contractors</p>
+                                                            <p>Simplify coordination and ensure projects are completed
+                                                                on
+                                                                time</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <!-- Repeat box-v4 for other personas -->
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="dropdown-v4 relative">
+                                        <p class="nav-dropdown">Pricing</p>
+                                        <div class="dropdown-menu-v4 pricing">
+                                            <div class="cover-v4 ">
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/pricing">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-1.svg"
+                                                                alt="icon-1" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>Pricing plans</p>
+                                                            <p>Explore flexible plans tailored to scale with your
+                                                                needs
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </li>
+
+                                    <li class="dropdown-v4">
+                                        <p class="nav-dropdown">Resources</p>
+                                        <div class="dropdown-menu-v4">
+                                            <h3>Resources</h3>
+                                            <div class="cover-v4 grid">
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/pricing">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-1.svg"
+                                                                alt="icon-1" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>Pricing plans</p>
+                                                            <p>Explore flexible plans tailored to scale with your
+                                                                needs
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="box-v4">
+                                                    <a href="https://buildbite.com/roi-calculator">
+                                                        <div class="icon-v4">
+                                                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/icon-2.svg"
+                                                                alt="icon-2" width="20" height="20">
+                                                        </div>
+                                                        <div class="text-v4">
+                                                            <p>ROI calculator</p>
+                                                            <p>Find out how much you can save by using Buildbite</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="menu-strip-v4">
+                                                <div class="text-v4">
+                                                    <strong>Start your 14-day free trial.</strong> Unlock the full
+                                                    potential of your construction jobs.
+                                                </div>
+                                                <div class="button-v4">
+                                                    <a class="button-v4-1"
+                                                        href="https://dashboard.buildbite.com/en/register">GET
+                                                        STARTED</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li><a href="https://buildbite.com/contact">Contact us</a></li>
+
+
+                                </ul>
+
+                                <div class="buttons-v4">
+                                    <div class="login-v4">
+                                        <a href="https://dashboard.buildbite.com/en/login">Login</a>
+                                    </div>
+                                    <div class="signup-v4 ">
+                                        <a class="button-v4-1" href="https://dashboard.buildbite.com/en/register">Sign
+                                            up for free</a>
+                                    </div>
+                                    <div class=" button-v4-2" class="demo-v4">
+                                        <a href="https://buildbite.com/demo">Book a demo</a>
+                                    </div>
+                                    <div class="dropdown-v4 dropdown-language relative">
+                                        <p class="nav-dropdown">Language</p>
+                                        <div class="dropdown-menu-v4">
+                                            <ul class="language-menu-v4">
+                                                <li><a href="https://buildbite.com">English</a></li>
+                                                <li><a href="https://buildbite.com/es/">Español</a></li>
+                                                <li><a href="https://buildbite.fi">Suomi</a></li>
+                                                <li><a href="https://buildbite.se">Svenska</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-popup-v4" style="display: none;">
+            <div class="inside-v4">
+                <div class="title-v4">
+                    <p>Scan the QR code to download Buildbite</p>
+                </div>
+                <div class="coverbox-v4">
+                    <div class="apple-v4">
+                        <div class="qr-v4">
+                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/App%20store%20QR%20Scan.svg"
+                                alt="App store QR Scan" width="100" height="100">
+                        </div>
+                        <div class="button-v4">
+                            <a href="https://apps.apple.com/app/buildbite/id6708234347" target="_blank">
+                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/App_Store.svg"
+                                    alt="App Store" width="96" height="29">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="apple-v4">
+                        <div class="qr-v4">
+                            <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Google%20play%20QR%20Scan.svg"
+                                alt="Google play QR Scan" width="100" height="100">
+                        </div>
+                        <div class="button-v4">
+                            <a href="https://play.google.com/store/apps/details?id=com.buildbite.mobile&hl=en"
+                                target="_blank">
+                                <img src="https://buildbite.com/hubfs/Buildbite%202024/Images/Google_Play.svg"
+                                    alt="Google Play" width="96" height="29">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-v4">
+                    <ul>
+                        <li>No credit card required</li>
+                        <li>Get started in 60 seconds</li>
+                        <li>Access all features</li>
+                        <li>No hidden fees</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileTrigger = document.querySelector(".nav-links-v4");
+            //  const mobileTrigger = document.querySelector(".mobile-trigger-v4");
+            const navLinksWrapper = document.querySelector(".nav-links-v4");
+            const navLinksUl = navLinksWrapper.querySelector("ul");
+            const dropdowns = document.querySelectorAll(".dropdown-v4"); // now includes divs
+            const buttons = document.querySelector(".buttons-v4");
+
+            // Toggle dropdowns on click
+            dropdowns.forEach((dropdown) => {
+                const link = dropdown.querySelector(".nav-dropdown");
+                const menu = dropdown.querySelector(".dropdown-menu-v4");
+
+                if (!link || !menu) return;
+
+                link.addEventListener("click", function (e) {
+                    e.stopPropagation(); // prevent document click from closing it
+
+                    // Close other dropdowns
+                    dropdowns.forEach((d) => {
+                        if (d !== dropdown) d.classList.remove("open-v4");
+                    });
+
+                    // Toggle current dropdown
+                    dropdown.classList.toggle("open-v4");
+                });
+            });
+
+            // Close dropdowns if clicked outside
+            document.addEventListener("click", function () {
+                dropdowns.forEach((dropdown) => {
+                    dropdown.classList.remove("open-v4");
+                });
+            });
+
+            // Mobile menu toggle
+            mobileTrigger.addEventListener("click", function (e) {
+                e.stopPropagation();
+                navLinksWrapper.classList.toggle("open-v4");
+
+                // Move buttons inside menu for mobile
+                if (window.innerWidth <= 1024) {
+                    if (!navLinksUl.contains(buttons)) {
+                        const divWrapper = document.createElement("div"); // wrap buttons in div
+                        divWrapper.appendChild(buttons);
+                        navLinksUl.appendChild(divWrapper);
+                    }
+                } else {
+                    // Restore buttons outside on desktop
+                    navLinksWrapper.appendChild(buttons);
+                }
+            });
+
+            // Ensure buttons are correctly placed on resize
+            window.addEventListener("resize", function () {
+                if (window.innerWidth <= 1024) {
+                    if (!navLinksUl.contains(buttons)) {
+                        const divWrapper = document.createElement("div");
+                        divWrapper.appendChild(buttons);
+                        navLinksUl.appendChild(divWrapper);
+                    }
+                } else {
+                    if (!navLinksWrapper.contains(buttons)) {
+                        navLinksWrapper.appendChild(buttons);
+                    }
+                    navLinksWrapper.classList.remove("open-v4");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

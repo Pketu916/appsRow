@@ -189,114 +189,306 @@ const observer = new IntersectionObserver(
 
 observer.observe(document.querySelector(".before-card"));
 
-// Home Page Animation Script
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.fromTo(
-  ".hero-sub-image-1",
-  { x: "168%", y: "-570%", }, 
-  {
-    x: "30%",
-    // y: "-35vw",
-    y: "-238%",
-    scrollTrigger: {
-      trigger: ".hero-section",
-      start: "0%",
-      end: "40%",
-      scrub: true,
-      ease: "power2.out",
-      duration:2.5,
-    },
-  }
-);
-
-
-gsap.fromTo(
-  ".hero-sub-image-3",
-  { x: "117%", y: "-1201%" }, 
-  {
-    x: "27.5%",
-    // y: "-228%",
-    y: "-236%",
-    scrollTrigger: {
-      trigger: ".hero-section",
-      start: "0%", 
-      end: "65%", 
-      scrub: true,
-      ease: "power2.out",
-      duration:2.5,
-    },
-  }
-);
-
-
-gsap.fromTo(
-  ".hero-sub-image-4",
-  { x: "117%", y: "-1310%" },
-  {
-    x: "145%",
-    y: "-130%",
-    // y: "-135%",
-    scrollTrigger: {
-      trigger: ".hero-section",
-      start: "0%", 
-      end: "65%", 
-      scrub: true,
-      ease: "power2.out",
-      duration:2.5,
-      // markers: true,
-    },
-  }
-);
-
- 
 const lenis = new Lenis({
   // Value between 0 and 1
   // Default value: 0.1
   // The lower the value, the smoother the scroll
-  lerp: 0.05, 
+  lerp: 0.05,
   // Default value: 1
   // The higher the value, the faster the scrolling
-  wheelMultiplier: 1, 
+  wheelMultiplier: 1,
 });
- 
+
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
- 
-
-
-// Navbar
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const navToggle = document.querySelector(".nav-toggle");
-//     const navMenu = document.querySelector(".nav-menu ul");
-
-//     navToggle.addEventListener("click", function () {
-//         navMenu.classList.toggle("active");
-//         this.classList.toggle("open");
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-menu-v2 ");
-    const navLinks = document.querySelectorAll(".nav-menu-v2 ul li a");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu-v2 ");
+  const navLinks = document.querySelectorAll(".nav-menu-v2 ul li a");
 
-    // Toggle menu open/close
-    navToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-        this.classList.toggle("open");
-    });
+  // Toggle menu open/close
+  navToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    this.classList.toggle("open");
+  });
 
-    // Close menu when any link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            navToggle.classList.remove("open");
-        });
+  // Close menu when any link is clicked
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      navToggle.classList.remove("open");
     });
+  });
 });
+
+// Home Page Animation Script
+function initAnimationsWeb() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".hero-sub-image-1",
+    { x: "168%", y: "-570%" },
+    {
+      x: "30%",
+      // y: "-35vw",
+      y: "-252%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "40%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-3",
+    { x: "115%", y: "-1301%" },
+    {
+      x: "27.5%",
+      // y: "-228%",
+      y: "-263%",
+      // y: "-270%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "65%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-4",
+    { x: "115%", y: "-1410%" },
+    {
+      x: "145%",
+      y: "-160%",
+      // y: "-135%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "65%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+}
+
+function initAnimationsWeb2() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".hero-sub-image-1",
+    { x: "168%", y: "-570%" },
+    {
+      x: "30%",
+      // y: "-35vw",
+      y: "-252%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "40%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-3",
+    { x: "115%", y: "-1301%" },
+    {
+      x: "27.5%",
+      y: "-270%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "65%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-4",
+    { x: "115%", y: "-1410%" },
+    {
+      x: "145%",
+      y: "-160%",
+      // y: "-135%",
+      scrollTrigger: {
+        trigger: ".hero-section",
+        start: "0%",
+        end: "65%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+}
+
+function initAnimationsTab() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".hero-sub-image-1",
+    {
+      top: "-29%",
+      maxWidth: "255px",
+    },
+    {
+      top: "14%",
+      maxWidth: "700px",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "-40%",
+        end: "160%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  // Animate maxWidth with delay
+  gsap.fromTo(
+    ".hero-sub-image-1",
+    { maxWidth: "255px" },
+    {
+      maxWidth: "750px",
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "-10%",
+        end: "160%",
+        // scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-3",
+    { top: "-15%" },
+    {
+      top: "67.2%",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "40%",
+        end: "300%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-4",
+    { top: "-10%" },
+    {
+      top: "86.15%",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "40%",
+        end: "350%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+}
+
+function initAnimationsMobile() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".hero-sub-image-1",
+    {
+      top: "-50%",
+      // maxWidth:"255px"
+    },
+    {
+      top: "14%",
+      // maxWidth: "unset",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "-40%",
+        end: "80%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-3",
+    { top: "-15%" },
+    {
+      top: "67.2%",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "40%",
+        end: "230%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    ".hero-sub-image-4",
+    { top: "-10%" },
+    {
+      top: "86.15%",
+      scrollTrigger: {
+        trigger: ".hero-wrapper-right",
+        start: "40%",
+        end: "300%",
+        scrub: true,
+        ease: "power2.out",
+        duration: 2.5,
+        // markers: true,
+      },
+    }
+  );
+}
+
+function triggerAnimations() {
+  if (window.innerWidth < 475) {
+    initAnimationsMobile();
+  } else if (window.innerWidth <= 767) {
+    initAnimationsTab();
+  } else if (window.innerWidth <= 1200) {
+    initAnimationsWeb();
+  } else {
+    initAnimationsWeb2();
+  }
+}
+
+triggerAnimations(); // Run on page load
+window.addEventListener("resize", triggerAnimations); // Run on resize
