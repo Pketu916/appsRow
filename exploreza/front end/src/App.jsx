@@ -10,6 +10,7 @@ import TestUpload from "./pages/TestUpload";
 import AdminLayout from "./admin/AdminLayout";
 import Dashboard from "./admin/pages/Dashboard";
 import TravelDestinationsAdmin from "./admin/pages/TravelDestinationsAdmin";
+import TravelDestinationFormPage from "./admin/pages/TravelDestinationFormPage";
 import Enquiry from "./admin/pages/Enquiry";
 import AdminManagement from "./admin/pages/AdminManagement";
 import ScrollToTop from "./components/ScrollToTop";
@@ -35,6 +36,14 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="destinations" element={<TravelDestinationsAdmin />} />
+          <Route
+            path="destinations/create"
+            element={<TravelDestinationFormPage />}
+          />
+          <Route
+            path="destinations/edit/:id"
+            element={<TravelDestinationFormPage />}
+          />
           <Route path="enquiry" element={<Enquiry />} />
           <Route path="management" element={<AdminManagement />} />
         </Route>

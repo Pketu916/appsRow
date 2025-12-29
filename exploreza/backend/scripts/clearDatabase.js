@@ -3,6 +3,7 @@ require("dotenv").config({ path: "./config.env" });
 
 const Deal = require("../models/Deal");
 const TravelDestination = require("../models/TravelDestination");
+const Place = require("../models/Place");
 
 const connectDB = async () => {
   try {
@@ -23,7 +24,10 @@ const clearDatabase = async () => {
     await TravelDestination.deleteMany({});
     console.log("Cleared all travel destinations...");
 
-    console.log("Database cleared successfully!");
+    await Place.deleteMany({});
+    console.log("Cleared all places...");
+
+    console.log("✅ Database cleared successfully!");
   } catch (error) {
     console.error("Clearing error:", error);
   } finally {

@@ -162,6 +162,24 @@ const TravelDestinationForm = ({
     }
   };
 
+  // Handle next step
+  const handleNext = async () => {
+    const currentIndex = formSections.findIndex((s) => s.id === activeSection);
+    if (currentIndex < formSections.length - 1) {
+      await autoSave();
+      setActiveSection(formSections[currentIndex + 1].id);
+    }
+  };
+
+  // Handle previous step
+  const handlePrevious = async () => {
+    const currentIndex = formSections.findIndex((s) => s.id === activeSection);
+    if (currentIndex > 0) {
+      await autoSave();
+      setActiveSection(formSections[currentIndex - 1].id);
+    }
+  };
+
   useEffect(() => {
     if (initialData) {
       console.log("TravelDestinationForm - initialData:", initialData);
@@ -269,11 +287,11 @@ const TravelDestinationForm = ({
 
     setValidationErrors(errors);
     setValidationWarnings(warnings);
-    
+
     return {
       isValid: errors.length === 0,
       errors,
-      warnings
+      warnings,
     };
   }, [formData]);
 
@@ -281,14 +299,14 @@ const TravelDestinationForm = ({
     let error = null;
 
     // Basic field validation
-    if (fieldName === 'title' && !value?.trim()) {
-      error = 'Title is required';
-    } else if (fieldName === 'description' && !value?.trim()) {
-      error = 'Description is required';
-    } else if (fieldName === 'category' && !value) {
-      error = 'Category is required';
-    } else if (fieldName === 'country' && !value?.trim()) {
-      error = 'Country is required';
+    if (fieldName === "title" && !value?.trim()) {
+      error = "Title is required";
+    } else if (fieldName === "description" && !value?.trim()) {
+      error = "Description is required";
+    } else if (fieldName === "category" && !value) {
+      error = "Category is required";
+    } else if (fieldName === "country" && !value?.trim()) {
+      error = "Country is required";
     }
 
     setFieldErrors((prev) => ({
@@ -537,70 +555,124 @@ const TravelDestinationForm = ({
     onSubmit(submitData);
   };
 
+  const currentIndex = formSections.findIndex((s) => s.id === activeSection);
+
   return (
-    <div className="flex h-full">
+    <div className="flex flex-col h-full">
+      {/* Horizontal Navigation at Top */}
       <FormNavigation
         formSections={formSections}
         activeSection={activeSection}
         onSectionChange={handleSectionChange}
-        isAutoSaving={isAutoSaving}
-        onSubmit={handleSubmit}
-        onCancel={onCancel}
         loading={loading}
-        initialData={initialData}
         validationErrors={validationErrors}
         validationWarnings={validationWarnings}
         onShowErrors={() => setShowErrorPanel(true)}
       />
 
-      {/* Right Content Area */}
-      <div className="flex-1 p-6 overflow-y-auto">
-        <div className="max-w-4xl">
-          <div className="mb-6">
-            <h1 className="text-2xl font-bold text-gray-900">
-              {formSections.find((s) => s.id === activeSection)?.name}
-            </h1>
-            <p className="text-gray-600 mt-1">
-              {activeSection === "basic" &&
-                "Enter basic information about the travel destination"}
-              {activeSection === "pricing" &&
-                "Configure pricing plans and packages"}
-              {activeSection === "details" &&
-                "Add detailed information, highlights, and inclusions"}
-              {activeSection === "images" &&
-                "Upload images for the travel destination"}
-              {activeSection === "status" &&
-                "Set status and visibility options"}
-            </p>
+      {/* Content Area */}
+      <div className="flex-1 overflow-y-auto bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6 py-8">
+          <div className="bg-white rounded-lg shadow-sm p-8">
+            <form onSubmit={handleSubmit}>
+              <FormContent
+                activeSection={activeSection}
+                formData={formData}
+                setFormData={setFormData}
+                handleInputChange={handleInputChange}
+                categories={categories}
+                currencies={[
+                  { code: "INR", symbol: "₹", name: "Indian Rupee" },
+                  { code: "USD", symbol: "$", name: "US Dollar" },
+                ]}
+                difficulties={difficulties}
+                addState={addState}
+                removeState={removeState}
+                addPlace={addPlace}
+                removePlace={removePlace}
+                addArrayItem={addArrayItem}
+                removeArrayItem={removeArrayItem}
+                handleFileChange={handleFileChange}
+                imagePreview={imagePreview}
+                additionalImagePreviews={additionalImagePreviews}
+                ctaBgImagePreview={ctaBgImagePreview}
+                removeAdditionalImage={removeAdditionalImage}
+                autoSave={autoSave}
+                fieldErrors={fieldErrors}
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Buttons at Bottom */}
+      <div className="border-t border-gray-200 bg-white px-6 py-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <button
+              type="button"
+              onClick={handlePrevious}
+              disabled={currentIndex === 0 || loading}
+              className="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </button>
           </div>
 
-          <form onSubmit={handleSubmit}>
-            <FormContent
-              activeSection={activeSection}
-              formData={formData}
-              setFormData={setFormData}
-              handleInputChange={handleInputChange}
-              categories={categories}
-              currencies={[
-                { code: "INR", symbol: "₹", name: "Indian Rupee" },
-                { code: "USD", symbol: "$", name: "US Dollar" },
-              ]}
-              difficulties={difficulties}
-              addState={addState}
-              removeState={removeState}
-              addPlace={addPlace}
-              removePlace={removePlace}
-              addArrayItem={addArrayItem}
-              removeArrayItem={removeArrayItem}
-              handleFileChange={handleFileChange}
-              imagePreview={imagePreview}
-              additionalImagePreviews={additionalImagePreviews}
-              ctaBgImagePreview={ctaBgImagePreview}
-              removeAdditionalImage={removeAdditionalImage}
-              autoSave={autoSave}
-              fieldErrors={fieldErrors}
-            />
-          </form>
+          <div className="flex items-center space-x-3">
+            {isAutoSaving && (
+              <div className="flex items-center text-sm text-blue-600">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
+                Saving...
+              </div>
+            )}
+
+            {currentIndex === formSections.length - 1 ? (
+              <button
+                type="button"
+                onClick={handleSubmit}
+                disabled={loading}
+                className="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              >
+                {loading
+                  ? "Saving..."
+                  : initialData
+                  ? "Update Destination"
+                  : "Create Destination"}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleNext}
+                disabled={loading}
+                className="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 flex items-center"
+              >
+                Next
+                <svg
+                  className="w-5 h-5 ml-2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

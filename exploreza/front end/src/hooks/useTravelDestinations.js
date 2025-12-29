@@ -19,13 +19,20 @@ export const useTravelDestinations = (initialParams = {}) => {
         params
       );
 
-      // Handle different response structures
+      // Handle different response structures and map _id to id
+      const mapDestinations = (dests) => {
+        return dests.map((dest) => ({
+          ...dest,
+          id: dest.id || dest._id || dest.Id,
+        }));
+      };
+
       if (response.data && Array.isArray(response.data)) {
-        setDestinations(response.data);
+        setDestinations(mapDestinations(response.data));
         setTotalCount(response.totalCount || response.data.length);
         setHasMore(response.hasMore || false);
       } else if (Array.isArray(response)) {
-        setDestinations(response);
+        setDestinations(mapDestinations(response));
         setTotalCount(response.length);
         setHasMore(false);
       } else {
@@ -114,10 +121,18 @@ export const useFeaturedTravelDestinations = (params = {}) => {
       const response =
         await travelDestinationsService.getFeaturedTravelDestinations(params);
 
+      // Map _id to id for featured destinations
+      const mapDestinations = (dests) => {
+        return dests.map((dest) => ({
+          ...dest,
+          id: dest.id || dest._id || dest.Id,
+        }));
+      };
+
       if (response.data && Array.isArray(response.data)) {
-        setFeaturedDestinations(response.data);
+        setFeaturedDestinations(mapDestinations(response.data));
       } else if (Array.isArray(response)) {
-        setFeaturedDestinations(response);
+        setFeaturedDestinations(mapDestinations(response));
       } else {
         setFeaturedDestinations([]);
       }
@@ -158,10 +173,15 @@ export const useTravelDestination = (id) => {
         id
       );
 
-      if (response.data) {
-        setDestination(response.data);
+      // Map _id to id for single destination
+      const mappedDest = response.data || response;
+      if (mappedDest) {
+        setDestination({
+          ...mappedDest,
+          id: mappedDest.id || mappedDest._id || mappedDest.Id,
+        });
       } else {
-        setDestination(response);
+        setDestination(null);
       }
     } catch (err) {
       setError(err.message || "Failed to fetch destination");

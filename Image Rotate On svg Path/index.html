@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GSAP Orbit Animation</title>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+    }
+
+    .orbit-wrapper {
+      position: relative;
+      width: 800px;
+      height: 800px;
+    }
+
+    svg {
+      position: absolute;
+      inset: 0;
+    }
+
+    #orbitImage {
+      position: absolute;
+      width: 400px;
+      height:auto;
+      /* border-radius: 50%; */
+      top: 0;
+      left: 0;
+      /* transform-origin: center; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="orbit-wrapper">
+
+    <!-- SVG CIRCLE PATH -->
+    <svg viewBox="0 0 300 300">
+      <path
+        id="orbitPath"
+        d="
+          M 150,30
+          a 120,120 0 1,1 0,240
+          a 120,120 0 1,1 0,-240
+        "
+        fill="none"
+        stroke="#38bdf8"
+        stroke-dasharray="6 6"
+      />
+    </svg>
+
+    <!-- ORBITING IMAGE -->
+    <img
+      id="orbitImage"
+      src="https://cdn.prod.website-files.com/6940f4ec9fac9423c7e7e2fd/694108d20aa431eaa1ef663a_satelight.png"
+      alt="orbit image"
+    />
+
+  </div>
+
+  <script>
+    gsap.registerPlugin(MotionPathPlugin);
+
+    gsap.to("#orbitImage", {
+      duration: 6,
+      repeat: -1,
+      ease: "none",
+      motionPath: {
+        path: "#orbitPath",
+        align: "#orbitPath",
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true
+      }
+    });
+  </script>
+
+</body>
+</html>

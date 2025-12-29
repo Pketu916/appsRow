@@ -13,13 +13,25 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     let uploadPath = uploadsDir;
 
-    // Create subdirectories based on file type
+    // Determine resource type from URL path
+    const urlPath = req.originalUrl || req.path;
+    let resourceFolder = "general"; // default folder
+
+    if (urlPath.includes("/travel-destinations")) {
+      resourceFolder = "travel-destinations";
+    } else if (urlPath.includes("/deals")) {
+      resourceFolder = "deals";
+    } else if (urlPath.includes("/places")) {
+      resourceFolder = "places";
+    }
+
+    // Create subdirectories based on resource and file type
     if (file.fieldname === "bigImage" || file.fieldname === "image") {
-      uploadPath = path.join(uploadsDir, "deals");
+      uploadPath = path.join(uploadsDir, resourceFolder);
     } else if (file.fieldname === "additionalImages") {
-      uploadPath = path.join(uploadsDir, "deals/additional");
+      uploadPath = path.join(uploadsDir, resourceFolder, "additional");
     } else if (file.fieldname === "ctaBgImage") {
-      uploadPath = path.join(uploadsDir, "deals/cta");
+      uploadPath = path.join(uploadsDir, resourceFolder, "cta");
     }
 
     // Create directory if it doesn't exist
@@ -200,6 +212,11 @@ const deleteFile = (filePath) => {
 // Helper function to get file URL
 const getFileUrl = (req, filePath) => {
   if (!filePath) return null;
+
+  // If it's already a full URL (starts with http:// or https://), return it as is
+  if (filePath.startsWith("http://") || filePath.startsWith("https://")) {
+    return filePath;
+  }
 
   const baseUrl = `${req.protocol}://${req.get("host")}`;
 

@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f172a;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#orbitImage {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

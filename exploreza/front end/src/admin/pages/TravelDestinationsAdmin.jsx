@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { travelDestinationsAPI } from "../../utils/http";
 import Modal from "../components/Modal";
 import DataTable from "../components/DataTable";
-import TravelDestinationForm from "../components/TravelDestinationForm";
 import toast from "react-hot-toast";
 
 const TravelDestinationsAdmin = () => {
+  const navigate = useNavigate();
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [modalMode, setModalMode] = useState("create"); // 'create', 'edit', 'view'
+  const [modalMode, setModalMode] = useState("view"); // 'create', 'edit', 'view'
   const [selectedDestination, setSelectedDestination] = useState(null);
   const [formLoading, setFormLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -35,15 +36,11 @@ const TravelDestinationsAdmin = () => {
   };
 
   const handleCreate = () => {
-    setSelectedDestination(null);
-    setModalMode("create");
-    setShowModal(true);
+    navigate("/admin/destinations/create");
   };
 
   const handleEdit = (destination) => {
-    setSelectedDestination(destination);
-    setModalMode("edit");
-    setShowModal(true);
+    navigate(`/admin/destinations/edit/${destination._id}`);
   };
 
   const handleView = (destination) => {
@@ -391,90 +388,80 @@ const TravelDestinationsAdmin = () => {
         isOpen={showModal}
         onClose={handleModalClose}
         title={getModalTitle()}
-        size="xl"
+        size="fullscreen"
+        showCloseButton={modalMode === "view"}
       >
-        {modalMode === "view" ? (
-          <div className="space-y-4">
-            {selectedDestination && (
-              <>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Title
-                    </label>
-                    <p className="mt-1 text-sm text-gray-900">
-                      {selectedDestination.title}
-                    </p>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Country
-                    </label>
-                    <p className="mt-1 text-sm text-gray-900">
-                      {selectedDestination.country}
-                    </p>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Category
-                    </label>
-                    <p className="mt-1 text-sm text-gray-900">
-                      {selectedDestination.category &&
-                      selectedDestination.category.trim() !== ""
-                        ? selectedDestination.category
-                        : "Not specified"}
-                    </p>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">
-                      Price
-                    </label>
-                    <p className="mt-1 text-sm text-gray-900">
-                      ${selectedDestination.price}{" "}
-                      {selectedDestination.currency}
-                    </p>
-                  </div>
+        <div className="space-y-4">
+          {selectedDestination && (
+            <>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Title
+                  </label>
+                  <p className="mt-1 text-sm text-gray-900">
+                    {selectedDestination.title}
+                  </p>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Description
+                    Country
                   </label>
                   <p className="mt-1 text-sm text-gray-900">
-                    {selectedDestination.description}
+                    {selectedDestination.country}
                   </p>
                 </div>
-                {selectedDestination.highlights &&
-                  selectedDestination.highlights.length > 0 && (
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700">
-                        Highlights
-                      </label>
-                      <div className="mt-1 flex flex-wrap gap-2">
-                        {selectedDestination.highlights.map(
-                          (highlight, index) => (
-                            <span
-                              key={index}
-                              className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
-                            >
-                              {highlight}
-                            </span>
-                          )
-                        )}
-                      </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Category
+                  </label>
+                  <p className="mt-1 text-sm text-gray-900">
+                    {selectedDestination.category &&
+                    selectedDestination.category.trim() !== ""
+                      ? selectedDestination.category
+                      : "Not specified"}
+                  </p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Price
+                  </label>
+                  <p className="mt-1 text-sm text-gray-900">
+                    ${selectedDestination.price} {selectedDestination.currency}
+                  </p>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Description
+                </label>
+                <p className="mt-1 text-sm text-gray-900">
+                  {selectedDestination.description}
+                </p>
+              </div>
+              {selectedDestination.highlights &&
+                selectedDestination.highlights.length > 0 && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">
+                      Highlights
+                    </label>
+                    <div className="mt-1 flex flex-wrap gap-2">
+                      {selectedDestination.highlights.map(
+                        (highlight, index) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
+                          >
+                            {highlight}
+                          </span>
+                        )
+                      )}
                     </div>
-                  )}
-              </>
-            )}
-          </div>
-        ) : (
-          <TravelDestinationForm
-            initialData={selectedDestination}
-            onSubmit={handleFormSubmit}
-            onCancel={handleModalClose}
-            onAutoSave={handleAutoSave}
-            loading={formLoading}
-          />
-        )}
+                  </div>
+                )}
+            </>
+          )}
+        </div>
       </Modal>
     </div>
   );

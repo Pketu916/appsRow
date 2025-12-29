@@ -23,6 +23,11 @@ const samplePlaces = [
       latitude: 28.6139,
       longitude: 77.209,
     },
+    image: "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800",
+      "https://images.unsplash.com/photo-1535392779539-228ae50151f5?w=800",
+    ],
     isActive: true,
   },
   {
@@ -38,6 +43,11 @@ const samplePlaces = [
       latitude: 27.1767,
       longitude: 78.0081,
     },
+    image: "https://images.unsplash.com/photo-1519148331902-567ed8e9e5d9?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1596195869248-47b29e8a1ac9?w=800",
+      "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=800",
+    ],
     isActive: true,
   },
   {
@@ -53,6 +63,11 @@ const samplePlaces = [
       latitude: 26.9124,
       longitude: 75.7873,
     },
+    image: "https://images.unsplash.com/photo-1504950531248-0c7d43ee6d75?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1565035010268-a3816f985123?w=800",
+      "https://images.unsplash.com/photo-1535035779776-7e38d5b1a295?w=800",
+    ],
     isActive: true,
   },
   {
@@ -73,6 +88,11 @@ const samplePlaces = [
       latitude: 15.2993,
       longitude: 74.124,
     },
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1476782376802-32a9afb5995c?w=800",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
+    ],
     isActive: true,
   },
   {
@@ -88,6 +108,11 @@ const samplePlaces = [
       latitude: 10.8505,
       longitude: 76.2711,
     },
+    image: "https://images.unsplash.com/photo-1513494789931-28cb2994669e?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1526761122248-27c4c0c21f20?w=800",
+      "https://images.unsplash.com/photo-1519869325930-281384ef6c9b?w=800",
+    ],
     isActive: true,
   },
   {
@@ -113,6 +138,11 @@ const samplePlaces = [
       latitude: 19.076,
       longitude: 72.8777,
     },
+    image: "https://images.unsplash.com/photo-1551732998-d092b38fa374?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800",
+      "https://images.unsplash.com/photo-1529258283598-8d07f75e2841?w=800",
+    ],
     isActive: true,
   },
 
@@ -140,6 +170,11 @@ const samplePlaces = [
       latitude: 25.2048,
       longitude: 55.2708,
     },
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800",
+      "https://images.unsplash.com/photo-1535350356005-fd52b3b524fb?w=800",
+    ],
     isActive: true,
   },
   {
@@ -165,6 +200,11 @@ const samplePlaces = [
       latitude: 1.3521,
       longitude: 103.8198,
     },
+    image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1543401457-b5f0b4b3c92e?w=800",
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800",
+    ],
     isActive: true,
   },
   {
@@ -190,6 +230,11 @@ const samplePlaces = [
       latitude: 13.7563,
       longitude: 100.5018,
     },
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800",
+      "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=800",
+    ],
     isActive: true,
   },
   {
@@ -215,6 +260,11 @@ const samplePlaces = [
       latitude: 48.8566,
       longitude: 2.3522,
     },
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1549144511-f099e773c147?w=800",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+    ],
     isActive: true,
   },
   {
@@ -240,6 +290,11 @@ const samplePlaces = [
       latitude: 51.5074,
       longitude: -0.1278,
     },
+    image: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1527030280862-64139fba04ca?w=800",
+      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800",
+    ],
     isActive: true,
   },
   {
@@ -260,6 +315,11 @@ const samplePlaces = [
       latitude: 40.7128,
       longitude: -74.006,
     },
+    image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1522083165195-3424ed129620?w=800",
+      "https://images.unsplash.com/photo-1532444458054-01a7dd3e9fca?w=800",
+    ],
     isActive: true,
   },
 ];
@@ -303,11 +363,11 @@ const seedPlaces = async () => {
         console.log(`- ${place.name}, ${place.country}`);
       });
 
-    console.log("\nPlaces seeded successfully!");
+    console.log("\n✅ Places seeded successfully!");
   } catch (error) {
-    console.error("Error seeding places:", error);
+    console.error("❌ Error seeding places:", error);
   } finally {
-    await mongoose.disconnect();
+    await mongoose.connection.close();
     console.log("Disconnected from MongoDB");
   }
 };

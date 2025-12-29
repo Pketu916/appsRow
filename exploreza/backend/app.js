@@ -14,7 +14,6 @@ const adminAuthRoutes = require("./routes/adminAuth");
 const adminManagementRoutes = require("./routes/adminManagement");
 const travelDestinationRoutes = require("./routes/travelDestinations");
 const placeRoutes = require("./routes/places");
-const testUploadRoutes = require("./routes/testUpload");
 const enquiryRoutes = require("./routes/enquiries");
 
 const app = express();
@@ -93,7 +92,6 @@ app.use("/api/admin/auth", adminAuthRoutes);
 app.use("/api/admin/management", adminManagementRoutes);
 app.use("/api/travel-destinations", travelDestinationRoutes);
 app.use("/api/places", placeRoutes);
-app.use("/api/test", testUploadRoutes);
 app.use("/api/enquiries", enquiryRoutes);
 
 // API documentation endpoint

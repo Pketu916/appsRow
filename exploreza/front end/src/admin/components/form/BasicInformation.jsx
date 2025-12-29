@@ -8,20 +8,16 @@ const BasicInformation = ({
   fieldErrors = {},
 }) => {
   const [countries, setCountries] = useState([]);
-  const [loadingCountries, setLoadingCountries] = useState(false);
 
   // Fetch countries from external API
   useEffect(() => {
     const loadCountries = async () => {
-      setLoadingCountries(true);
       try {
         const fetchedCountries = await fetchCountries();
         setCountries(fetchedCountries);
       } catch (error) {
         console.error("Error loading countries:", error);
         setCountries([]);
-      } finally {
-        setLoadingCountries(false);
       }
     };
 
@@ -71,26 +67,24 @@ const BasicInformation = ({
         <label className="block text-sm font-medium text-gray-700">
           Country *
         </label>
-        <select
+        <input
+          type="text"
           name="country"
           value={formData.country}
           onChange={handleInputChange}
+          list="countries"
           required
-          disabled={loadingCountries}
+          placeholder="Type to search or enter country name"
           className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 ${
             fieldErrors.country ? "border-red-300" : "border-gray-300"
-          } ${loadingCountries ? "bg-gray-100" : ""}`}
-        >
-          <option value="">
-            {loadingCountries ? "Loading countries..." : "Select Country"}
-          </option>
+          }`}
+        />
+        <datalist id="countries">
           {countries.map((country) => (
-            <option key={country.code} value={country.name}>
-              {country.name}
-            </option>
+            <option key={country.code} value={country.name} />
           ))}
-          <option value="Other">Other</option>
-        </select>
+          <option value="Other" />
+        </datalist>
         {fieldErrors.country && (
           <p className="mt-1 text-sm text-red-600">{fieldErrors.country}</p>
         )}
@@ -153,19 +147,20 @@ const BasicInformation = ({
         <label className="block text-sm font-medium text-gray-700">
           Category
         </label>
-        <select
+        <input
+          type="text"
           name="category"
           value={formData.category}
           onChange={handleInputChange}
+          list="categories"
+          placeholder="Type to search or enter category"
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-        >
-          <option value="">Select Category (Optional)</option>
+        />
+        <datalist id="categories">
           {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
+            <option key={cat} value={cat} />
           ))}
-        </select>
+        </datalist>
       </div>
     </div>
   );

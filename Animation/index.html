@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Path Animation with GSAP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+            /* background-color: #000; */
+        }
+
+        .svg_wrapper {
+            width: 900px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            /* z-index: -1; */
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+        }
+
+        .linear-element {
+            width: 27px;
+            height: 11px;
+            z-index: 200;
+            position: relative;
+        }
+
+        .circle-dot {
+            z-index: 100000;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="svg_wrapper">
+        <svg width="972" height="1054" viewBox="0 0 972 1054" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="path1" d="M963.5 187H928C894.863 187 868 160.137 868 127V0" stroke="#EDA942" stroke-width="2" />
+            <path id="path2" d="M772.5 283.5V247C772.5 213.863 799.363 187 832.5 187H965.5" stroke="#EDA941"
+                stroke-width="2" />
+            <path id="path3" d="M693.634 378H641.05C607.946 378 581.096 404.812 581.05 437.916L581 473.5"
+                stroke="#EDA942" stroke-width="2" />
+            <rect class="circle-dot" y="1037.5" width="16" height="16" rx="8" fill="#EDA941" />
+            <rect class="rect2" x="767" y="248.5" width="11" height="27" fill="url(#paint0_linear_3188_3139)"
+                fill-opacity="0.8" />
+            <rect class="rect1" x="929" y="194.5" width="11" height="27" transform="rotate(0 929 194.5)"
+                fill="url(#paint1_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path4" d="M868.5 379H833C799.863 379 773 352.137 773 319V285.5" stroke="#EDA942"
+                stroke-width="2" />
+            <path id="path5" d="M678.866 378H712.952C746.055 378 772.904 351.189 772.952 318.086L773 284.5"
+                stroke="#EDA942" stroke-width="2" />
+            <rect class="circle-dot" x="860" y="370.5" width="16" height="16" rx="8" fill="#DE5A44" />
+            <rect class="circle-dot" x="956" y="179.5" width="16" height="16" rx="8" fill="#4C6A35" />
+            <rect x="711" y="372.5" width="11" height="27" transform="rotate(90 711 372.5)"
+                fill="url(#paint2_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="643" y="384.5" width="11" height="27" transform="rotate(-90 643 384.5)"
+                fill="url(#paint3_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="576" y="438.5" width="11" height="27" fill="url(#paint4_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="833" y="383.5" width="11" height="27" transform="rotate(-90 833 383.5)"
+                fill="url(#paint5_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path6" d="M773 473.5V281.5" stroke="#EDA942" stroke-width="2" />
+            <rect class="circle-dot" x="765" y="275.5" width="16" height="16" rx="8" fill="#586FB1" />
+            <rect x="778" y="318.5" width="11" height="27" transform="rotate(-180 778 318.5)"
+                fill="url(#paint6_linear_3188_3139)" />
+            <rect x="767" y="438.5" width="11" height="27" fill="url(#paint7_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path7" d="M773 474.5V604C773 637.137 746.137 664 713 663.5H585" stroke="#EDA942"
+                stroke-width="2" />
+            <rect class="circle-dot" x="765" y="465.5" width="16" height="16" rx="8" fill="#586FB1" />
+            <rect x="778" y="508.5" width="11" height="27" transform="rotate(-180 778 508.5)"
+                fill="url(#paint8_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path8" d="M966.5 663.5H585" stroke="#EDA942" stroke-width="2" />
+            <rect x="932" y="669.5" width="11" height="27" transform="rotate(-90 932 669.5)"
+                fill="url(#paint9_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="616" y="658.5" width="11" height="27" transform="rotate(90 616 658.5)"
+                fill="url(#paint10_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path9" d="M581 663H353.5C320.363 663 293.5 689.863 293.5 723V759" stroke="#EDA942"
+                stroke-width="2" />
+            <rect x="546" y="669.5" width="11" height="28" transform="rotate(-90 546 669.5)"
+                fill="url(#paint11_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path10" d="M294 759.5V985.5C294 1018.64 267.137 1045.5 234 1045.5H8" stroke="#EDA942"
+                stroke-width="2" />
+            <rect class="circle-dot" x="286" y="751.5" width="16" height="16" rx="8" fill="#4C6A35" />
+            <rect x="288" y="724.5" width="11" height="27" fill="url(#paint12_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="299" y="794.5" width="11" height="27" transform="rotate(-180 299 794.5)"
+                fill="url(#paint13_linear_3188_3139)" fill-opacity="0.8" />
+            <rect class="rect1f0" x="43" y="1040.5" width="11" height="27" transform="rotate(90 43 1040.5)"
+                fill="url(#paint14_linear_3188_3139)" fill-opacity="0.8" />
+            <path id="path11" d="M389 567V603C389 636.137 415.863 663 449 663H585" stroke="#EDA942" stroke-width="2" />
+            <rect class="circle-dot" x="381" y="560.5" width="16" height="16" rx="8" fill="#586FB1" />
+            <path id="path12" d="M585 663H197.5" stroke="#EDA942" stroke-width="2" />
+            <rect class="circle-dot" x="191" y="656.5" width="16" height="16" rx="8" fill="#586FB1" />
+            <rect class="circle-dot" x="669" y="370.5" width="16" height="16" rx="8" fill="#D9D9D9" />
+            <rect class="circle-dot" x="573" y="465.5" width="16" height="16" rx="8" fill="#D9D9D9" />
+            <rect x="234" y="658.5" width="11" height="27" transform="rotate(90 234 658.5)"
+                fill="url(#paint15_linear_3188_3139)" fill-opacity="0.8" />
+            <rect x="394" y="603.5" width="11" height="27" transform="rotate(-180 394 603.5)"
+                fill="url(#paint16_linear_3188_3139)" fill-opacity="0.8" />
+            <rect class="circle-dot" x="573" y="656.5" width="16" height="16" rx="8" fill="#586FB1" />
+            <rect class="circle-dot" x="956" y="655.5" width="16" height="16" rx="8" fill="#DE5A44" />
+
+            <defs>
+                <linearGradient id="paint0_linear_208_4211" x1="32.5" y1="0" x2="32.5" y2="27"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#f5f5f5" stop-opacity="0" />
+                    <stop offset="1" stop-color="#f5f5f5" />
+                </linearGradient>
+            </defs>
+
+        </svg>
+
+        <svg id="linear2-start" class="linear-element" x="772.5" y="283.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear2-end" class="linear-element" x="965.5" y="187" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear3-start" class="linear-element" x="693.634" y="378" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear3-end" class="linear-element" x="581" y="473.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear4-start" class="linear-element" x="868.5" y="379" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear4-end" class="linear-element" x="773" y="285.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear5-start" class="linear-element" x="678.866" y="378" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear5-end" class="linear-element" x="773" y="284.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear6-start" class="linear-element" x="773" y="473.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear6-end" class="linear-element" x="773" y="281.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear7-start" class="linear-element" x="773" y="474.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear7-end" class="linear-element" x="581.5" y="664" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear8-start" class="linear-element" x="966.5" y="663.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear8-end" class="linear-element" x="585" y="663.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear9-start" class="linear-element" x="581" y="663" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear9-end" class="linear-element" x="293.5" y="759" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear10-start" class="linear-element" x="294" y="759.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear10-end" class="linear-element" x="8" y="1045.5" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear11-start" class="linear-element" x="389" y="567" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear11-end" class="linear-element" x="486" y="663" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear12-start" class="linear-element" x="445" y="663" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+        <!-- <svg id="linear12-end" class="linear-element" x="197.5" y="663" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg> -->
+
+        <svg id="linear1-second" class="linear-element" x="920" y="100" width="27" height="11" viewBox="0 0 27 11"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="27" width="5" height="27" transform="rotate(90 27 0)" fill="url(#paint0_linear_208_4211)"
+                fill-opacity="1" />
+        </svg>
+
+        <circle id="top-dot" class="linear-element" cx="963.5" cy="50" r="6" fill="#00ff00" opacity="0.8" />
+    </div>
+    <script>
+        gsap.registerPlugin(MotionPathPlugin);
+
+        const tl = gsap.timeline({ repeat: -1 });
+
+        const paths = ["#path1", "#path2", "#path3", "#path4", "#path5", "#path6", "#path7", "#path8", "#path9", "#path10", "#path11", "#path12"];
+
+        for (let i = 1; i <= 12; i++) {
+            const isSpecialPath = [2, 4, 5, 6, 11].includes(i);
+
+            gsap.to(`#linear${i}-start`, {
+                duration: 5,
+                repeat: -1,
+                ease: "none",
+                motionPath: {
+                    path: `#path${i}`,
+                    align: `#path${i}`,
+                    alignOrigin: [0.5, 0.25],
+                    autoRotate: true,
+                    start: isSpecialPath ? 0 : 1,
+                    end: isSpecialPath ? 1 : 0
+                }
+            });
+        }
+
+        // Animate end elements (continuous movement)
+        for (let i = 1; i <= 12; i++) {
+            // Special paths (2, 4, 5, 6, 11) need start: 0, end: 1
+            const isSpecialPath = [2, 4, 5, 6, 11].includes(i);
+
+            gsap.to(`#linear${i}-end`, {
+                duration: 5,
+                repeat: -1,
+                ease: "none",
+                motionPath: {
+                    path: `#path${i}`,
+                    align: `#path${i}`,
+                    // alignOrigin: [0.5, 0.5],
+                    autoRotate: true,
+                    start: isSpecialPath ? 0 : 1,
+                    end: isSpecialPath ? 1 : 0
+                }
+            });
+        }
+
+        // Animate Path 1 second linear element (continuous)
+        gsap.to("#linear1-second", {
+            duration: 5,
+            repeat: -1,
+            ease: "none",
+            motionPath: {
+                path: "#path1",
+                align: "#path1",
+                alignOrigin: [0.5, 0.25],
+                autoRotate: true,
+                start: 0,
+                end: 1
+            }
+        });
+
+        // Animate top dot (continuous bounce)
+        gsap.to("#top-dot", {
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "power2.inOut",
+            y: "+=20"
+        });
+
+        // Add some variety with different delays
+        // gsap.set("#linear1-start, #linear1-end, #linear1-second", { delay: 0 });
+        // gsap.set("#linear2-start, #linear2-end", { delay: 0.0 });
+        // gsap.set("#linear3-start, #linear3-end", { delay: 0.0 });
+        // gsap.set("#linear4-start, #linear4-end", { delay: 0.0 });
+        // gsap.set("#linear5-start, #linear5-end", { delay: 0.0 });
+        // gsap.set("#linear6-start, #linear6-end", { delay: 0.0 });
+        // gsap.set("#linear7-start, #linear7-end", { delay: 0.0 });
+        // gsap.set("#linear8-start, #linear8-end", { delay: 0.0 });
+        // gsap.set("#linear9-start, #linear9-end", { delay: 0.0 });
+        // gsap.set("#linear10-start, #linear10-end", { delay: 0.0 });
+        // gsap.set("#linear11-start, #linear11-end", { delay: 0.0 });
+        // gsap.set("#linear12-start, #linear12-end", { delay: 0.0 });
+    </script>
+
+
+</body>
+
+</html>

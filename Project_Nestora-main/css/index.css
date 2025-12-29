@@ -1,0 +1,80 @@
+
+
+
+div{
+    border: solid rgb(8, 8, 8) 2px;
+}
+
+.slide{
+
+    display: flex;
+    position: relative;
+
+    height: 98vh;
+    width: 98vw;
+}
+
+
+.div1{
+    
+    width: 61.1%;
+    height: 38.3%;
+
+    /* margin-top: 15.97%;
+    margin-left: 2.77%; */
+    position: absolute;
+    top: 15.96%;
+    left: 2.70%;
+}
+
+.div2{
+    width: 22.43%;
+    height: 70.25%;
+
+    /* margin-left: 2.91%; */
+    position: absolute;
+    top: 0%;
+    left: 66.89%;
+    
+}
+
+.div3{
+    position: absolute;
+
+    width: 14.02%;
+    height: 4.35%;
+
+    top: 68.06%;
+    left: 71.04%;
+}
+
+.div4{
+    position: absolute;
+    width: 12.14px;
+    height: 11.94px;
+
+    top: 73.14%;
+    left: 2.77%;
+}
+
+.navbar{
+    height: 4.70%;
+    width: 100%;		
+    
+    top: 0%;
+    position:sticky;
+}
+
+.slide4{
+    position: relative;
+    border: solid red;
+    
+}
+.divlatest{
+    position: absolute;
+    top: 220px;
+    left: 158px;
+
+    width: 345px;
+    height: 176px;
+}

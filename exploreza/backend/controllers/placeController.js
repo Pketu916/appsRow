@@ -4,6 +4,12 @@ const { deleteFile, getRelativePath } = require("../middleware/upload");
 // Helper function to get proper image URL
 const getImageUrl = (req, imagePath) => {
   if (!imagePath) return null;
+  
+  // If it's already a full URL (starts with http:// or https://), return it as is
+  if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+    return imagePath;
+  }
+  
   const baseUrl = `${req.protocol}://${req.get("host")}`;
   let normalizedPath = imagePath.replace(/\\/g, "/");
   const uploadsIndex = normalizedPath.indexOf("/uploads/");

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /admin/
+
+Sitemap: https://samarthev.com/sitemap.xml
